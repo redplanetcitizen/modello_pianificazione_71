@@ -5,6 +5,7 @@
     python -m pianificazione71 controllo-solver
     python -m pianificazione71 c1
     python -m pianificazione71 c2
+    python -m pianificazione71 c4
 """
 from __future__ import annotations
 
@@ -85,6 +86,14 @@ def cmd_c2(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_c4(a: argparse.Namespace) -> int:
+    from .passo_c4 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="pianificazione71")
     ap.add_argument("--config", type=Path, default=CONFIG)
@@ -97,6 +106,7 @@ def main(argv: list[str] | None = None) -> int:
         f=cmd_controllo_solver)
     sub.add_parser("c1", help="passo C1: sistema prodotti-industrie 2012-2016").set_defaults(f=cmd_c1)
     sub.add_parser("c2", help="passo C2: margini dell'investimento").set_defaults(f=cmd_c2)
+    sub.add_parser("c4", help="passo C4: stima di Phi").set_defaults(f=cmd_c4)
     a = ap.parse_args(argv)
     return a.f(a)
 
