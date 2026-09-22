@@ -1,0 +1,11 @@
+# Esecuzioni: gli esiti si conservano fuori da git; in git va solo il loro manifest quando un risultato viene congelato
+runs/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+# I dati grezzi non entrano mai nel repository: stanno nell'archivio dati_economici
+*.xlsx
+*.xls
+*.zip

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pianificazione71"
+version = "0.1.0"
+description = "Modello LP intertemporale di pianificazione a 71 industrie / 73 prodotti, dati BEA 2012-2016"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.3",
+    "pandas>=2.2",
+    "openpyxl>=3.1",
+    "highspy==1.15.1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

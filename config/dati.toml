@@ -1,0 +1,51 @@
+# Release dell'archivio dati_economici usate dal modello.
+#
+# Regole (README dell'archivio):
+# - il repository non copia dati: legge dall'archivio e ne verifica le impronte all'avvio;
+# - una release congelata non cambia; una release nuova si aggiunge qui con la sua impronta;
+# - sha256_manifest è l'impronta del file MANIFEST_RELEASE.json della release.
+#
+# Il percorso dell'archivio si può sostituire con la variabile d'ambiente DATI_ECONOMICI.
+
+[archivio]
+radice = 'C:\Users\franc\Documents\dati_economici'
+
+[[release]]
+id = "bea-2025-09"
+percorso = "bea/2025-09"
+sha256_manifest = "af5f0cdb897a3fc1936f0140cf3c2ee68cfef0bd224f929fbf50b8c77cc633f6"
+contenuto = "Make/Use Summary 1997-2024; Fixed Assets Sez. 3 e 7; capital flow table 1997; concordanze"
+
+[[release]]
+id = "bea-2026-09-22"
+percorso = "bea/2026-09-22"
+sha256_manifest = "9e1db20f3d4e3ac6d3be9ca411eb8933875e351aa3f8c160066266d8c9ce8d21"
+contenuto = "Fixed Assets dettagliati per industria e tipo di bene; zip Make/Use/Import; raccordi PEQ e PCE"
+
+[[release]]
+id = "bea-2026-09-23"
+percorso = "bea/2026-09-23"
+sha256_manifest = "c660b7adf85e7ae25706546dbcf24b9ff92ffd764c928aa1d7312aca49817daf"
+contenuto = "API BEA: NIPA (scorte 5.7/5.8), Fixed Assets, GDP by Industry, Input-Output"
+
+[[release]]
+id = "bls-2026-09-18"
+percorso = "bls/2026-09-18"
+sha256_manifest = "3a7aafd39229406a405c17d8b6064455a2d7525ffa1894abce032de2dabbfad8"
+contenuto = "Account integrato BEA-BLS (KLEMS) 1997-2024"
+
+[[release]]
+id = "fed-g17-2026-09-18"
+percorso = "fed_g17/2026-09-18"
+sha256_manifest = "39a5f08707580a21f8104bb0fa24c2e354e698f1a8bab9d1fd07c9f7e6021d19"
+contenuto = "Federal Reserve G.17: capacità e utilizzo"
+
+# File effettivamente letti dal modello. Ogni voce è verificata contro il manifest
+# della release a ogni esecuzione. L'elenco cresce con la pipeline (passo C).
+[[file]]
+release = "bea-2025-09"
+percorso = "manual/M1/IOUse_Before_Redefinitions_PRO_Summary.xlsx"
+
+[[file]]
+release = "bea-2025-09"
+percorso = "manual/M1/IOMake_Before_Redefinitions_PRO_Summary.xlsx"
