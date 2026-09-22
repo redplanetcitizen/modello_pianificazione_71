@@ -7,7 +7,8 @@ un'eventuale non fattibilità al blocco che la causa.
 Obiettivi (§8):
   O1  max Σ_t β^(t−2012) γ_t         consumo privato a composizione osservata dell'anno, γ = 1 al livello 2012
   O2  max Σ_t Σ_c w_c f(ρ_{c,t})     programmazione per obiettivi: ρ = consumo / obiettivo, f concava a tratti
-  O3  max Σ w K_{T+1}                capitale terminale per la capacità, con γ_t ≥ γ_min
+  O3  max Σ K_{T+1}                  capitale terminale a valore dello stock (dollari 2012), con γ_t ≥ γ_min;
+                                     variante storica: pesi a costo d'uso w (pesi_o3 = "costo_uso", passo D2)
   O4  min distanza L1 normalizzata dai valori osservati (solo diagnostica)
 """
 from __future__ import annotations
@@ -48,6 +49,7 @@ class Opzioni:
     import_scala: float = 1.0              # moltiplicatore del tetto alle importazioni totali
     beta: float = 1.0
     gamma_min: float = 1.0                 # per O3
+    pesi_o3: str = "valore"                # "valore" (stock a prezzi 2012, decisione 22/09) | "costo_uso" (D2)
     obiettivi_o2: str = "osservato"        # "osservato" | "costante_2012"
     elastico: bool = False                 # scarti di capacità penalizzati, solo per diagnosi
     penalita_elastico: float = 1e3
@@ -296,7 +298,8 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
     elif o.obiettivo == "O3":
         for j in cap_ind + ["HS"]:
             for a in tipi_j.get(j, []):
-                C.costo[v[("K", j, a, T + 1)]] = 1.0 if a == "R" else float(P.w[(j, a)])
+                usa_w = o.pesi_o3 == "costo_uso" and a != "R"
+                C.costo[v[("K", j, a, T + 1)]] = float(P.w[(j, a)]) if usa_w else 1.0
     elif o.obiettivo == "O4":
         blocchi = {"x": (lambda t: P.x_oss[t], J), "c": (lambda t: P.consumo_oss[t].clip(lower=0), Cc)}
         if o.estero:

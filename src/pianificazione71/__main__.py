@@ -141,6 +141,23 @@ def cmd_d(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_d4(a: argparse.Namespace) -> int:
+    from .dati_modello import costruisci
+    from .passo_d import o3_valore
+    cfg = carica_configurazione(a.config)
+    es = o3_valore(cfg, costruisci(cfg))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_d5(a: argparse.Namespace) -> int:
+    from .grafici import esegui
+    es = esegui(carica_configurazione(a.config))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
 def cmd_passo_c(a: argparse.Namespace) -> int:
     """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
     import importlib
@@ -171,6 +188,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("c6", help="passo C6: capacita' legata al capitale").set_defaults(f=cmd_c6)
     sub.add_parser("c7", help="passo C7: lavoro, scorte, estero").set_defaults(f=cmd_c7)
     sub.add_parser("d", help="passo D: modello (controllo, O4, obiettivi, sensibilita')").set_defaults(f=cmd_d)
+    sub.add_parser("d4", help="passo D4: O3 con capitale terminale a valore dello stock").set_defaults(f=cmd_d4)
+    sub.add_parser("d5", help="passo D5: grafici modello / economia osservata").set_defaults(f=cmd_d5)
     sub.add_parser("passo-c", help="esegue tutti i sotto-passi del passo C").set_defaults(f=cmd_passo_c)
     a = ap.parse_args(argv)
     return a.f(a)

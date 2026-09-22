@@ -82,7 +82,7 @@ def obiettivo_o4(cfg, P) -> Esecuzione:
 
 def obiettivi(cfg, P) -> Esecuzione:
     casi = {"O1": Opzioni(obiettivo="O1", **VARIANTE), "O2": Opzioni(obiettivo="O2", **VARIANTE),
-            "O3": Opzioni(obiettivo="O3", **VARIANTE), "O1_base": Opzioni(obiettivo="O1", **BASE)}
+            "O3": Opzioni(obiettivo="O3", pesi_o3="costo_uso", **VARIANTE), "O1_base": Opzioni(obiettivo="O1", **BASE)}
     with Esecuzione("M71-D2-obiettivi", cfg, parametri={k: dataclasses.asdict(v) for k, v in casi.items()}) as es:
         righe, tab = ["# M71-D2 — obiettivi O1, O2, O3", ""], []
         for nome, o in casi.items():
@@ -94,6 +94,43 @@ def obiettivi(cfg, P) -> Esecuzione:
         es.scrivi_testo("casi.csv", _csv(pd.DataFrame(tab)))
         es.scrivi_testo("sintesi.md", "\n".join(righe) + "\n")
     return es
+
+
+def o3_valore(cfg, P) -> Esecuzione:
+    """D4: O3 riformulato (capitale terminale a valore dello stock), confrontato con O3 a costo d'uso e con O1."""
+    casi = {"O3_valore": Opzioni(obiettivo="O3", pesi_o3="valore", **VARIANTE),
+            "O3_costo_uso": Opzioni(obiettivo="O3", pesi_o3="costo_uso", **VARIANTE),
+            "O1": Opzioni(obiettivo="O1", **VARIANTE)}
+    with Esecuzione("M71-D4-O3-valore", cfg, parametri={k: dataclasses.asdict(v) for k, v in casi.items()}) as es:
+        righe, tab = ["# M71-D4 — O3 con capitale terminale a valore dello stock", ""], []
+        for nome, o in casi.items():
+            R = costruisci_e_risolvi(P, o)
+            riga = _scrivi_risultato(es, nome, R)
+            if R.stato == "Optimal":
+                kt = _capitale_terminale(P, R.tabelle["investimento"])
+                es.scrivi_testo(f"{nome}/capitale_terminale.csv", _csv(kt))
+                riga.update({f"K2017_{a}": float(v) for a, v in kt.groupby("tipo")["K_2017"].sum().items()})
+            tab.append(riga)
+            righe += [f"## {nome} — stato {R.stato}, obiettivo {R.obiettivo}", ""]
+            if R.stato == "Optimal":
+                righe += [_tabella(R.tabelle["aggregati"]), ""]
+        t = pd.DataFrame(tab)
+        es.scrivi_testo("casi.csv", _csv(t))
+        cols = ["caso", "gamma_2016", "consumo_cumulato", "anni_disinvestimento_netto"] + [c for c in t if c.startswith("K2017_")]
+        righe += ["## Sintesi", "", "```", t[[c for c in cols if c in t]].to_string(index=False, float_format=lambda v: f"{v:,.3f}"), "```"]
+        es.scrivi_testo("sintesi.md", "\n".join(righe) + "\n")
+    return es
+
+
+def _capitale_terminale(P: Parametri, inv: pd.DataFrame) -> pd.DataFrame:
+    """Stock di fine orizzonte ricostruito con l'identità del modello: K_{t+1} = (1 − δ) K_t + I_t."""
+    righe = []
+    for (j, a), g in inv.groupby(["industria", "tipo"]):
+        k = float(P.K0[(j, a)])
+        for _, r in g.sort_values("anno").iterrows():
+            k = (1 - float(P.delta[(j, a)])) * k + float(r["I"])
+        righe.append({"industria": j, "tipo": a, "K_2012": float(P.K0[(j, a)]), "K_2017": k})
+    return pd.DataFrame(righe)
 
 
 def sensibilita(cfg, P) -> Esecuzione:

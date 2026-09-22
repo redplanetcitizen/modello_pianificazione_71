@@ -68,6 +68,7 @@ class Parametri:
     phi_R: dict[int, pd.Series] = field(default_factory=dict)
     I_oss: pd.DataFrame | None = None        # industria, tipo, anno, I (FA reale)
     K0: pd.Series | None = None              # (industria, tipo) → stock inizio 2012
+    K_oss: pd.Series | None = None           # (industria, tipo, anno) → stock osservato di inizio anno, 2012-2017 (solo confronto)
     delta: pd.Series | None = None           # (industria, tipo) → δ
     w: pd.Series | None = None               # (industria, tipo) → peso capacità
     kappa: pd.Series | None = None           # industria → κ_2012
@@ -122,6 +123,8 @@ def costruisci(cfg: Configurazione) -> Parametri:
                      pannello_residenziale(percorso_dati(cfg, *FA_RES), ANNI_CAPITALE)], ignore_index=True)
     p12 = pan[pan["anno"] == 2012].set_index(["industria_io", "tipo"])
     P.K0 = p12["K_inizio_2012"] / SCALA
+    # stock osservato di inizio anno t = stock di fine anno t−1 a prezzi 2012 (solo per il confronto ex post)
+    P.K_oss = (pan.assign(anno=pan["anno"] + 1).set_index(["industria_io", "tipo", "anno"])["K_2012"] / SCALA).sort_index()
     d = pan.dropna(subset=["delta"]).groupby(["industria_io", "tipo"])
     P.delta = d["D_2012"].sum() / d["K_inizio_2012"].sum()
     P.I_oss = pan[pan["anno"].isin(ANNI)][["industria_io", "tipo", "anno", "I_2012"]].assign(
