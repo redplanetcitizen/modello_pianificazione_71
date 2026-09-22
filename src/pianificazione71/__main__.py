@@ -11,6 +11,7 @@
     python -m pianificazione71 c6
     python -m pianificazione71 c7
     python -m pianificazione71 passo-c
+    python -m pianificazione71 d
 """
 from __future__ import annotations
 
@@ -132,6 +133,14 @@ def cmd_c7(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_d(a: argparse.Namespace) -> int:
+    from .passo_d import esegui
+    for es in esegui(carica_configurazione(a.config)):
+        print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+        print(f"Registro: {es.cartella}\n")
+    return 0
+
+
 def cmd_passo_c(a: argparse.Namespace) -> int:
     """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
     import importlib
@@ -161,6 +170,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("c5", help="passo C5: capitale a prezzi 2012").set_defaults(f=cmd_c5)
     sub.add_parser("c6", help="passo C6: capacita' legata al capitale").set_defaults(f=cmd_c6)
     sub.add_parser("c7", help="passo C7: lavoro, scorte, estero").set_defaults(f=cmd_c7)
+    sub.add_parser("d", help="passo D: modello (controllo, O4, obiettivi, sensibilita')").set_defaults(f=cmd_d)
     sub.add_parser("passo-c", help="esegue tutti i sotto-passi del passo C").set_defaults(f=cmd_passo_c)
     a = ap.parse_args(argv)
     return a.f(a)
