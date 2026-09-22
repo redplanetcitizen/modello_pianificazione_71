@@ -23,18 +23,23 @@ COLONNE_USE = {"E": "F02E", "S": "F02S", "N": "F02N", "R": "F02R"}
 RIGHE_NIPA = {"E": 9, "S": 3, "N": 16, "R": 20, "S_nuove": 29}
 
 
-def leggi_fa_dettaglio(percorso: Path | str) -> pd.DataFrame:
-    """Foglio 'Datasets' dei file detailnonres_*: serie I3N<industria>1<bene>.A per anno."""
+def leggi_fa_dettaglio(percorso: Path | str, anni=ANNI) -> pd.DataFrame:
+    """Foglio 'Datasets' dei file detailnonres_*: serie <misura><industria>1<bene>.A per anno.
+
+    Misure: I3N/I2N investimento corrente/costo fisso, K1N/K2N stock netto, M1N/M2N ammortamento,
+    R2N tassi di ammortamento.
+    """
     wb = openpyxl.load_workbook(percorso, read_only=True, data_only=True)
     righe = list(wb["Datasets"].iter_rows(values_only=True))
     wb.close()
-    anni = [str(a) for a in righe[0][1:]]
-    df = pd.DataFrame([r for r in righe[1:] if r[0]], columns=["serie"] + anni)
-    if not df["serie"].str.fullmatch(r"I3N.{4}1.{4}\.A").all():
+    colonne_anni = [str(a) for a in righe[0][1:]]
+    df = pd.DataFrame([r for r in righe[1:] if r[0]], columns=["serie"] + colonne_anni)
+    if not df["serie"].str.fullmatch(r"[A-Z]\dN.{4}1.{4}\.A").all():
         raise ValueError("Codici di serie inattesi nel foglio Datasets")
+    df["misura"] = df["serie"].str[:3]
     df["industria_fa"] = df["serie"].str[3:7]
     df["bene"] = df["serie"].str[8:12]
-    lungo = df.melt(id_vars=["serie", "industria_fa", "bene"], value_vars=[str(a) for a in ANNI],
+    lungo = df.melt(id_vars=["serie", "misura", "industria_fa", "bene"], value_vars=[str(a) for a in anni],
                     var_name="anno", value_name="valore")
     lungo["anno"] = lungo["anno"].astype(int)
     lungo["valore"] = pd.to_numeric(lungo["valore"], errors="raise").astype(float)

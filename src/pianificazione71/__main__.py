@@ -6,12 +6,18 @@
     python -m pianificazione71 c1
     python -m pianificazione71 c2
     python -m pianificazione71 c4
+    python -m pianificazione71 c4b
+    python -m pianificazione71 c5
+    python -m pianificazione71 c6
+    python -m pianificazione71 c7
+    python -m pianificazione71 passo-c
 """
 from __future__ import annotations
 
 import argparse
 import json
 import sys
+import warnings
 from pathlib import Path
 
 from .archivio import carica_configurazione, verifica_archivio
@@ -94,7 +100,51 @@ def cmd_c4(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_c4b(a: argparse.Namespace) -> int:
+    from .passo_c4b import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_c5(a: argparse.Namespace) -> int:
+    from .passo_c5 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_c6(a: argparse.Namespace) -> int:
+    from .passo_c6 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_c7(a: argparse.Namespace) -> int:
+    from .passo_c7 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_passo_c(a: argparse.Namespace) -> int:
+    """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
+    import importlib
+    cfg = carica_configurazione(a.config)
+    for passo in ("c1", "c2", "c4", "c4b", "c5", "c6", "c7"):
+        es = importlib.import_module(f".passo_{passo}", __package__).esegui(cfg)
+        print(f"{passo}: {es.cartella}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
+    # avviso innocuo di openpyxl sulle intestazioni di stampa dei file BEA
+    warnings.filterwarnings("ignore", message="Cannot parse header or footer")
     ap = argparse.ArgumentParser(prog="pianificazione71")
     ap.add_argument("--config", type=Path, default=CONFIG)
     sub = ap.add_subparsers(dest="comando", required=True)
@@ -107,6 +157,11 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("c1", help="passo C1: sistema prodotti-industrie 2012-2016").set_defaults(f=cmd_c1)
     sub.add_parser("c2", help="passo C2: margini dell'investimento").set_defaults(f=cmd_c2)
     sub.add_parser("c4", help="passo C4: stima di Phi").set_defaults(f=cmd_c4)
+    sub.add_parser("c4b", help="passo C4b: confronto di Phi con la tavola 1997").set_defaults(f=cmd_c4b)
+    sub.add_parser("c5", help="passo C5: capitale a prezzi 2012").set_defaults(f=cmd_c5)
+    sub.add_parser("c6", help="passo C6: capacita' legata al capitale").set_defaults(f=cmd_c6)
+    sub.add_parser("c7", help="passo C7: lavoro, scorte, estero").set_defaults(f=cmd_c7)
+    sub.add_parser("passo-c", help="esegue tutti i sotto-passi del passo C").set_defaults(f=cmd_passo_c)
     a = ap.parse_args(argv)
     return a.f(a)
 

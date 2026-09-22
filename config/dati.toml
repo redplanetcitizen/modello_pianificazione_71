@@ -69,3 +69,59 @@ percorso = "api/tidy/NIPA/T50305.csv"
 [[file]]
 release = "bea-2026-09-22"
 percorso = "manual/M4/PEQBridge_Summary.xlsx"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailnonres_stk1.xlsx"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailnonres_stk2.xlsx"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailnonres_inv2.xlsx"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailnonres_dep1.xlsx"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailnonres_dep2.xlsx"
+
+[[file]]
+release = "bls-2026-09-18"
+percorso = "BEA-BLS-industry-level-production-account-1997-2024.xlsx"
+
+[[file]]
+release = "fed-g17-2026-09-18"
+percorso = "FRB-g17-capacity-utilization.txt"
+
+[[file]]
+release = "fed-g17-2026-09-18"
+percorso = "FRB-g17-industrial-capacity.txt"
+
+[[file]]
+release = "bea-2026-09-23"
+percorso = "api/tidy/NIPA/T60500D.csv"
+
+[[file]]
+release = "bea-2026-09-23"
+percorso = "api/tidy/NIPA/T50805B.csv"
+
+[[file]]
+release = "bea-2026-09-23"
+percorso = "api/tidy/NIPA/T50809B.csv"
+
+[[file]]
+release = "bea-2026-09-23"
+percorso = "api/tidy/NIPA/T50705B.csv"
+
+[[file]]
+release = "bea-2025-09"
+percorso = "manual/M5/flow1997.xls"
+
+[[file]]
+release = "bea-2025-09"
+percorso = "manual/M5/changes_to_180x123combined.xls"
