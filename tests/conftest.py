@@ -13,7 +13,9 @@ def _sha(b: bytes) -> str:
 
 
 @pytest.fixture
-def archivio(tmp_path: Path):
+def archivio(tmp_path: Path, monkeypatch):
+    # l'archivio di prova non deve essere sostituito dalla variabile d'ambiente
+    monkeypatch.delenv("DATI_ECONOMICI", raising=False)
     radice = tmp_path / "dati_economici"
     rel = radice / "bea" / "prova"
     (rel / "manual" / "M1").mkdir(parents=True)

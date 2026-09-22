@@ -3,6 +3,8 @@
     python -m pianificazione71 verifica-dati [--completa]
     python -m pianificazione71 ambiente
     python -m pianificazione71 controllo-solver
+    python -m pianificazione71 c1
+    python -m pianificazione71 c2
 """
 from __future__ import annotations
 
@@ -66,6 +68,23 @@ def cmd_controllo_solver(a: argparse.Namespace) -> int:
     return 0 if ok else 1
 
 
+def cmd_c1(a: argparse.Namespace) -> int:
+    from .passo_c1 import esegui
+    cfg = carica_configurazione(a.config)
+    es = esegui(cfg)
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_c2(a: argparse.Namespace) -> int:
+    from .passo_c2 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="pianificazione71")
     ap.add_argument("--config", type=Path, default=CONFIG)
@@ -76,6 +95,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("ambiente", help="versioni di Python e pacchetti").set_defaults(f=cmd_ambiente)
     sub.add_parser("controllo-solver", help="risolve un LP di prova e registra l'esecuzione").set_defaults(
         f=cmd_controllo_solver)
+    sub.add_parser("c1", help="passo C1: sistema prodotti-industrie 2012-2016").set_defaults(f=cmd_c1)
+    sub.add_parser("c2", help="passo C2: margini dell'investimento").set_defaults(f=cmd_c2)
     a = ap.parse_args(argv)
     return a.f(a)
 

@@ -1,0 +1,75 @@
+industria_fa,nome_fa,industria_io,nota
+110C,Farms,111CA,
+113F,"Forestry, fishing, and related activities",113FF,
+2110,Oil and gas extraction,211,
+2120,"Mining, except oil and gas",212,
+2130,Support activities for mining,213,
+2211,Electric power,22,"aggregazione: le utility I/O comprendono elettricità, gas e acqua"
+2212,Natural gas distribution,22,aggregazione
+2213,"Water, sewage, and other systems",22,aggregazione
+2300,Construction,23,
+3210,Wood products,321,
+3270,Nonmetallic mineral products,327,
+3310,Primary metals,331,
+3320,Fabricated metal products,332,
+3330,Machinery,333,
+3340,Computer and electronic products,334,
+3350,"Electrical equipment, appliances, and components",335,
+336M,"Motor vehicles, bodies and trailers, and parts",3361MV,
+336O,Other transportation equipment,3364OT,
+3370,Furniture and related products,337,
+3380,Medical equipment and supplies,339,aggregazione: NAICS 3391 è compreso in 339 Miscellaneous manufacturing
+3390,Other manufacturing,339,aggregazione
+3110,Food manufacturing,311FT,aggregazione
+3120,Beverage and tobacco product manufacturing,311FT,aggregazione
+313T,Textile mills and textile product mills,313TT,
+315A,Apparel and leather and allied products,315AL,
+3220,Paper products,322,
+3230,Printing and related support activities,323,
+3240,Petroleum and coal products,324,
+3250,Chemical products,325,
+3260,Plastics and rubber products,326,
+4210,"Wholesale trade, durable goods",42,aggregazione
+4220,"Wholesale trade, nondurable goods",42,aggregazione
+4410,Motor vehicle and parts dealers,441,
+4450,Food and beverage stores,445,
+4520,General merchandise stores,452,
+442R,Other retail,4A0,
+4810,Air transportation,481,
+4820,Railroad transportation,482,
+4830,Water transportation,483,
+4840,Truck transportation,484,
+4850,Transit and ground passenger transportation,485,
+4860,Pipeline transportation,486,
+487S,Other transportation and support activities,487OS,
+4930,Warehousing and storage,493,
+5110,Publishing industries (including software),511,
+5120,Motion picture and sound recording industries,512,
+5130,Broadcasting and telecommunications,513,
+5140,Information and data processing services,514,
+5210,Federal Reserve banks,521CI,aggregazione
+5221,Depository credit intermediation,521CI,aggregazione
+5223,Other intermediation,521CI,aggregazione
+5229,Nondepository credit intermediation,521CI,aggregazione
+5230,"Securities, commodity contracts, and investments",523,
+524A,Insurance carriers,524,aggregazione
+5243,Insurance agencies and brokers and related services,524,aggregazione
+5250,"Funds, trusts, and other financial vehicles",525,
+5310,Real estate,ORE,ipotesi H18a: il capitale non residenziale del settore immobiliare va a Other real estate; le abitazioni (HS) ricevono il capitale residenziale
+5320,Rental and leasing services and lessors of intangible assets,532RL,
+5411,Legal services,5411,
+5415,Computer systems design and related services,5415,
+5412,"Miscellaneous professional, scientific, and technical services",5412OP,
+5500,Management of companies and enterprises,55,
+5610,Administrative and support services,561,
+5620,Waste management and remediation services,562,
+6100,Educational services,61,
+6210,Ambulatory health care services,621,
+622H,Hospitals,622,
+6230,Nursing and residential care facilities,623,
+6240,Social assistance,624,
+711A,"Performing arts, spectator sports, museums, and related activities",711AS,
+7130,"Amusements, gambling, and recreation industries",713,
+7210,Accommodation,721,
+7220,Food services and drinking places,722,
+8100,"Other services, except government",81,

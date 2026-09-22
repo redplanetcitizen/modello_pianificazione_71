@@ -49,3 +49,19 @@ percorso = "manual/M1/IOUse_Before_Redefinitions_PRO_Summary.xlsx"
 [[file]]
 release = "bea-2025-09"
 percorso = "manual/M1/IOMake_Before_Redefinitions_PRO_Summary.xlsx"
+
+[[file]]
+release = "bea-2026-09-23"
+percorso = "api/tidy/GDPbyIndustry/18.csv"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailnonres_inv1.xlsx"
+
+[[file]]
+release = "bea-2026-09-22"
+percorso = "manual/M3/detailresidential.xlsx"
+
+[[file]]
+release = "bea-2026-09-23"
+percorso = "api/tidy/NIPA/T50305.csv"
