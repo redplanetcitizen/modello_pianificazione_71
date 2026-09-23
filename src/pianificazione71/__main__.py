@@ -174,6 +174,22 @@ def cmd_e2(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_e3(a: argparse.Namespace) -> int:
+    from .passo_e3 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_e4(a: argparse.Namespace) -> int:
+    from .passo_e4 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
 def cmd_passo_c(a: argparse.Namespace) -> int:
     """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
     import importlib
@@ -208,6 +224,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("d5", help="passo D5: grafici modello / economia osservata").set_defaults(f=cmd_d5)
     sub.add_parser("e1", help="passo E1: gradualita' dell'investimento su O2").set_defaults(f=cmd_e1)
     sub.add_parser("e2", help="passo E2: orizzonte 2010-2019, confronto sul 2012-2016").set_defaults(f=cmd_e2)
+    sub.add_parser("e3", help="passo E3: funzione d'investimento stimata in O2").set_defaults(f=cmd_e3)
+    sub.add_parser("e4", help="passo E4: taratura della capacita' fuori G.17 sull'inviluppo 1997-2019").set_defaults(f=cmd_e4)
     sub.add_parser("passo-c", help="esegue tutti i sotto-passi del passo C").set_defaults(f=cmd_passo_c)
     a = ap.parse_args(argv)
     return a.f(a)

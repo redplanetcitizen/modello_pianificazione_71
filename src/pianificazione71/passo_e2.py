@@ -144,22 +144,25 @@ def esegui(cfg: Configurazione) -> Esecuzione:
         es.scrivi_byte("3_stock_per_tipo.png", _figura(
             s, {f"stock_{a}": f"Stock netto di inizio anno — {n}" for a, n in TIPI_TUTTI.items()},
             "Stock per tipo 2012-2017: orizzonte breve e orizzonte esteso", 2, 2, (14, 10)))
-        # figure dell'intero orizzonte 2010-2019: O2 invariato contro l'economia osservata
-        NOMI["O2 2010-2019 intero"] = "O2, orizzonte 2010-19"
-        COLORI["O2 2010-2019 intero"] = COLORI["O2 2010-2019"]
-        se = pd.concat([s_esteso[s_esteso.caso == "osservato"],
-                        s_esteso[s_esteso.caso == "O2 2010-2019"].assign(caso="O2 2010-2019 intero")], ignore_index=True)
+        # figure dell'intero orizzonte 2010-2019: singolo caso contro l'economia osservata
         es.scrivi_testo("serie_2010_2019.csv", _csv(s_esteso))
         nota = "Orizzonte intero 2010-2019 (stock: inizio 2010-2020); calibrazione sul 2010."
-        es.scrivi_byte("4_O2_2010_2019_produzione_consumo.png", _figura(
-            se, {"produzione_lorda": "Produzione lorda (71 industrie)", "consumo_privato": "Consumo privato"},
-            "O2 2010-2019 ed economia osservata: produzione e consumo", 1, 2, (16, 5.8), ["O2 2010-2019 intero"], nota))
-        es.scrivi_byte("5_O2_2010_2019_investimento_per_tipo.png", _figura(
-            se, {f"investimento_{a}": f"Investimento — {n}" for a, n in TIPI_TUTTI.items()},
-            "O2 2010-2019 ed economia osservata: investimento fisso per tipo", 2, 2, (16, 10), ["O2 2010-2019 intero"], nota))
-        es.scrivi_byte("6_O2_2010_2019_stock_per_tipo.png", _figura(
-            se, {f"stock_{a}": f"Stock netto di inizio anno — {n}" for a, n in TIPI_TUTTI.items()},
-            "O2 2010-2019 ed economia osservata: stock di capitale per tipo (2020 = fine orizzonte)", 2, 2, (16, 10),
-            ["O2 2010-2019 intero"], nota))
+        for n0, (caso, titolo) in ((4, ("O2 2010-2019", "O2 2010-2019")),
+                                    (7, ("penalita_0.1 2010-2019", "O2 + penalità 2010-2019"))):
+            chiave = caso + " intero"
+            NOMI[chiave], COLORI[chiave] = NOMI[caso], COLORI[caso]
+            se = pd.concat([s_esteso[s_esteso.caso == "osservato"],
+                            s_esteso[s_esteso.caso == caso].assign(caso=chiave)], ignore_index=True)
+            pref = titolo.replace(" + ", "_").replace(" ", "_").replace("à", "a").replace("-", "_")
+            es.scrivi_byte(f"{n0}_{pref}_produzione_consumo.png", _figura(
+                se, {"produzione_lorda": "Produzione lorda (71 industrie)", "consumo_privato": "Consumo privato"},
+                f"{titolo} ed economia osservata: produzione e consumo", 1, 2, (16, 5.8), [chiave], nota))
+            es.scrivi_byte(f"{n0 + 1}_{pref}_investimento_per_tipo.png", _figura(
+                se, {f"investimento_{a}": f"Investimento — {n}" for a, n in TIPI_TUTTI.items()},
+                f"{titolo} ed economia osservata: investimento fisso per tipo", 2, 2, (16, 10), [chiave], nota))
+            es.scrivi_byte(f"{n0 + 2}_{pref}_stock_per_tipo.png", _figura(
+                se, {f"stock_{a}": f"Stock netto di inizio anno — {n}" for a, n in TIPI_TUTTI.items()},
+                f"{titolo} ed economia osservata: stock di capitale per tipo (2020 = fine orizzonte)", 2, 2, (16, 10),
+                [chiave], nota))
         es.scrivi_testo("sintesi.md", "\n".join(righe_sint) + "\n")
     return es

@@ -34,6 +34,7 @@ class Opzioni:
     deriva: bool = True                    # opzione (a): κ con deriva stimata dove esiste la G.17
     theta_non_g17: float = 0.0             # deriva per le industrie senza dati G.17 (sensibilità: −0,018)
     u_non_g17: float = 1.0                 # utilizzo 2012 delle industrie senza G.17: 1 (H9) o 0,772 (H9b)
+    capacita_non_g17: str = "uniforme"     # "uniforme" (u_non_g17, H9/H9b) | "inviluppo" | "inviluppo_tendenza" (H9c, anche per HS)
     sigma_fattore: float = 1.0             # minimo delle scorte come quota del rapporto 2012 (H13: 1; H13b: 0,85)
     accumulazione: bool = True
     terminale: bool = True
@@ -57,6 +58,12 @@ class Opzioni:
     soglia_var_inv: float = 0.05           # H25b: variazione relativa annua non penalizzata
     tempi_costruzione: tuple = ()          # H26: tipi con spesa ripartita su due anni, es. ("S", "R")
     quota_primo_anno: float = 0.5          # H26: quota della spesa di un progetto nell'anno di avvio
+    # --- funzione d'investimento stimata (passo E3; disattivata per default) ---
+    regola_inv: dict | None = None         # H28: tipo → {"k": c0, "x": c1, "costante": {anno: v}}; obiettivo I_a,t = c0·K_a,t + c1·X_t + v_t
+                                           #      X_t = produzione delle industrie private (per R: produzione di HS)
+    regola_modo: str = "banda"             # "banda": (1−ε)·obiettivo ≤ I ≤ (1+ε)·obiettivo; "penalita": scarto penalizzato a gradini
+    regola_eps: float = 0.10
+    regola_tratti: tuple = ((0.05, 0.0), (0.15, 0.1), (float("inf"), 0.5))  # (ampiezza cumulata relativa a I_prec, penalità per unità relativa)
     elastico: bool = False                 # scarti di capacità penalizzati, solo per diagnosi
     penalita_elastico: float = 1e3
 
@@ -100,6 +107,7 @@ class Risultato:
     obiettivo: float | None
     opzioni: Opzioni
     tabelle: dict = field(default_factory=dict)
+    grezzi: dict = field(default_factory=dict)
     n_var: int = 0
     n_vincoli: int = 0
 
@@ -192,8 +200,12 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                 theta = float(P.theta.get(j, 0.0)) if o.deriva else 0.0
                 if o.deriva and j not in P.theta[P.theta != 0].index:
                     theta = o.theta_non_g17
-                fattore = (1 + theta) ** (t - anni[0])
                 u_j = o.u_non_g17 if (j not in P.theta[P.theta != 0].index and j != "HS") else 1.0
+                if o.capacita_non_g17 != "uniforme" and j not in set(P.g17):
+                    cinv = P.capacita_inviluppo.set_index("industria_io")
+                    u_j = float(cinv.at[j, f"u_{o.capacita_non_g17}"])
+                    theta = float(cinv.at[j, "theta_inviluppo_tendenza"]) if o.capacita_non_g17 == "inviluppo_tendenza" else 0.0
+                fattore = (1 + theta) ** (t - anni[0])
                 kap = float(P.kappa[j]) * u_j / fattore
                 if o.capacita_tipo == "leontief" and j != "HS":
                     for a in tipi_j[j]:
@@ -326,6 +338,49 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                        (1 - qa) * avvii_prec if t == anni[0] else 0.0, f"tempi_costruzione[{j},{a},{t}]")
                 prec_var = s_t
 
+    # (10) funzione d'investimento stimata (passo E3, opzionale)
+    if o.regola_inv:
+        for a, coeff in o.regola_inv.items():
+            membri = membri_tipo.get(a, [])
+            if not membri:
+                continue
+            prod = ["HS"] if a == "R" else list(P.private)
+            scala = base_2011[a] if base_2011[a] > 0 else 1.0
+            for t in anni:
+                # obiettivo = c0·ΣK + c1·ΣX + v_t  →  termini variabili (coef_ob) e costante (cost_ob)
+                coef_ob, cost_ob = {}, float(coeff.get("costante", {}).get(t, 0.0))
+                c0, c1 = float(coeff.get("k", 0.0)), float(coeff.get("x", 0.0))
+                for j in membri:
+                    idx, c = K(j, a, t)
+                    if idx is None:
+                        cost_ob += c0 * c
+                    elif c0:
+                        coef_ob[idx] = coef_ob.get(idx, 0.0) + c0
+                if c1:
+                    for j in prod:
+                        coef_ob[v[("x", j, t)]] = coef_ob.get(v[("x", j, t)], 0.0) + c1
+                I_t = {v[("I", j, a, t)]: 1.0 for j in membri}
+                if o.regola_modo == "banda":
+                    for fatt, nome, lo, hi in ((1 + o.regola_eps, "max", -INF, None), (1 - o.regola_eps, "min", None, INF)):
+                        coef = dict(I_t)
+                        for k2, val in coef_ob.items():
+                            coef[k2] = coef.get(k2, 0.0) - fatt * val
+                        rhs = fatt * cost_ob
+                        C.riga(coef, rhs if lo is None else lo, rhs if hi is None else hi, f"regola_inv_{nome}[{a},{t}]")
+                else:
+                    segno = -1.0 if massimizza else 1.0
+                    coef = dict(I_t)
+                    for k2, val in coef_ob.items():
+                        coef[k2] = coef.get(k2, 0.0) - val
+                    prec = 0.0
+                    for verso, sg in (("su", -1.0), ("giu", 1.0)):
+                        prec_amp = 0.0
+                        for k3, (amp, pen) in enumerate(o.regola_tratti):
+                            ub = INF if amp == float("inf") else (amp - prec_amp) * scala
+                            coef[C.var(f"scarto_regola_{verso}{k3}[{a},{t}]", ub=ub, costo=segno * pen / scala)] = sg
+                            prec_amp = amp
+                    C.riga(coef, cost_ob, cost_ob, f"regola_inv[{a},{t}]")
+
     # ---------------------------- obiettivo ----------------------------
     if o.obiettivo == "O1":
         for t in anni:
@@ -386,6 +441,7 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
     R.obiettivo = h.getInfo().objective_function_value
     xv, dual = np.array(sol.col_value), np.array(sol.row_dual)
     R.tabelle = estrai(P, o, v, C, xv, dual, cap_ind, tipi_j, comp_cons, liv_2012)
+    R.grezzi = {"v": v, "valori": xv, "duali": pd.Series(dual, index=C.rnomi)}  # non scritti su disco
     return R
 
 

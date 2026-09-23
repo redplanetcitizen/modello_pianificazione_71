@@ -163,3 +163,41 @@ def deriva_capacita(ctrl: pd.DataFrame, fine_stima: int = 2014, base: int = 2012
         righe.append({"anno": a, "metodo_g17": "tutti", "errore_u_senza_deriva": float(senza.mean()),
                       "errore_u_con_deriva": float(con.mean())})
     return der, pd.DataFrame(righe)
+
+
+def inviluppo_capacita(pan: pd.DataFrame, x: dict, w: pd.Series, industrie: list[str], anni, a0: int) -> pd.DataFrame:
+    """Capacità delle industrie senza dati G.17 dall'inviluppo dei massimi storici del rapporto r = x / K^cap (H9c).
+
+    K^cap_{j,t} = Σ_a w_{j,a} K_{j,a,t} (stock di inizio anno a prezzi 2012; per HS: stock residenziale).
+    Due metodi, entrambi con la traiettoria osservata ammissibile per costruzione:
+      - "inviluppo": capacità = K^cap · max_t r_{j,t} (massimo sul periodo, senza tendenza);
+      - "inviluppo_tendenza" (peak-to-peak): log r_{j,t} = α + g·t + e_t; capacità = K^cap · exp(α + g·t + max e),
+        cioè la tendenza del rapporto spostata sul massimo storico; deriva θ_j = e^g − 1.
+    Restituisce per industria l'utilizzo implicito nell'anno di calibrazione a0 (u = r_a0 / capacità_a0) e θ.
+    """
+    righe = []
+    for j in industrie:
+        sub = pan[pan["industria_io"] == j]
+        for t in anni:
+            s = sub[sub["anno"] == t]
+            if j == "HS":
+                k = float(s[s["tipo"] == "R"]["K_inizio_2012"].sum())
+            else:
+                k = float(sum(float(w.get((j, a), 0.0)) * s[s["tipo"] == a]["K_inizio_2012"].sum() for a in ("E", "S", "N")))
+            if k > 0 and t in x:
+                righe.append({"industria_io": j, "anno": t, "r": float(x[t][j]) / k})
+    d = pd.DataFrame(righe)
+    out = []
+    for j, g in d.groupby("industria_io"):
+        g = g.sort_values("anno")
+        tt = (g["anno"] - a0).to_numpy(float)
+        y = np.log(g["r"].to_numpy(float))
+        b = np.polyfit(tt, y, 1)
+        e = y - np.polyval(b, tt)
+        r0 = float(g.loc[g["anno"] == a0, "r"].iloc[0])
+        m_piatto = float(g["r"].max())
+        m_tend = float(np.exp(b[1] + e.max()))
+        out.append({"industria_io": j, "r_a0": r0, "anno_massimo": int(g.loc[g["r"].idxmax(), "anno"]),
+                    "u_inviluppo": r0 / m_piatto, "u_inviluppo_tendenza": r0 / m_tend,
+                    "theta_inviluppo_tendenza": float(np.exp(b[0]) - 1), "anno_scarto_massimo": int(g["anno"].iloc[int(e.argmax())])})
+    return pd.DataFrame(out)

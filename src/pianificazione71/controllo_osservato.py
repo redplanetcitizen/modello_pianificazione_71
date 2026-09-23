@@ -13,7 +13,8 @@ from .blocchi import COMPARTI, industrie_comparto
 from .dati_modello import TIPI, Parametri
 
 
-def controlla(P: Parametri, epsilon: float = 0.10, u_non_g17: float = 1.0, sigma_fattore: float = 1.0) -> dict[str, pd.DataFrame]:
+def controlla(P: Parametri, epsilon: float = 0.10, u_non_g17: float = 1.0, sigma_fattore: float = 1.0,
+              capacita_non_g17: str = "uniforme") -> dict[str, pd.DataFrame]:
     anni = list(P.anni)
     cap_ind = [j for j in P.kappa.index if j in P.private and j != "HS"]
     bil, cap, lav, est, sc = [], [], [], [], []
@@ -49,9 +50,14 @@ def controlla(P: Parametri, epsilon: float = 0.10, u_non_g17: float = 1.0, sigma
             kcap = sum((1.0 if a == "R" else float(P.w[(j, a)])) * K[(j, a, t)] for a in tipi)
             theta = float(P.theta.get(j, 0.0))
             u_j = 1.0 if (theta != 0.0 or j == "HS") else u_non_g17
+            e_g17 = theta != 0.0
+            if capacita_non_g17 != "uniforme" and j not in set(P.g17):
+                cinv = P.capacita_inviluppo.set_index("industria_io")
+                u_j = float(cinv.at[j, f"u_{capacita_non_g17}"])
+                theta = float(cinv.at[j, "theta_inviluppo_tendenza"]) if capacita_non_g17 == "inviluppo_tendenza" else 0.0
             u = float(P.x_oss[t][j]) * float(P.kappa[j]) * u_j / (1 + theta) ** (t - anni[0]) / kcap
             cap.append({"anno": t, "industria": j, "utilizzo_implicito": u, "violato": u > 1 + 1e-9,
-                        "g17": theta != 0.0})
+                        "g17": e_g17})
         lav.append({"anno": t, "lavoro_usato": float((P.ell[t] * P.x_oss[t]).sum()), "lavoro_disponibile": P.lavoro_tot[t],
                     "scarto_quote_max": quote_scarto})
         uso = B @ P.x_oss[t] + P.consumo_oss[t] + inv + P.pubblica[t]

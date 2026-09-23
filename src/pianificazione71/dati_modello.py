@@ -23,6 +23,7 @@ from .capacita import (
     capitale_capacita,
     controllo_g17,
     deriva_capacita,
+    inviluppo_capacita,
     kappa,
     leggi_g17,
     leggi_klems,
@@ -82,15 +83,18 @@ class Parametri:
     psi: pd.Series | None = None             # composizione per prodotto delle scorte (quota ≥ 0)
     mu: dict[int, pd.Series] = field(default_factory=dict)
     import_tot: dict[int, float] = field(default_factory=dict)
+    g17: list | None = None                  # industrie con capacità e utilizzo dalla Fed G.17
+    capacita_inviluppo: pd.DataFrame | None = None  # H9c: utilizzo implicito e deriva dall'inviluppo 1997-2019 (industrie senza G.17 e HS)
     diagnostica: dict = field(default_factory=dict)
 
 
-def costruisci(cfg: Configurazione, anni=ANNI) -> Parametri:
+def costruisci(cfg: Configurazione, anni=ANNI, inviluppo: bool = False) -> Parametri:
     """Parametri per l'orizzonte `anni` (default 2012-2016, passo D). Prezzi sempre 2012 (l'orizzonte deve contenere il 2012).
 
     Anno di calibrazione = primo anno dell'orizzonte: stock iniziale, κ (con l'utilizzo G.17 di quell'anno), σ delle scorte,
     base della deriva θ; δ è la media sull'orizzonte; i pesi w restano calibrati sul 2012 (costi d'uso KLEMS 2012).
     Con il default 2012-2016 i parametri coincidono con quelli del passo D.
+    inviluppo=True calcola anche la calibrazione della capacità dall'inviluppo dei massimi 1997-2019 (H9c).
     """
     anni = tuple(anni)
     a0 = anni[0]
@@ -172,6 +176,9 @@ def costruisci(cfg: Configurazione, anni=ANNI) -> Parametri:
     kap = kappa(kcap, xr, u, anno=a0)
     der, _ = deriva_capacita(controllo_g17(kcap, xr, kap, u, cap, base=a0), base=a0)
     P.kappa = kap.set_index("industria_io")["kappa"]  # K_cap (milioni) / x (milioni): adimensionale
+    P.g17 = sorted(set(u["industria_io"]) & set(P.kappa.index))
+    if inviluppo:
+        P.capacita_inviluppo = _inviluppo(cfg, P, a0)
     P.theta = der.set_index("industria_io")[f"deriva_annua_{a0}_{anni[-1] % 100}"].reindex(P.kappa.index).fillna(0.0)
 
     # --- lavoro, scorte, estero (C7) -------------------------------------------------------------
@@ -193,3 +200,25 @@ def costruisci(cfg: Configurazione, anni=ANNI) -> Parametri:
         P.mu[a] = (P.import_oss[a] / uso.where(uso > 0)).fillna(0.0).clip(upper=1.0)
         P.import_tot[a] = float(P.import_oss[a].sum())
     return P
+
+
+ANNI_INVILUPPO = range(1997, 2020)
+
+
+def _inviluppo(cfg: Configurazione, P: Parametri, a0: int) -> pd.DataFrame:
+    """Dati 1997-2019 per l'inviluppo dei massimi (H9c): pannello del capitale e produzione a prezzi 2012."""
+    anni_k = range(ANNI_INVILUPPO[0], ANNI_INVILUPPO[-1] + 1)
+    conc = leggi_concordanza(CONCORDANZA)
+    ser = {k: leggi_fa_dettaglio(percorso_dati(cfg, REL, v), anni=range(anni_k[0] - 1, anni_k[-1] + 1)) for k, v in FILE.items()}
+    el = {m: elementari_2012(ser[m + "1"], ser[m + "2"]) for m in "KID"}
+    pan = pd.concat([pannello(*(aggrega_io(el[m], conc, m) for m in "KID")),
+                     pannello_residenziale(percorso_dati(cfg, *FA_RES), range(anni_k[0] - 1, anni_k[-1] + 1))], ignore_index=True)
+    tidy = pd.read_csv(percorso_dati(cfg, *PREZZI))
+    x, prezzi = {}, None
+    for a in ANNI_INVILUPPO:
+        u, m = leggi_use(percorso_dati(cfg, *USE), a), leggi_make(percorso_dati(cfg, *MAKE), a)
+        prezzi = indici_prezzo(tidy, list(u.U.columns), ANNI_INVILUPPO) if prezzi is None else prezzi
+        x[a] = sistema_reale(u, m, prezzi[a]).x
+    cap_ind = [j for j in P.kappa.index if j in P.private and j != "HS"]
+    industrie = [j for j in cap_ind if j not in set(P.g17)] + ["HS"]
+    return inviluppo_capacita(pan, x, P.w, industrie, ANNI_INVILUPPO, a0)
