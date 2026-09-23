@@ -109,6 +109,43 @@ def _figura(s, variabili: dict, titolo: str, nota: str, righe: int, colonne: int
     return b.getvalue()
 
 
+def _pannello_barre(ax, s: pd.DataFrame, variabile: str, titolo: str, caso: str):
+    oss = s[(s.caso == "osservato") & (s.variabile == variabile)].set_index("anno")["valore"]
+    mod = s[(s.caso == caso) & (s.variabile == variabile)].set_index("anno")["valore"].reindex(oss.index)
+    x = range(len(oss))
+    ax.bar([i - 0.2 for i in x], oss.values, 0.4, color="#4d4d4d", label="Economia osservata")
+    ax.bar([i + 0.2 for i in x], mod.values, 0.4, color=STILI[caso]["color"], label=ETICHETTE[caso])
+    alto = max(float(oss.max()), float(mod.max()))
+    for i, (o, m) in enumerate(zip(oss.values, mod.values)):
+        if o:
+            ax.text(i + 0.2, m + alto * 0.012, f"{round((m / o - 1) * 100) + 0:+d}%", ha="center", va="bottom", fontsize=7.5,
+                    color="#333333")
+    ax.set_xticks(list(x), [str(a) for a in oss.index])
+    ax.set_ylim(0, alto * 1.12)
+    ax.set_title(titolo, fontsize=10.5)
+    ax.grid(axis="y", alpha=0.3)
+    ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}".replace(",", ".")))
+    ax.tick_params(labelsize=8.5)
+
+
+def _figura_barre(s, caso: str, variabili: dict, titolo: str, righe: int, colonne: int, dim):
+    fig, assi = plt.subplots(righe, colonne, figsize=dim, squeeze=False)
+    for ax, (var, tit) in zip(assi.flat, variabili.items()):
+        _pannello_barre(ax, s, var, tit, caso)
+        ax.set_ylabel("miliardi di dollari 2012", fontsize=8.5)
+    h, l = assi.flat[0].get_legend_handles_labels()
+    fig.legend(h, l, loc="lower center", ncol=2, fontsize=9, frameon=False, bbox_to_anchor=(0.5, 0.0))
+    fig.suptitle(titolo, fontsize=12.5, fontweight="bold")
+    fig.text(0.5, 0.075 if righe > 1 else 0.13,
+             "Etichette: scarto percentuale del modello rispetto all'osservato. Calibrazione adottata (H9b, H13b), prezzi 2012.",
+             ha="center", va="center", fontsize=7.8, color="#444444")
+    fig.tight_layout(rect=(0, 0.1 if righe > 1 else 0.18, 1, 0.95))
+    b = io.BytesIO()
+    fig.savefig(b, format="png", dpi=160)
+    plt.close(fig)
+    return b.getvalue()
+
+
 NOTA = ("Calibrazione adottata (H9b, H13b), prezzi 2012. Modello: soluzioni LP 2012–2016 con previsione perfetta. "
         "Osservato: BEA Input-Output e Fixed Assets deflazionati.\n"
         "O4 quasi coincide con l'osservato (distanza 0,013) e ne resta in gran parte coperta.")
@@ -138,6 +175,17 @@ def esegui(cfg: Configurazione) -> Esecuzione:
                 s, {f"stock_{a}": f"Stock netto di inizio anno — {t}" for a, t in TIPI_TUTTI.items()},
                 "Stock di capitale per tipo (inizio anno, 2017 = fine orizzonte)", NOTA, 2, 2, (12, 9)),
         }
+        figure.update({
+            "4_O2_produzione_consumo.png": _figura_barre(
+                s, "O2", {"produzione_lorda": "Produzione lorda (71 industrie)", "consumo_privato": "Consumo privato"},
+                "O2 ed economia osservata: produzione e consumo", 1, 2, (12, 5.2)),
+            "5_O2_investimento_per_tipo.png": _figura_barre(
+                s, "O2", {f"investimento_{a}": f"Investimento — {t}" for a, t in TIPI_TUTTI.items()},
+                "O2 ed economia osservata: investimento fisso per tipo", 2, 2, (12, 9)),
+            "6_O2_stock_per_tipo.png": _figura_barre(
+                s, "O2", {f"stock_{a}": f"Stock netto di inizio anno — {t}" for a, t in TIPI_TUTTI.items()},
+                "O2 ed economia osservata: stock di capitale per tipo (2017 = fine orizzonte)", 2, 2, (12, 9)),
+        })
         for nome, dati in figure.items():
             es.scrivi_byte(nome, dati)
         es.scrivi_testo("sintesi.md", "# M71-D5 — grafici modello / osservato\n\n" + "\n".join(f"- {n}" for n in figure) + "\n")

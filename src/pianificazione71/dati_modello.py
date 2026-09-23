@@ -68,6 +68,7 @@ class Parametri:
     phi_R: dict[int, pd.Series] = field(default_factory=dict)
     I_oss: pd.DataFrame | None = None        # industria, tipo, anno, I (FA reale)
     K0: pd.Series | None = None              # (industria, tipo) → stock inizio 2012
+    I_prec: pd.Series | None = None          # (industria, tipo) → investimento FA reale osservato nell'anno precedente l'orizzonte (base della gradualità, passo E)
     K_oss: pd.Series | None = None           # (industria, tipo, anno) → stock osservato di inizio anno, 2012-2017 (solo confronto)
     delta: pd.Series | None = None           # (industria, tipo) → δ
     w: pd.Series | None = None               # (industria, tipo) → peso capacità
@@ -84,22 +85,31 @@ class Parametri:
     diagnostica: dict = field(default_factory=dict)
 
 
-def costruisci(cfg: Configurazione) -> Parametri:
+def costruisci(cfg: Configurazione, anni=ANNI) -> Parametri:
+    """Parametri per l'orizzonte `anni` (default 2012-2016, passo D). Prezzi sempre 2012 (l'orizzonte deve contenere il 2012).
+
+    Anno di calibrazione = primo anno dell'orizzonte: stock iniziale, κ (con l'utilizzo G.17 di quell'anno), σ delle scorte,
+    base della deriva θ; δ è la media sull'orizzonte; i pesi w restano calibrati sul 2012 (costi d'uso KLEMS 2012).
+    Con il default 2012-2016 i parametri coincidono con quelli del passo D.
+    """
+    anni = tuple(anni)
+    a0 = anni[0]
+    anni_capitale = range(a0 - 1, anni[-1] + 1)
     tidy = pd.read_csv(percorso_dati(cfg, *PREZZI))
     usi, makes, reali = {}, {}, {}
     prezzi = None
-    for a in ANNI:
+    for a in anni:
         usi[a] = leggi_use(percorso_dati(cfg, *USE), a)
         makes[a] = leggi_make(percorso_dati(cfg, *MAKE), a)
-        prezzi = indici_prezzo(tidy, list(usi[a].U.columns)) if prezzi is None else prezzi
+        prezzi = indici_prezzo(tidy, list(usi[a].U.columns), anni) if prezzi is None else prezzi
         reali[a] = sistema_reale(usi[a], makes[a], prezzi[a])
-    industrie = list(usi[2012].U.columns)
+    industrie = list(usi[a0].U.columns)
     prodotti = industrie[:]  # i 71 prodotti ordinari hanno gli stessi codici delle industrie
     private = [j for j in industrie if not j.startswith("G")]
-    P = Parametri(ANNI, industrie, prodotti, private)
+    P = Parametri(anni, industrie, prodotti, private)
 
     # --- sistema e domanda finale -----------------------------------------------------------
-    for a in ANNI:
+    for a in anni:
         s = reali[a]
         P.B[a] = s.B.loc[prodotti] * 1.0                         # coefficienti: adimensionali
         P.D[a] = s.D[prodotti] * 1.0
@@ -117,22 +127,23 @@ def costruisci(cfg: Configurazione) -> Parametri:
 
     # --- capitale (C5) -----------------------------------------------------------------------
     conc = leggi_concordanza(CONCORDANZA)
-    ser = {k: leggi_fa_dettaglio(percorso_dati(cfg, REL, v), anni=ANNI_CAPITALE) for k, v in FILE.items()}
+    ser = {k: leggi_fa_dettaglio(percorso_dati(cfg, REL, v), anni=anni_capitale) for k, v in FILE.items()}
     el = {m: elementari_2012(ser[m + "1"], ser[m + "2"]) for m in "KID"}
     pan = pd.concat([pannello(*(aggrega_io(el[m], conc, m) for m in "KID")),
-                     pannello_residenziale(percorso_dati(cfg, *FA_RES), ANNI_CAPITALE)], ignore_index=True)
-    p12 = pan[pan["anno"] == 2012].set_index(["industria_io", "tipo"])
+                     pannello_residenziale(percorso_dati(cfg, *FA_RES), anni_capitale)], ignore_index=True)
+    p12 = pan[pan["anno"] == a0].set_index(["industria_io", "tipo"])
     P.K0 = p12["K_inizio_2012"] / SCALA
     # stock osservato di inizio anno t = stock di fine anno t−1 a prezzi 2012 (solo per il confronto ex post)
     P.K_oss = (pan.assign(anno=pan["anno"] + 1).set_index(["industria_io", "tipo", "anno"])["K_2012"] / SCALA).sort_index()
     d = pan.dropna(subset=["delta"]).groupby(["industria_io", "tipo"])
     P.delta = d["D_2012"].sum() / d["K_inizio_2012"].sum()
-    P.I_oss = pan[pan["anno"].isin(ANNI)][["industria_io", "tipo", "anno", "I_2012"]].assign(
+    P.I_prec = pan[pan["anno"] == a0 - 1].set_index(["industria_io", "tipo"])["I_2012"] / SCALA
+    P.I_oss = pan[pan["anno"].isin(anni)][["industria_io", "tipo", "anno", "I_2012"]].assign(
         I=lambda z: z["I_2012"] / SCALA).drop(columns="I_2012")
 
     # --- Φ reale per unità di investimento FA reale (C4) ---------------------------------------
     fa_inv = ser["I1"].assign(valore=ser["I1"]["valore"])  # costo corrente, per la stima di Φ
-    for a in ANNI:
+    for a in anni:
         u = usi[a]
         cp = composizione_peq(leggi_peq(percorso_dati(cfg, *PEQ), a), u.F["F02E"], prodotti)
         for t in TIPI:
@@ -148,35 +159,35 @@ def costruisci(cfg: Configurazione) -> Parametri:
         f"{a}_{t}": float((P.phi[(a, t)].sum(axis=0) * P.I_oss[(P.I_oss.anno == a) & (P.I_oss.tipo == t)]
                            .set_index("industria_io")["I"].reindex(industrie).fillna(0)).sum()
                           / P.I_oss[(P.I_oss.anno == a) & (P.I_oss.tipo == t)]["I"].sum())
-        for a in ANNI for t in TIPI}
+        for a in anni for t in TIPI}
 
     # --- capacità (C6), opzione (a): κ con deriva ------------------------------------------------
     rem = leggi_klems(percorso_dati(cfg, *KLEMS), CATEGORIE_CAPITALE, [2012])[2012]
     pesi, _ = pesi_costo_uso(pan, rem)
     P.w = pesi.set_index(["industria_io", "tipo"])["w"]
     kcap = capitale_capacita(pan, pesi)
-    xr = pd.DataFrame([{"industria_io": j, "anno": a, "x_reale": reali[a].x[j]} for a in ANNI for j in industrie])
-    u = utilizzo_per_industria(leggi_g17(percorso_dati(cfg, *G17_U), list(G17_IO), list(ANNI)))
-    cap = leggi_g17(percorso_dati(cfg, *G17_CAP), list(G17_IO), list(ANNI))
-    kap = kappa(kcap, xr, u)
-    der, _ = deriva_capacita(controllo_g17(kcap, xr, kap, u, cap))
+    xr = pd.DataFrame([{"industria_io": j, "anno": a, "x_reale": reali[a].x[j]} for a in anni for j in industrie])
+    u = utilizzo_per_industria(leggi_g17(percorso_dati(cfg, *G17_U), list(G17_IO), list(anni)))
+    cap = leggi_g17(percorso_dati(cfg, *G17_CAP), list(G17_IO), list(anni))
+    kap = kappa(kcap, xr, u, anno=a0)
+    der, _ = deriva_capacita(controllo_g17(kcap, xr, kap, u, cap, base=a0), base=a0)
     P.kappa = kap.set_index("industria_io")["kappa"]  # K_cap (milioni) / x (milioni): adimensionale
-    P.theta = der.set_index("industria_io")["deriva_annua_2012_16"].reindex(P.kappa.index).fillna(0.0)
+    P.theta = der.set_index("industria_io")[f"deriva_annua_{a0}_{anni[-1] % 100}"].reindex(P.kappa.index).fillna(0.0)
 
     # --- lavoro, scorte, estero (C7) -------------------------------------------------------------
-    lav = coefficienti_lavoro(fte(pd.read_csv(percorso_dati(cfg, *FTE_T)), ANNI), xr, industrie)
-    for a in ANNI:
+    lav = coefficienti_lavoro(fte(pd.read_csv(percorso_dati(cfg, *FTE_T)), anni), xr, industrie)
+    for a in anni:
         la = lav[lav["anno"] == a].set_index("industria_io")
         P.ell[a] = (la["fte_migliaia"] / (la["x_reale"] / SCALA)).reindex(industrie).fillna(0.0)  # migliaia FTE per miliardo
         P.lavoro_tot[a] = float(la["fte_migliaia"].sum())
-    sc = scorte(pd.read_csv(percorso_dati(cfg, *STOCK_T)), pd.read_csv(percorso_dati(cfg, *DEFL_T)), [2011] + list(ANNI))
+    sc = scorte(pd.read_csv(percorso_dati(cfg, *STOCK_T)), pd.read_csv(percorso_dati(cfg, *DEFL_T)), [a0 - 1] + list(anni))
     sc["stock_2012"] /= SCALA
     P.S_oss = sc
-    P.sigma = sigma(sc, xr.assign(x_reale=xr["x_reale"] / SCALA), private)
-    P.S0 = sc[sc["anno"] == 2011].set_index("riga")["stock_2012"]
-    pos = sum(P.scorte_oss[a].clip(lower=0) for a in ANNI)
+    P.sigma = sigma(sc, xr.assign(x_reale=xr["x_reale"] / SCALA), private, anno=a0)
+    P.S0 = sc[sc["anno"] == a0 - 1].set_index("riga")["stock_2012"]
+    pos = sum(P.scorte_oss[a].clip(lower=0) for a in anni)
     P.psi = pos / pos.sum()
-    for a in ANNI:
+    for a in anni:
         uso = P.B[a] @ P.x_oss[a] + P.consumo_oss[a] + P.pubblica[a] + sum(
             P.inv_oss_prodotti[(a, t)] for t in ("E", "S", "N", "R"))
         P.mu[a] = (P.import_oss[a] / uso.where(uso > 0)).fillna(0.0).clip(upper=1.0)

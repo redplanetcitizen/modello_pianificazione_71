@@ -125,20 +125,20 @@ def kappa(kcap: pd.DataFrame, x_reale: pd.DataFrame, u: pd.DataFrame, anno: int 
 
 
 def controllo_g17(kcap: pd.DataFrame, x_reale: pd.DataFrame, kap: pd.DataFrame, u: pd.DataFrame,
-                  cap_g17: pd.DataFrame) -> pd.DataFrame:
+                  cap_g17: pd.DataFrame, base: int = 2012) -> pd.DataFrame:
     """Per le industrie G.17: utilizzo implicito u* = x κ / K^cap contro u G.17; crescita della capacità."""
     m = kcap.merge(x_reale, on=["industria_io", "anno"]).merge(kap[["industria_io", "kappa"]], on="industria_io")
     m["u_implicito"] = m["x_reale"] * m["kappa"] / m["K_cap"]
     m = m.merge(u, on=["industria_io", "anno"])
-    base = m[m["anno"] == 2012].set_index("industria_io")["K_cap"]
-    m["crescita_Kcap"] = m["K_cap"] / m["industria_io"].map(base)
-    cap = cap_g17.div(cap_g17[2012], axis=0)
+    k_base = m[m["anno"] == base].set_index("industria_io")["K_cap"]
+    m["crescita_Kcap"] = m["K_cap"] / m["industria_io"].map(k_base)
+    cap = cap_g17.div(cap_g17[base], axis=0)
     m["crescita_cap_g17"] = [cap.loc[s, a] for s, a in zip(m["serie_g17"], m["anno"])]
     m["scarto_u"] = m["u_implicito"] - m["u"]
     return m
 
 
-def deriva_capacita(ctrl: pd.DataFrame, fine_stima: int = 2014) -> tuple[pd.DataFrame, pd.DataFrame]:
+def deriva_capacita(ctrl: pd.DataFrame, fine_stima: int = 2014, base: int = 2012) -> tuple[pd.DataFrame, pd.DataFrame]:
     """Deriva annua tra capacità G.17 e capitale per la capacità, per industria.
 
     θ_j = (crescita capacità G.17 / crescita K^cap)^(1/n) − 1. Con κ_{j,t} = κ_j,2012 / (1+θ_j)^(t−2012)
@@ -149,14 +149,14 @@ def deriva_capacita(ctrl: pd.DataFrame, fine_stima: int = 2014) -> tuple[pd.Data
                          values=["crescita_Kcap", "crescita_cap_g17", "u", "u_implicito"])
     metodo = ctrl.drop_duplicates("industria_io").set_index("industria_io")["metodo_g17"]
     ultimo = max(d["u"].columns)
-    theta_tutto = (d["crescita_cap_g17"][ultimo] / d["crescita_Kcap"][ultimo]) ** (1 / (ultimo - 2012)) - 1
-    theta_stima = (d["crescita_cap_g17"][fine_stima] / d["crescita_Kcap"][fine_stima]) ** (1 / (fine_stima - 2012)) - 1
-    der = pd.DataFrame({"metodo_g17": metodo, "deriva_annua_2012_16": theta_tutto,
-                        f"deriva_annua_2012_{fine_stima % 100}": theta_stima}).reset_index()
+    theta_tutto = (d["crescita_cap_g17"][ultimo] / d["crescita_Kcap"][ultimo]) ** (1 / (ultimo - base)) - 1
+    theta_stima = (d["crescita_cap_g17"][fine_stima] / d["crescita_Kcap"][fine_stima]) ** (1 / (fine_stima - base)) - 1
+    der = pd.DataFrame({"metodo_g17": metodo, f"deriva_annua_{base}_{ultimo % 100}": theta_tutto,
+                        f"deriva_annua_{base}_{fine_stima % 100}": theta_stima}).reset_index()
     righe = []
     for a in [c for c in d["u"].columns if c > fine_stima]:
         senza = (d["u_implicito"][a] - d["u"][a]).abs()
-        con = (d["u_implicito"][a] / (1 + theta_stima) ** (a - 2012) - d["u"][a]).abs()
+        con = (d["u_implicito"][a] / (1 + theta_stima) ** (a - base) - d["u"][a]).abs()
         for m, idx in metodo.groupby(metodo).groups.items():
             righe.append({"anno": a, "metodo_g17": m, "errore_u_senza_deriva": float(senza[idx].mean()),
                           "errore_u_con_deriva": float(con[idx].mean())})

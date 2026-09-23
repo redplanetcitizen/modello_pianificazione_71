@@ -198,20 +198,20 @@ def importazioni_positive(use: TavolaUse) -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Prezzi e tavole a prezzi 2012
 # ---------------------------------------------------------------------------
-def indici_prezzo(tidy_go_prezzi: pd.DataFrame, industrie: list[str]) -> pd.DataFrame:
+def indici_prezzo(tidy_go_prezzi: pd.DataFrame, industrie: list[str], anni=ANNI) -> pd.DataFrame:
     """Indici di prezzo della produzione lorda (GDP by Industry, tavola 18), ribasati al 2012 = 1.
 
     Righe: 71 prodotti ordinari (prezzo dell'industria con lo stesso codice, H5) + Used e Other
     (prezzo delle industrie private, H24). Colonne: anni.
     """
     t = tidy_go_prezzi
-    t = t[(t["Frequency"] == "A") & (t["Year"].isin(ANNI))]
+    t = t[(t["Frequency"] == "A") & (t["Year"].isin(list(anni)))]
     tab = t.pivot_table(index="Industry", columns="Year", values="value_num", aggfunc="first")
     codici = list(industrie) + [CODICE_PREZZO_SPECIALI]
     mancanti = [c for c in codici if c not in tab.index]
     if mancanti:
         raise ValueError(f"Indici di prezzo mancanti per: {mancanti}")
-    p = tab.loc[codici, list(ANNI)]
+    p = tab.loc[codici, list(anni)]
     p = p.div(p[ANNO_BASE], axis=0)
     p.index = list(industrie) + [CODICE_PREZZO_SPECIALI]
     speciali = pd.DataFrame([p.loc[CODICE_PREZZO_SPECIALI]] * 2, index=list(SPECIALI))

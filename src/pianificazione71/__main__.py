@@ -158,6 +158,22 @@ def cmd_d5(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_e1(a: argparse.Namespace) -> int:
+    from .passo_e1 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_e2(a: argparse.Namespace) -> int:
+    from .passo_e2 import esegui
+    es = esegui(carica_configurazione(a.config))
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
 def cmd_passo_c(a: argparse.Namespace) -> int:
     """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
     import importlib
@@ -190,6 +206,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("d", help="passo D: modello (controllo, O4, obiettivi, sensibilita')").set_defaults(f=cmd_d)
     sub.add_parser("d4", help="passo D4: O3 con capitale terminale a valore dello stock").set_defaults(f=cmd_d4)
     sub.add_parser("d5", help="passo D5: grafici modello / economia osservata").set_defaults(f=cmd_d5)
+    sub.add_parser("e1", help="passo E1: gradualita' dell'investimento su O2").set_defaults(f=cmd_e1)
+    sub.add_parser("e2", help="passo E2: orizzonte 2010-2019, confronto sul 2012-2016").set_defaults(f=cmd_e2)
     sub.add_parser("passo-c", help="esegue tutti i sotto-passi del passo C").set_defaults(f=cmd_passo_c)
     a = ap.parse_args(argv)
     return a.f(a)

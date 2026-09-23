@@ -51,6 +51,12 @@ class Opzioni:
     gamma_min: float = 1.0                 # per O3
     pesi_o3: str = "valore"                # "valore" (stock a prezzi 2012, decisione 22/09) | "costo_uso" (D2)
     obiettivi_o2: str = "osservato"        # "osservato" | "costante_2012"
+    # --- gradualità dell'investimento (passo E; tutte disattivate per default: O1-O4 del passo D restano invariati) ---
+    limite_var_inv: float | None = None    # H25a: (1−g)·I_{a,t−1} ≤ I_{a,t} ≤ (1+g)·I_{a,t−1}, per tipo (somma sulle industrie); I_2011 osservato
+    penalita_var_inv: float = 0.0          # H25b: penalità per unità di variazione relativa di I_a oltre la soglia (rispetto a I_{a,2011})
+    soglia_var_inv: float = 0.05           # H25b: variazione relativa annua non penalizzata
+    tempi_costruzione: tuple = ()          # H26: tipi con spesa ripartita su due anni, es. ("S", "R")
+    quota_primo_anno: float = 0.5          # H26: quota della spesa di un progetto nell'anno di avvio
     elastico: bool = False                 # scarti di capacità penalizzati, solo per diagnosi
     penalita_elastico: float = 1e3
 
@@ -276,8 +282,51 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                 C.riga({v[("K", j, a, T + 1)]: 1.0 for j in membri}, base * (1 + o.crescita_terminale), INF,
                        f"terminale[{a}]")
 
-    # ---------------------------- obiettivo ----------------------------
+    # (9) gradualità dell'investimento (passo E, opzionale)
     massimizza = o.obiettivo != "O4"
+    membri_tipo = {a: [j for j in cap_ind + ["HS"] if a in tipi_j.get(j, [])] for a in list(TIPI) + ["R"]}
+    base_2011 = {a: sum(float(P.I_prec.get((j, a), 0.0)) for j in membri_tipo[a]) for a in membri_tipo}
+    if o.limite_var_inv is not None or o.penalita_var_inv:
+        for a, membri in membri_tipo.items():
+            if not membri or base_2011[a] <= 0:
+                continue
+            for t in anni:
+                coef = {v[("I", j, a, t)]: 1.0 for j in membri}
+                prec = 0.0
+                if t == anni[0]:
+                    prec = base_2011[a]
+                else:
+                    for j in membri:
+                        coef[v[("I", j, a, t - 1)]] = -1.0
+                # coef·I = I_t − I_{t−1} (+ prec per il 2012)
+                if o.limite_var_inv is not None:
+                    g = o.limite_var_inv
+                    cs = {k: (1.0 if val > 0 else -(1 + g)) for k, val in coef.items()}
+                    C.riga(cs, -INF, (1 + g) * prec, f"inv_max[{a},{t}]")
+                    ci = {k: (1.0 if val > 0 else -(1 - g)) for k, val in coef.items()}
+                    C.riga(ci, (1 - g) * prec, INF, f"inv_min[{a},{t}]")
+                if o.penalita_var_inv:
+                    segno = -1.0 if massimizza else 1.0
+                    costo = segno * o.penalita_var_inv / base_2011[a]
+                    su1 = C.var(f"dinv_su_libera[{a},{t}]", ub=o.soglia_var_inv * base_2011[a])
+                    giu1 = C.var(f"dinv_giu_libera[{a},{t}]", ub=o.soglia_var_inv * base_2011[a])
+                    su2 = C.var(f"dinv_su[{a},{t}]", costo=costo)
+                    giu2 = C.var(f"dinv_giu[{a},{t}]", costo=costo)
+                    cp = dict(coef)
+                    cp.update({su1: -1.0, su2: -1.0, giu1: 1.0, giu2: 1.0})
+                    C.riga(cp, prec, prec, f"var_inv[{a},{t}]")
+    for a in o.tempi_costruzione:
+        qa = o.quota_primo_anno
+        for j in membri_tipo.get(a, []):
+            avvii_prec = float(P.I_prec.get((j, a), 0.0))   # progetti avviati nel 2011: ipotesi di regime (avvii = spesa 2011)
+            for t in anni:
+                s_t = C.var(f"avvii[{j},{a},{t}]")
+                C.riga({v[("I", j, a, t)]: 1.0, s_t: -qa} | ({} if t == anni[0] else {prec_var: -(1 - qa)}),
+                       (1 - qa) * avvii_prec if t == anni[0] else 0.0,
+                       (1 - qa) * avvii_prec if t == anni[0] else 0.0, f"tempi_costruzione[{j},{a},{t}]")
+                prec_var = s_t
+
+    # ---------------------------- obiettivo ----------------------------
     if o.obiettivo == "O1":
         for t in anni:
             C.costo[v[("g", t)]] = o.beta ** (t - anni[0])
