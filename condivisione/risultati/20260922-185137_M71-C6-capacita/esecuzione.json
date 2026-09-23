@@ -1,0 +1,86 @@
+{
+ "id": "20260922-185137_M71-C6-capacita",
+ "nome": "M71-C6-capacita",
+ "inizio_utc": "2026-09-22T22:51:38+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "klems": "bls-2026-09-18/BEA-BLS-industry-level-production-account-1997-2024.xlsx",
+  "g17_utilizzo": "fed-g17-2026-09-18/FRB-g17-capacity-utilization.txt",
+  "g17_capacita": "fed-g17-2026-09-18/FRB-g17-industrial-capacity.txt",
+  "anno_calibrazione": 2012,
+  "ipotesi": [
+   "H8",
+   "H8b",
+   "H9",
+   "H9a",
+   "H10"
+  ]
+ },
+ "fine_utc": "2026-09-22T22:52:01+00:00",
+ "esito": "completata",
+ "output": {
+  "deriva_capacita.csv": {
+   "bytes": 1166,
+   "sha256": "430e6b53851b0a982b31087176b6a6f10d51812bca9fc5a7187027dcc6d00e0e"
+  },
+  "deriva_fuori_campione.csv": {
+   "bytes": 390,
+   "sha256": "ed4a17b3c30142720e5bbd53a943813196b83ca067e069097eb4c7ea2bdcc7c5"
+  },
+  "pesi_costo_uso.csv": {
+   "bytes": 14590,
+   "sha256": "31e156305867635656ec4aacc5f80d959e5b871b355f9cccec85229a53f16afc"
+  },
+  "tassi_rendimento_klems.csv": {
+   "bytes": 3744,
+   "sha256": "f70a4e26b82c076ccddc65188dc5069a8a8f3161b43648e0caabc2f45f3d3e85"
+  },
+  "capitale_capacita.csv": {
+   "bytes": 10633,
+   "sha256": "fc4633cf2666c14ec3b03e3f9f877aae01a5d374d70bbedf721f8caa9ce3fe9a"
+  },
+  "kappa.csv": {
+   "bytes": 3137,
+   "sha256": "e95de9c50094390b803b2090ff8570d1ad3c363127b23a932e69dfeeab00a683"
+  },
+  "controllo_g17.csv": {
+   "bytes": 15371,
+   "sha256": "6a5d02396f2288d6cb59cc523f5d372297316f4209afcff32f89af9e7a31990b"
+  },
+  "sintesi.md": {
+   "bytes": 1895,
+   "sha256": "41481e8e6c8923fca752f6ba24d89f24ac3931f480b7e2bd7964118067a3bd6b"
+  }
+ }
+}

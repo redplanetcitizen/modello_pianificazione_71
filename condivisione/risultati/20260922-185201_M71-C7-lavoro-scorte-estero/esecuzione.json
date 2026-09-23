@@ -1,0 +1,88 @@
+{
+ "id": "20260922-185201_M71-C7-lavoro-scorte-estero",
+ "nome": "M71-C7-lavoro-scorte-estero",
+ "inizio_utc": "2026-09-22T22:52:01+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "fte": "bea-2026-09-23/api/tidy/NIPA/T60500D.csv",
+  "scorte": "bea-2026-09-23/api/tidy/NIPA/T50805B.csv",
+  "deflatori_scorte": "bea-2026-09-23/api/tidy/NIPA/T50809B.csv",
+  "klems": "bls-2026-09-18/BEA-BLS-industry-level-production-account-1997-2024.xlsx",
+  "ipotesi": [
+   "H13",
+   "H14",
+   "H14a",
+   "H15",
+   "H21",
+   "H22",
+   "D3"
+  ]
+ },
+ "fine_utc": "2026-09-22T22:52:03+00:00",
+ "esito": "completata",
+ "output": {
+  "lavoro.csv": {
+   "bytes": 13988,
+   "sha256": "f8310f9ec822a94f8a18d432ef6eff45804bdeb4923eee8f3f67e0910d289cd2"
+  },
+  "controllo_ore_klems.csv": {
+   "bytes": 1838,
+   "sha256": "344b7e3852a2ff18b350c9e82e54d481c832d67e2f782151dc8d58486a8e4f49"
+  },
+  "scorte.csv": {
+   "bytes": 3056,
+   "sha256": "34b34e5d6457515611a57d16d503c38a3fe72fdcf44582f0fe7252b02e131c3e"
+  },
+  "sigma_scorte.csv": {
+   "bytes": 891,
+   "sha256": "fea746a330fb1b60da16344021e9f4e0d61c307ecb0851f5a84d34fd65aeb2bd"
+  },
+  "controllo_scorte.csv": {
+   "bytes": 186,
+   "sha256": "d163e222bf076ac98f7970a051104c0dd6bfb61608f108cd69631741682f1064"
+  },
+  "estero.csv": {
+   "bytes": 18220,
+   "sha256": "6b0e887121c913a0d99b3aff14cc3bbb6dcb069290cda93daf1078d803a26419"
+  },
+  "saldo_estero.csv": {
+   "bytes": 320,
+   "sha256": "e4f0f86e20911c988c63c4d7a10140f15ec3a8bf68ac97f9b40d918016f29426"
+  },
+  "sintesi.md": {
+   "bytes": 2112,
+   "sha256": "0e83763e87269c3e614efc1a844f57a3a56522dd7d34058f0675e3288a67300b"
+  }
+ }
+}

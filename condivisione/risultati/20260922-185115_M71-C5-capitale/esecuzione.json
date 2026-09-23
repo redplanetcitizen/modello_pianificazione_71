@@ -1,0 +1,88 @@
+{
+ "id": "20260922-185115_M71-C5-capitale",
+ "nome": "M71-C5-capitale",
+ "inizio_utc": "2026-09-22T22:51:15+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "file": {
+   "K1": "bea-2026-09-22/manual/M3/detailnonres_stk1.xlsx",
+   "K2": "bea-2026-09-22/manual/M3/detailnonres_stk2.xlsx",
+   "I1": "bea-2026-09-22/manual/M3/detailnonres_inv1.xlsx",
+   "I2": "bea-2026-09-22/manual/M3/detailnonres_inv2.xlsx",
+   "D1": "bea-2026-09-22/manual/M3/detailnonres_dep1.xlsx",
+   "D2": "bea-2026-09-22/manual/M3/detailnonres_dep2.xlsx"
+  },
+  "residenziale": "bea-2026-09-22/manual/M3/detailresidential.xlsx",
+  "anni": [
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016
+  ],
+  "ipotesi": [
+   "H6",
+   "H11",
+   "H12",
+   "H18",
+   "H18a",
+   "H20"
+  ]
+ },
+ "fine_utc": "2026-09-22T22:51:37+00:00",
+ "esito": "completata",
+ "output": {
+  "pannello_capitale.csv": {
+   "bytes": 123299,
+   "sha256": "e00c4b5bec49c9525817604395306a5ddd4f044bc72f3867b645fc8ea5f73865"
+  },
+  "identita_accumulazione.csv": {
+   "bytes": 2517,
+   "sha256": "e81afae5ce03336300242d0c5f359fb53ee8e7f18127e14f7bef428f31493601"
+  },
+  "delta_industria_tipo.csv": {
+   "bytes": 3868,
+   "sha256": "41d3fe729ecdf105a563d4a68fb3ae403dbc11247691bda80de5abdd656576ca"
+  },
+  "serie_senza_prezzo_2012.csv": {
+   "bytes": 48,
+   "sha256": "d19b80919f77bdab5e4b5f9377dfcb3080e1b85288a5f72b02629027a9465830"
+  },
+  "sintesi.md": {
+   "bytes": 2211,
+   "sha256": "fcd98fda4e2a2bdf47a018165dd2b9158bf07206b5691eb1a8608bdffa096f10"
+  }
+ }
+}

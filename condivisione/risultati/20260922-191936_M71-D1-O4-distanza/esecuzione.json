@@ -1,0 +1,109 @@
+{
+ "id": "20260922-191936_M71-D1-O4-distanza",
+ "nome": "M71-D1-O4-distanza",
+ "inizio_utc": "2026-09-22T23:19:36+00:00",
+ "codice": {
+  "commit": "2725bd86d8e2e59de2e43b3777c91a3c486a71c3",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "varianti": {
+   "base": {
+    "u_non_g17": 1.0,
+    "sigma_fattore": 1.0
+   },
+   "variante": {
+    "u_non_g17": 0.772,
+    "sigma_fattore": 0.85
+   }
+  }
+ },
+ "fine_utc": "2026-09-22T23:19:46+00:00",
+ "esito": "completata",
+ "output": {
+  "base/aggregati.csv": {
+   "bytes": 1483,
+   "sha256": "a44ae6cd87ab10581bfadef5c152b23f79d9a1ade07f3d151aef7d620e3d67b0"
+  },
+  "base/industrie.csv": {
+   "bytes": 11323,
+   "sha256": "37ee5708b11509e7b100a9b6854affea4246a33be43b28c55dc10974b41a8f4e"
+  },
+  "base/investimento.csv": {
+   "bytes": 21859,
+   "sha256": "9275e0b303907be3e5e7fcece216c095a42b9509356fa80451f0f59a23cc7ebd"
+  },
+  "base/prezzi_ombra.csv": {
+   "bytes": 14523,
+   "sha256": "65be34b59d0118ffa0bd2a6e87d470fde176d792cb10246f129cef33e14686f2"
+  },
+  "base/vincoli_attivi.csv": {
+   "bytes": 191,
+   "sha256": "55d98abfbbe08dfc10a11170c33e72e0540f5555fbaf493f22b24b34f464c7f9"
+  },
+  "base/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "variante/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "d315f5db088f938d3d6bf94bf2c54cd97db51ecebcb5677b342334c5760125af"
+  },
+  "variante/industrie.csv": {
+   "bytes": 11360,
+   "sha256": "8c85c8743ef5c533dedd1eb37756289d60e6ebddbd0941c7f66b45403b41b83b"
+  },
+  "variante/investimento.csv": {
+   "bytes": 21833,
+   "sha256": "f36292866c157de89052a989b523d86fe1b7c57adcad4defe59094cf2315e360"
+  },
+  "variante/prezzi_ombra.csv": {
+   "bytes": 13703,
+   "sha256": "b5d90933535922f2b727c153ae8c36d916a4d19a896197e3a14bcdf630c646c2"
+  },
+  "variante/vincoli_attivi.csv": {
+   "bytes": 156,
+   "sha256": "f51e0dcc440bf12bc4e945c2ce36ce71b8c3b5a9bf5558276045e7fb8c842abc"
+  },
+  "variante/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "casi.csv": {
+   "bytes": 814,
+   "sha256": "edd447ae69e0a71223a387b769db6d5f786f4c422833a3180e2c7dcc0a027dd0"
+  },
+  "sintesi.md": {
+   "bytes": 2874,
+   "sha256": "45eb737749f87516ba9173d9791836f74454e81862e3d84aded46b27eb90b271"
+  }
+ }
+}

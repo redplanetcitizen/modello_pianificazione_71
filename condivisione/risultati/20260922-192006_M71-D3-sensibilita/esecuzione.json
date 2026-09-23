@@ -1,0 +1,407 @@
+{
+ "id": "20260922-192006_M71-D3-sensibilita",
+ "nome": "M71-D3-sensibilita",
+ "inizio_utc": "2026-09-22T23:20:06+00:00",
+ "codice": {
+  "commit": "2725bd86d8e2e59de2e43b3777c91a3c486a71c3",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "base": {
+   "obiettivo": "O1",
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85
+  },
+  "casi": {
+   "riferimento": {},
+   "capacita_leontief": {
+    "capacita_tipo": "leontief"
+   },
+   "deriva_servizi_-1.8%": {
+    "theta_non_g17": -0.018
+   },
+   "senza_deriva": {
+    "deriva": false
+   },
+   "bande_import_0": {
+    "epsilon": 0.0
+   },
+   "bande_import_25%": {
+    "epsilon": 0.25
+   },
+   "lavoro_+2%": {
+    "lavoro_scala": 1.02
+   },
+   "terminale_+5%": {
+    "crescita_terminale": 0.05
+   },
+   "beta_0.97": {
+    "beta": 0.97
+   },
+   "senza_capacita": {
+    "capacita": false
+   },
+   "senza_terminale": {
+    "terminale": false
+   },
+   "senza_terminale_scorte": {
+    "terminale_scorte": false
+   },
+   "senza_massimo_scorte": {
+    "sigma_max_fattore": null
+   }
+  }
+ },
+ "fine_utc": "2026-09-22T23:21:08+00:00",
+ "esito": "completata",
+ "output": {
+  "riferimento/aggregati.csv": {
+   "bytes": 1416,
+   "sha256": "1aeef592968fdca1f2301dffaa44c0cb301cb2698a35b245f06adc82e7590a8b"
+  },
+  "riferimento/industrie.csv": {
+   "bytes": 11477,
+   "sha256": "549d839b36da0d0c7eea0f1f2a634ff4814541a74873dd9bf4c15b4cbf5a1fb2"
+  },
+  "riferimento/investimento.csv": {
+   "bytes": 14675,
+   "sha256": "0bfa8e4a8422f68a9c3157293142ee81ca9c0862cba0d4f588f3eabbae22ba5f"
+  },
+  "riferimento/prezzi_ombra.csv": {
+   "bytes": 16784,
+   "sha256": "f121f2cd3655c4ed08df3110d3e5bea96ab219cf00658ed5101074b94b11bebe"
+  },
+  "riferimento/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "9b491eb81a8648ae8a3cbab852c9d904f4babd0159782b3d5070a9d80067ba15"
+  },
+  "riferimento/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "capacita_leontief/aggregati.csv": {
+   "bytes": 1431,
+   "sha256": "7dfca7ae7be722ddf14610f421a64493ec33a8a2af6a05a9934664bdfb428305"
+  },
+  "capacita_leontief/industrie.csv": {
+   "bytes": 11504,
+   "sha256": "b17f0611401841d6f450edc6e4dee86db79a834c76995f82f44b0a2826401326"
+  },
+  "capacita_leontief/investimento.csv": {
+   "bytes": 17431,
+   "sha256": "ff78832aae69e8885007f163bc3d9a1f981591563f8e28d9a961101951cee0cd"
+  },
+  "capacita_leontief/prezzi_ombra.csv": {
+   "bytes": 16789,
+   "sha256": "2d9ac834cadafc49a59c210c528c4549464c9af4361b57d86272e02958a78e96"
+  },
+  "capacita_leontief/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "d6d5adc08a05a8b210920df31858ab3e16fec10885d5a5abde9cfd5117efccd3"
+  },
+  "capacita_leontief/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "deriva_servizi_-1.8%/aggregati.csv": {
+   "bytes": 1415,
+   "sha256": "c09a3069fc5370d4f14c038a137da4b03e68eb7a94de2ac6de99ebda6623c838"
+  },
+  "deriva_servizi_-1.8%/industrie.csv": {
+   "bytes": 11479,
+   "sha256": "bd4902bd17ef094b1d7a6029739060fb38e19c1ee2e8f8b5c4286d6d5f10af10"
+  },
+  "deriva_servizi_-1.8%/investimento.csv": {
+   "bytes": 14818,
+   "sha256": "a7dc938ecfbef00702cd086888ce32b15e25e956ea693a04aa63ce83c8b733d4"
+  },
+  "deriva_servizi_-1.8%/prezzi_ombra.csv": {
+   "bytes": 16784,
+   "sha256": "3948faa7d1231dc14c73dff387486e75e05b5a7fa882a134bbcc5820b6fd3c39"
+  },
+  "deriva_servizi_-1.8%/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "18b68a5c461a497a5ed2d114af3604d079085a0255f90698329b3d3c4a5c5599"
+  },
+  "deriva_servizi_-1.8%/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "senza_deriva/aggregati.csv": {
+   "bytes": 1416,
+   "sha256": "5688f87163902e64cb4dc17b67912fe45367a62fd45f2dbcb2d971ef6751888f"
+  },
+  "senza_deriva/industrie.csv": {
+   "bytes": 11494,
+   "sha256": "ed896d40bad4e01fb39a780ed01c3f494acaec91f13e16a2b18324d0859dd407"
+  },
+  "senza_deriva/investimento.csv": {
+   "bytes": 14599,
+   "sha256": "2017300eb61a3ce1f041aeabb7a9dc61f5c951f5e6c7b6932439b2c41598c430"
+  },
+  "senza_deriva/prezzi_ombra.csv": {
+   "bytes": 16777,
+   "sha256": "70ed2eab03b6d8774cf74a761383923327ce1e50c7a70c38877bd2f97db17db1"
+  },
+  "senza_deriva/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "de6284fde017c415809fc02439b579a7d599542dea0a942930a4b270a3201206"
+  },
+  "senza_deriva/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "bande_import_0/aggregati.csv": {
+   "bytes": 1425,
+   "sha256": "cae1ca970b6ae844df403848ab31720a77fe1736bf73fa282183bbc08a9269a7"
+  },
+  "bande_import_0/industrie.csv": {
+   "bytes": 11495,
+   "sha256": "81f6c2e57d96cafb93b02b7d50c66ee64720b8313b553c1ce447c0d01bc76fdf"
+  },
+  "bande_import_0/investimento.csv": {
+   "bytes": 14676,
+   "sha256": "7c7e73507474c3f761b966626ca840f7a157a5d02003d33bc5fecf19cd5c529d"
+  },
+  "bande_import_0/prezzi_ombra.csv": {
+   "bytes": 16790,
+   "sha256": "b1198b0be711b7101cee9c48c160d5bc22cb30b87677b0d70a1d907f534ac0ba"
+  },
+  "bande_import_0/vincoli_attivi.csv": {
+   "bytes": 174,
+   "sha256": "16b45314142bb752f061b113dc49b0fd25da5cd7dd8b6e32c1d526047aae4628"
+  },
+  "bande_import_0/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "bande_import_25%/aggregati.csv": {
+   "bytes": 1419,
+   "sha256": "485aded0177f464b6b2d6b03116466fb64bc25a3019d6628d4c6f2289cf1b8e5"
+  },
+  "bande_import_25%/industrie.csv": {
+   "bytes": 11494,
+   "sha256": "c324fa67f46324f8533b65167edac78ffbf156efe4be41bb46d388cb00c3ee7b"
+  },
+  "bande_import_25%/investimento.csv": {
+   "bytes": 14674,
+   "sha256": "325a6acd188a222afaa926c03b9f3e24a2adde06094bff73fbce41bf9dae186c"
+  },
+  "bande_import_25%/prezzi_ombra.csv": {
+   "bytes": 16800,
+   "sha256": "88d26dfc3fd0d19975db48e91fd687be616271bdebd14d4441515813f40135b7"
+  },
+  "bande_import_25%/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "0cca4ace994d4041dc453c86dbe285e8a56e82aeb7bab064ded0242904f84ffe"
+  },
+  "bande_import_25%/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "lavoro_+2%/aggregati.csv": {
+   "bytes": 1412,
+   "sha256": "02328f89764dd7f011020c63b211e231102cdf3af4b3e6a2eb808ac76a291ef3"
+  },
+  "lavoro_+2%/industrie.csv": {
+   "bytes": 11487,
+   "sha256": "deb2c83dfaa20eab9350a3611f89638aed6a74f6e8d1feb19ac5b086557ad6c1"
+  },
+  "lavoro_+2%/investimento.csv": {
+   "bytes": 14740,
+   "sha256": "cc3ac4cfc0e38810f6d062f9f78cacee8817bd12035d2748ee052fd2b3a4a739"
+  },
+  "lavoro_+2%/prezzi_ombra.csv": {
+   "bytes": 16776,
+   "sha256": "18ece4f64ecc18b08d9d9c1eb9494fcea73e5976e49a80c9867585b4718daa0b"
+  },
+  "lavoro_+2%/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "5fbfd47ba776bd227aaf975656e9299d7302f5a1940551f7fe76f14b836a2892"
+  },
+  "lavoro_+2%/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "terminale_+5%/aggregati.csv": {
+   "bytes": 1414,
+   "sha256": "241790e6f61d9d6e13004a2915f14c4147f41f6e0c66193b98ed9b1a8de9b567"
+  },
+  "terminale_+5%/industrie.csv": {
+   "bytes": 11492,
+   "sha256": "b665bfe8febd121e85feb718dfb84454d14a0777f72c6a16982d4f91a052a4de"
+  },
+  "terminale_+5%/investimento.csv": {
+   "bytes": 14682,
+   "sha256": "d6379c042b8267f558544dc362720a28c98cec155c9547cff5bbde0b590f0c29"
+  },
+  "terminale_+5%/prezzi_ombra.csv": {
+   "bytes": 16796,
+   "sha256": "528e9419e4dc16ed421f064877781ad4fd52520e625eecfaaa43e48d66b58a88"
+  },
+  "terminale_+5%/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "bcf2d3683c50288d1c25aae9179dae5d11564e5392f787d5ca155c3efead258a"
+  },
+  "terminale_+5%/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "beta_0.97/aggregati.csv": {
+   "bytes": 1417,
+   "sha256": "34e2d1a99dd5a8e8acae62e3c2780d1b5356399c81334d085956a54e3cd92b90"
+  },
+  "beta_0.97/industrie.csv": {
+   "bytes": 11489,
+   "sha256": "5dea9619cf0314e2bb1d5c5e895dab54e7406e2289793cb81b533f4b22ecab1f"
+  },
+  "beta_0.97/investimento.csv": {
+   "bytes": 14676,
+   "sha256": "2e8df4ba73c2273980847ff78cf165f332427ed6d098fe2dcc0cf71e2649a87e"
+  },
+  "beta_0.97/prezzi_ombra.csv": {
+   "bytes": 16785,
+   "sha256": "4c513dc4921fd8446df4b5e93d1d100cf852eb49f21d1e3febfa421673906850"
+  },
+  "beta_0.97/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "9b491eb81a8648ae8a3cbab852c9d904f4babd0159782b3d5070a9d80067ba15"
+  },
+  "beta_0.97/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "senza_capacita/aggregati.csv": {
+   "bytes": 1264,
+   "sha256": "096cc80df4b9bdb1ab0ab8ee7fb4bc43ca0a58a49b93b551b228e569beaf2180"
+  },
+  "senza_capacita/industrie.csv": {
+   "bytes": 11488,
+   "sha256": "eae1ea7b50e98836e95d72157f4fe01ece963c58eadff412f65ff041e0700e93"
+  },
+  "senza_capacita/investimento.csv": {
+   "bytes": 13151,
+   "sha256": "32fc2a5c3a447cf59a1079950a12471cc48c4b1640b753ac1140a938536d608e"
+  },
+  "senza_capacita/prezzi_ombra.csv": {
+   "bytes": 16795,
+   "sha256": "f80b26eb1382da7ebb55cf741ad496e872307fb1e1d409295eff12a5c9ce986d"
+  },
+  "senza_capacita/vincoli_attivi.csv": {
+   "bytes": 196,
+   "sha256": "e5d4fb35ce5deafe476adc866807d511a2bb601a87caf8c6ba316ed5cfdd14f5"
+  },
+  "senza_capacita/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "senza_terminale/aggregati.csv": {
+   "bytes": 1357,
+   "sha256": "f1340184e0a58ace22ba473c78e8785a84ada2585bb9bfbf38ddadc6ab89d813"
+  },
+  "senza_terminale/industrie.csv": {
+   "bytes": 11484,
+   "sha256": "f4f428ac4870160a18e9875aae3058eefae244e738e4de3735888a652ef15945"
+  },
+  "senza_terminale/investimento.csv": {
+   "bytes": 14547,
+   "sha256": "8f7896024e5767e758f8db15285ba12915678d40b54cff0fbe597d618bcbbcca"
+  },
+  "senza_terminale/prezzi_ombra.csv": {
+   "bytes": 16703,
+   "sha256": "0aa44aaefc267c552ebc5c05dbaf3a041a181f9945db55f885c46cfcdeab56da"
+  },
+  "senza_terminale/vincoli_attivi.csv": {
+   "bytes": 197,
+   "sha256": "ee12ce6108b560db04c3c7cbb3177bfbe5e9a4874dcf5874e66f3b25fa1db814"
+  },
+  "senza_terminale/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "senza_terminale_scorte/aggregati.csv": {
+   "bytes": 1411,
+   "sha256": "d351f8f4918f266e5d2ac01b19885dd5e3f6c87194c78af193dbb629b9a970e9"
+  },
+  "senza_terminale_scorte/industrie.csv": {
+   "bytes": 11491,
+   "sha256": "cf416ecec06398b0c8cab7fa4848860db5e18431884e6111b6db94898045732b"
+  },
+  "senza_terminale_scorte/investimento.csv": {
+   "bytes": 14584,
+   "sha256": "9a856a1606b596cbbf941c39f533eca1d851bfd449d407db4ffe6c3d10060d0b"
+  },
+  "senza_terminale_scorte/prezzi_ombra.csv": {
+   "bytes": 16790,
+   "sha256": "98f90dd8455ca5ef7fd7c29111ceec2578b131675d9db12cb49f84a6da7d974f"
+  },
+  "senza_terminale_scorte/vincoli_attivi.csv": {
+   "bytes": 190,
+   "sha256": "05aff36326005063e78b0c3d98c71d0d4fc42d11182b4548c66e01b1d4674cc4"
+  },
+  "senza_terminale_scorte/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "senza_massimo_scorte/aggregati.csv": {
+   "bytes": 1410,
+   "sha256": "572350af128926706fbd588379ed0dcdfdbb25369daba8b407307ccd853b066a"
+  },
+  "senza_massimo_scorte/industrie.csv": {
+   "bytes": 11493,
+   "sha256": "7c9a56e951b339e0f3ef6e4bcd1ba9c0b0e5e430c1d6117f11fd042b948f851b"
+  },
+  "senza_massimo_scorte/investimento.csv": {
+   "bytes": 14661,
+   "sha256": "35329e4ff280ea8d10b22fb1f14e04203380023822d5890d091b78a9f76823df"
+  },
+  "senza_massimo_scorte/prezzi_ombra.csv": {
+   "bytes": 16787,
+   "sha256": "ead9f3cd1dd22df9437e9f91c03fb12a00235c861a47714d1f9e5bcc2e987d6c"
+  },
+  "senza_massimo_scorte/vincoli_attivi.csv": {
+   "bytes": 190,
+   "sha256": "7a17a5df5b47ed6ca902124b27638eb50afae34e901a84e5f3e2746378d74394"
+  },
+  "senza_massimo_scorte/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "casi.csv": {
+   "bytes": 2985,
+   "sha256": "d658855b1a51d52ea509b7b70ce1c76da7da59ca4772af6e85e7cac72b719c71"
+  },
+  "sintesi.md": {
+   "bytes": 1655,
+   "sha256": "118af14b72165cb5f0f47606917d5dc569a6db45a234d93e36de93cd330bcd64"
+  }
+ }
+}

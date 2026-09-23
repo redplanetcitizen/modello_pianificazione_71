@@ -1,0 +1,230 @@
+{
+ "id": "20260922-185103_M71-C4-phi",
+ "nome": "M71-C4-phi",
+ "inizio_utc": "2026-09-22T22:51:03+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "lambda": 0.05,
+  "lambda_sensibilita": [
+   0.2,
+   1.0
+  ],
+  "fa": "bea-2026-09-22/manual/M3/detailnonres_inv1.xlsx",
+  "peq": "bea-2026-09-22/manual/M4/PEQBridge_Summary.xlsx",
+  "use": "bea-2025-09/manual/M1/IOUse_Before_Redefinitions_PRO_Summary.xlsx",
+  "ipotesi": [
+   "H13",
+   "H18",
+   "H18a",
+   "H19",
+   "D1"
+  ]
+ },
+ "fine_utc": "2026-09-22T22:51:10+00:00",
+ "esito": "completata",
+ "output": {
+  "phi/2012/composizione_peq.csv": {
+   "bytes": 6969,
+   "sha256": "c7d97ba12facff8f76407e9efd03990d2eed5af5fc6c7359a56996d1e0fefaee"
+  },
+  "phi/2012/X_E.csv": {
+   "bytes": 27016,
+   "sha256": "ae126a2e12692734bdce892eef856d7cb1abfbd04129656cc723882803c7c6ac"
+  },
+  "phi/2012/Phi_E.csv": {
+   "bytes": 31270,
+   "sha256": "f76f529fd4337ccdae7e55b58382136f120f2ac19b9fb288257d15d165c3c071"
+  },
+  "phi/2012/X_S.csv": {
+   "bytes": 14802,
+   "sha256": "817ff70b71dcbadba582977ac95e5363b91de90c3e09b88bbf3cb05f56356247"
+  },
+  "phi/2012/Phi_S.csv": {
+   "bytes": 15697,
+   "sha256": "b4ca94f1811575634e6e05eb51820433ed1c8167df686d39f665fe30fc65dbd7"
+  },
+  "phi/2012/X_N.csv": {
+   "bytes": 19462,
+   "sha256": "d87e204e525ab960c88e91fa5b0b1e8e012ed6c5c38083a84581c97df907ae6c"
+  },
+  "phi/2012/Phi_N.csv": {
+   "bytes": 21436,
+   "sha256": "cb157a7bb223c7968ae042979643ee9c98e9b29de8557e3760b3223142995d72"
+  },
+  "phi/2012/phi_R.csv": {
+   "bytes": 706,
+   "sha256": "c1111adcb87192cbb507ebae64f7eb452f0e8d3eb3879567cf4c1558cdc21776"
+  },
+  "phi/2013/composizione_peq.csv": {
+   "bytes": 6965,
+   "sha256": "8e93e48648ebc4c2814fdc8aeef4ccf0b0d240d03fc452c2babc1851c3fdd1aa"
+  },
+  "phi/2013/X_E.csv": {
+   "bytes": 27039,
+   "sha256": "b2bb7e3bb046838142d02afb2927226ef442f6ecdb2d0303e6987971e0819e38"
+  },
+  "phi/2013/Phi_E.csv": {
+   "bytes": 31260,
+   "sha256": "202b16e7eef4f5364a1f1943c4a5b48f9141ca9b35b17ab775755d267f379fe7"
+  },
+  "phi/2013/X_S.csv": {
+   "bytes": 14765,
+   "sha256": "31191439c0892d4d781b63a30faa8a3a6d0d6e2d913b381f4adf4541bc30bd49"
+  },
+  "phi/2013/Phi_S.csv": {
+   "bytes": 15639,
+   "sha256": "faffb6a2a40cf5e682b22548fe0f450b0b13ec6042eab800bfb85b1680d89080"
+  },
+  "phi/2013/X_N.csv": {
+   "bytes": 19456,
+   "sha256": "3957cd40e3d95a83bf29b46a87e0431bb635526c52152c62d72219ca92705598"
+  },
+  "phi/2013/Phi_N.csv": {
+   "bytes": 21435,
+   "sha256": "b7413dd697993e4e9f2d4a994a9f2737fdb287de4282b5bd51306be88dfa212c"
+  },
+  "phi/2013/phi_R.csv": {
+   "bytes": 707,
+   "sha256": "17da17c5ff47427e01216a19b150781344a202803c43bea5fe5bd0fc11619d7c"
+  },
+  "phi/2014/composizione_peq.csv": {
+   "bytes": 6971,
+   "sha256": "34943e46a70ae1005756fb7f44f11d55e4a4be65bea40e3f2dc0244333aaf79b"
+  },
+  "phi/2014/X_E.csv": {
+   "bytes": 27014,
+   "sha256": "788d70520e9840ba7966664e4973f0b638295a12ea1fb189c4310d99191cd2c1"
+  },
+  "phi/2014/Phi_E.csv": {
+   "bytes": 31254,
+   "sha256": "62a7ba6881ac0f7ce004923d4d0bd538fe7998eaf3a70a6a430e4c9f98c1b0ab"
+  },
+  "phi/2014/X_S.csv": {
+   "bytes": 14761,
+   "sha256": "a8b6a7459ddacc169d17a3bb3c3bb89bfa974e2bc5733af1f318aa657a73ee2c"
+  },
+  "phi/2014/Phi_S.csv": {
+   "bytes": 15646,
+   "sha256": "ea3cb8f8eda750313ffb9a3ce746dd1ce32e5c1d9f6450c491ad011704fb3367"
+  },
+  "phi/2014/X_N.csv": {
+   "bytes": 19436,
+   "sha256": "4b452c305ac3f04aeaa9415a9d8d0a98fb0b81ac6d0ea91fdb8e1db6bcaaaa3c"
+  },
+  "phi/2014/Phi_N.csv": {
+   "bytes": 21424,
+   "sha256": "6a7e1a8b5f2ebc2b5864976891b30abbb0cd5cba3e2dc2cb0bc8b2873ee0f6e5"
+  },
+  "phi/2014/phi_R.csv": {
+   "bytes": 708,
+   "sha256": "1d05d79bf501ed3a69a53bc7b8f2a6d886046c4dd97f056f894c6b22c56db962"
+  },
+  "phi/2015/composizione_peq.csv": {
+   "bytes": 6960,
+   "sha256": "bf34e433d6136ce5e40b4a43a9e5816e7cf45ee81d2d429826915939667e174b"
+  },
+  "phi/2015/X_E.csv": {
+   "bytes": 27004,
+   "sha256": "33d96db1f0f9a3e0590c6e31c50a23c8eb4f2256ce3c752ac37aee231298145f"
+  },
+  "phi/2015/Phi_E.csv": {
+   "bytes": 31261,
+   "sha256": "d4c0ac9ece845ef1659103d3f15201e17fd87d6c429dca6636aaa649d41901c2"
+  },
+  "phi/2015/X_S.csv": {
+   "bytes": 14741,
+   "sha256": "fc6056aa6968ee97a5cd16541e44982deb229379f9e58209043ee42defb77664"
+  },
+  "phi/2015/Phi_S.csv": {
+   "bytes": 15697,
+   "sha256": "e38bf6f56914692abd3d21cd10e5b7465cda9328cc77dfcaf9f89656f84cc011"
+  },
+  "phi/2015/X_N.csv": {
+   "bytes": 19417,
+   "sha256": "bdf8a49b94ebf44cc8544d32a2162403cea31c3e31144ee3e57f005a6bb2e0b4"
+  },
+  "phi/2015/Phi_N.csv": {
+   "bytes": 21429,
+   "sha256": "e113f260c5fb091b93eeb849fb5985750bfb2c88db1e385872ad97073fb8270a"
+  },
+  "phi/2015/phi_R.csv": {
+   "bytes": 708,
+   "sha256": "9f5c0dbef9aafef454858304b01467e3683fde1ccab18a06d69c6db714d6ed6e"
+  },
+  "phi/2016/composizione_peq.csv": {
+   "bytes": 6955,
+   "sha256": "5514596fa5d2dff53f987cbd4f3f5c073baae9a6a414a9a80e318976afabf668"
+  },
+  "phi/2016/X_E.csv": {
+   "bytes": 27054,
+   "sha256": "0d0845c29cb5f204d0a36b8d5a2393ad59df9f2b313025667506bc1fafe9185b"
+  },
+  "phi/2016/Phi_E.csv": {
+   "bytes": 31302,
+   "sha256": "e007c1da6e4c1f35c6fa82624129c0fceebf4e91edf0cb804635144d1787748e"
+  },
+  "phi/2016/X_S.csv": {
+   "bytes": 14721,
+   "sha256": "4b4367b70ba8307abbb911a6db8ce2bfbb654b0d62137255b8906ca80b8826a2"
+  },
+  "phi/2016/Phi_S.csv": {
+   "bytes": 15693,
+   "sha256": "49cb306f34e32faa04efd3c82548a49c05c2e42db830536bd2de4bf4b6f5ea13"
+  },
+  "phi/2016/X_N.csv": {
+   "bytes": 19401,
+   "sha256": "9a7987096d37d1fcbd2323ce3af4760d4693bcb37b5b2c46d9391a44ab930455"
+  },
+  "phi/2016/Phi_N.csv": {
+   "bytes": 21396,
+   "sha256": "025bfc284ea70f4bc180776583aa38ff86412fe720c324c8e16f0bc2e6b977ad"
+  },
+  "phi/2016/phi_R.csv": {
+   "bytes": 711,
+   "sha256": "8bdc50b2070be274a52912cf5d44872914902413a34351934270d51267f99705"
+  },
+  "diagnostica.csv": {
+   "bytes": 1331,
+   "sha256": "4df3f093752ce12121815ffcd3ea7b8da7b115469cb81fca2644312edfaff45c"
+  },
+  "sensibilita_struttura_iniziale.csv": {
+   "bytes": 735,
+   "sha256": "95ad99d1f23fdf96b5a627f0393cd727efa60e11930443b6a2f63fc4e6cb0022"
+  },
+  "sintesi.md": {
+   "bytes": 1347,
+   "sha256": "5b6651bab222a43a46742d4e91db5354e94e2796609d6c0df921b787edc486af"
+  }
+ }
+}

@@ -1,0 +1,231 @@
+{
+ "id": "20260922-204413_M71-D4-O3-valore",
+ "nome": "M71-D4-O3-valore",
+ "inizio_utc": "2026-09-23T00:44:13+00:00",
+ "codice": {
+  "commit": "3b3a9be8b7142825420c2ba0288e7fcd514d0452",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "O3_valore": {
+   "obiettivo": "O3",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "valore",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  },
+  "O3_costo_uso": {
+   "obiettivo": "O3",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "costo_uso",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  },
+  "O1": {
+   "obiettivo": "O1",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "valore",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  }
+ },
+ "fine_utc": "2026-09-23T00:44:28+00:00",
+ "esito": "completata",
+ "output": {
+  "O3_valore/aggregati.csv": {
+   "bytes": 1355,
+   "sha256": "08c0a5fe8a011ede01c8b1cf69efd4dd7a790e7fc34a45db171bcef56cae5053"
+  },
+  "O3_valore/industrie.csv": {
+   "bytes": 11484,
+   "sha256": "2e56b6c6c8d79b3bd1f30d4844952d6584300d8f56a9af7c96a6e0f06a590c1b"
+  },
+  "O3_valore/investimento.csv": {
+   "bytes": 14467,
+   "sha256": "5c44c92e6deca0f55751dacbc1e27c49ebc574c3e6e98cfe01ddf8bc7cd66ba1"
+  },
+  "O3_valore/prezzi_ombra.csv": {
+   "bytes": 15537,
+   "sha256": "5d20f18055c6d3d85a35eadaf26db30560d559ca366750b852a6013dd07e7bfa"
+  },
+  "O3_valore/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "900a4553d623ae2f93faebb570bc025dbe94b2478c75a905a87eb0ebfdb8d152"
+  },
+  "O3_valore/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "O3_valore/capitale_terminale.csv": {
+   "bytes": 5969,
+   "sha256": "72859c8d135d38e2f9afde447a4621e92ed4bc35293fae002ab4d6c98cbc6eec"
+  },
+  "O3_costo_uso/aggregati.csv": {
+   "bytes": 1360,
+   "sha256": "2f20dc5d52e3c614eb7133a8da034fef79aa314b54047e152e53fadf05e5fd18"
+  },
+  "O3_costo_uso/industrie.csv": {
+   "bytes": 11484,
+   "sha256": "60c2d055f9388161e6fa5a29a8b30a1f7efc73552cdf38c37ae5cea8dfb4874a"
+  },
+  "O3_costo_uso/investimento.csv": {
+   "bytes": 14143,
+   "sha256": "47b79e6a30a5aa4f8ce7f4b269397fd3662defccd460f8bbced027f31ecb23c8"
+  },
+  "O3_costo_uso/prezzi_ombra.csv": {
+   "bytes": 15349,
+   "sha256": "f3bd1b2feea9829b61938faa3772d61c42e69c034b2a8c159b19cb271ee836a0"
+  },
+  "O3_costo_uso/vincoli_attivi.csv": {
+   "bytes": 207,
+   "sha256": "81fdc075bdc1985332315e059e287e1bbe2137b05a2846fb6f1b696d27f7e7c4"
+  },
+  "O3_costo_uso/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "O3_costo_uso/capitale_terminale.csv": {
+   "bytes": 5983,
+   "sha256": "336e2437319ef271be0e96e2e56727af0d656786ba71479336bf4bd668cc54b3"
+  },
+  "O1/aggregati.csv": {
+   "bytes": 1416,
+   "sha256": "1aeef592968fdca1f2301dffaa44c0cb301cb2698a35b245f06adc82e7590a8b"
+  },
+  "O1/industrie.csv": {
+   "bytes": 11477,
+   "sha256": "549d839b36da0d0c7eea0f1f2a634ff4814541a74873dd9bf4c15b4cbf5a1fb2"
+  },
+  "O1/investimento.csv": {
+   "bytes": 14675,
+   "sha256": "0bfa8e4a8422f68a9c3157293142ee81ca9c0862cba0d4f588f3eabbae22ba5f"
+  },
+  "O1/prezzi_ombra.csv": {
+   "bytes": 16784,
+   "sha256": "f121f2cd3655c4ed08df3110d3e5bea96ab219cf00658ed5101074b94b11bebe"
+  },
+  "O1/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "9b491eb81a8648ae8a3cbab852c9d904f4babd0159782b3d5070a9d80067ba15"
+  },
+  "O1/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "O1/capitale_terminale.csv": {
+   "bytes": 5960,
+   "sha256": "7fe7dbaa764c6637a1324a5ec9be6cd44f50fab8d5983a18955c7ee774d3ccad"
+  },
+  "casi.csv": {
+   "bytes": 1311,
+   "sha256": "e70ce7be9a3002b7cb323e00826877015499f9f579db375e647e7f274a993097"
+  },
+  "sintesi.md": {
+   "bytes": 4651,
+   "sha256": "62ed4507d03473d999cb81d393d51737024bffce99ccce742c7070ff5fd0051b"
+  }
+ }
+}

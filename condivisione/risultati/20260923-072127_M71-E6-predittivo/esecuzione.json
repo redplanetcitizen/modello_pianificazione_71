@@ -1,0 +1,1750 @@
+{
+ "id": "20260923-072127_M71-E6-predittivo",
+ "nome": "M71-E6-predittivo",
+ "inizio_utc": "2026-09-23T11:21:27+00:00",
+ "codice": {
+  "commit": "4e163597d3b8e7f660cf7a2a33ace20797eb07a0",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "rapida": false,
+  "H_max": 5,
+  "origini": [
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018
+  ],
+  "SIMULATION_YEAR_MIN": 2008,
+  "SIMULATION_YEAR_MAX": 2019,
+  "configurazioni": {
+   "P1|E6|agg|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|E6|agg|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|agg|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|agg+ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|E6|agg+ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|agg+ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|E6|ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|nessuna|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|E6|nessuna|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|E6|nessuna|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.2,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|agg|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|stretto|agg|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|agg|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|agg+ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|stretto|agg+ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|agg+ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|stretto|ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|nessuna|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|stretto|nessuna|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|stretto|nessuna|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.95,
+      1.0
+     ],
+     [
+      0.05,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|agg|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|largo|agg|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|agg|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|agg+ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|largo|agg+ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|agg+ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|largo|ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|nessuna|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|largo|nessuna|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|largo|nessuna|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.3,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|agg|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto100|agg|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|agg|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|agg+ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto100|agg+ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|agg+ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto100|ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|nessuna|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto100|nessuna|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto100|nessuna|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|agg|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto110|agg|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|agg|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|agg+ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto110|agg+ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|agg+ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.05,
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|ind|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto110|ind|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|ind|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "penalita_var_inv_ind": 0.05,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|nessuna|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P1|tetto110|nessuna|T2": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "terminale": false,
+    "valore_terminale": 1e-05
+   },
+   "P1|tetto110|nessuna|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "O2",
+    "tratti_o2": [
+     [
+      0.9,
+      1.0
+     ],
+     [
+      0.1,
+      0.5
+     ],
+     [
+      0.1,
+      0.1
+     ]
+    ],
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|lx0.5|li0.1|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 0.5,
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P2|lx0.5|li0.1|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 0.5,
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|lx0.5|li0.5|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 0.5,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P2|lx0.5|li0.5|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 0.5,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|lx2.0|li0.1|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 2.0,
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P2|lx2.0|li0.1|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 2.0,
+    "penalita_var_inv": 0.1,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|lx2.0|li0.5|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 2.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P2|lx2.0|li0.5|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 2.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|inv1.0|m0.0|S0.0|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 1.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "p2_lambda_inv": 1.0,
+    "p2_lambda_m": 0.0,
+    "p2_lambda_S": 0.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P2|inv1.0|m0.0|S0.0|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 1.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "p2_lambda_inv": 1.0,
+    "p2_lambda_m": 0.0,
+    "p2_lambda_S": 0.0,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|inv1.0|m1.0|S1.0|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 1.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "p2_lambda_inv": 1.0,
+    "p2_lambda_m": 1.0,
+    "p2_lambda_S": 1.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   },
+   "P2|inv1.0|m1.0|S1.0|T3": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 1.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "p2_lambda_inv": 1.0,
+    "p2_lambda_m": 1.0,
+    "p2_lambda_S": 1.0,
+    "terminale": true,
+    "valore_terminale": 1e-05
+   },
+   "P2|uniformi|li0.5|T1": {
+    "u_non_g17": 1.0,
+    "capacita_non_g17": "uniforme",
+    "sigma_fattore": 0.85,
+    "sigma_max_fattore": 1.2,
+    "obiettivo": "P2",
+    "p2_pesi": "uniformi",
+    "p2_lambda_c": 1.0,
+    "p2_lambda_x": 1.0,
+    "penalita_var_inv": 0.5,
+    "soglia_var_inv": 0.0,
+    "terminale": true,
+    "valore_terminale": 0.0
+   }
+  },
+  "robuste": {
+   "P3|q25": 0.25,
+   "P3|q75": 0.75
+  },
+  "alfa": {
+   "produzione": 0.3,
+   "consumo": 0.3,
+   "investimento_tipo": 0.2,
+   "stock_tipo": 0.1,
+   "importazioni": 0.05,
+   "scorte": 0.05
+  }
+ },
+ "fine_utc": "2026-09-23T12:37:04+00:00",
+ "esito": "completata",
+ "output": {
+  "osservato.csv": {
+   "bytes": 257407,
+   "sha256": "d80de86f5ecc77e88102a1166361f430a0b935d1aafa4a12d06abe3bf7eb0d09"
+  },
+  "previsioni_aggregati_tutti_i_casi.csv": {
+   "bytes": 2892019,
+   "sha256": "a522a4f1771105bed65bde95b815c4a98be1b92565a6c0d472a8535969cdde1f"
+  },
+  "previsioni_dettaglio_casi_principali.csv": {
+   "bytes": 16752260,
+   "sha256": "2464949b3104c48ae4714437020db782bac4316acab973b10a9c68fd780e733f"
+  },
+  "errori_dettaglio_casi_principali.csv": {
+   "bytes": 33613452,
+   "sha256": "47a5459246d31d5236b970059ff5ed93c77df3003dbd7890ee2f625c7a1e90ac"
+  },
+  "metriche_A_2008_2019.csv": {
+   "bytes": 529027,
+   "sha256": "55be3d3a8eba2295ca0b31ac753592e641e5ec491f25782c59d2f581aa9f8eca"
+  },
+  "sintesi_S_A_2008_2019.csv": {
+   "bytes": 43060,
+   "sha256": "0a6e70225abdfb4fa526600c4faf1151253229d6475a2cc9449e81d51707a6e5"
+  },
+  "metriche_B_2010_2019.csv": {
+   "bytes": 527157,
+   "sha256": "f4c093e29725af71940953a75b5c2ea61144243a2626725888c26a43cdeb321d"
+  },
+  "sintesi_S_B_2010_2019.csv": {
+   "bytes": 43092,
+   "sha256": "63f2ccc25c0297ee21be6172d04050d811784617ec1787704a8957e6ebaf8b90"
+  },
+  "metriche_C_2012_2016_origine_2011.csv": {
+   "bytes": 512382,
+   "sha256": "99e4754bb7c3c0114ce767f9f941760ef7facdfe31197e258a8ae54894dc9ff2"
+  },
+  "sintesi_S_C_2012_2016_origine_2011.csv": {
+   "bytes": 42749,
+   "sha256": "775eebc0d48c80865dc6b781172bcd153292ff1def6829f922e8f8aa9ff85cc7"
+  },
+  "metriche_C_2012_2016.csv": {
+   "bytes": 105084,
+   "sha256": "0f5f9e5dd99ac8d95f0121509e7ace29feea69446b77396df403cc563ca013d9"
+  },
+  "sintesi_S_C_2012_2016.csv": {
+   "bytes": 8721,
+   "sha256": "276918470323f12e3ee5aaec4d0749705556a74afd8f2734bf20d4e718bac243"
+  },
+  "S_per_origine_h1.csv": {
+   "bytes": 96998,
+   "sha256": "b531bb25083ca2223d3032979d707111634a0b493ae2e011710785039706a5e1"
+  },
+  "selezione_annidata.csv": {
+   "bytes": 583,
+   "sha256": "a1f63f50d46705ec4cf1266477b747cfbaab0b1731fed8bf0a4da857e76767f2"
+  },
+  "diagnostica.json": {
+   "bytes": 1375138,
+   "sha256": "5e754783f55635d4d954036de74910b3d51af75e88fae7149c935f24e60ea850"
+  },
+  "tempi.csv": {
+   "bytes": 37787,
+   "sha256": "d41c247528f5d6fce2d1f6351392e488a3a0f8c90889a975f691a6fcd71d20d8"
+  },
+  "note_origini.json": {
+   "bytes": 79539,
+   "sha256": "dee10e833a74580cb6390981cec615cc711130b4502df2cb62f8af9fabbea67b"
+  },
+  "sintesi.md": {
+   "bytes": 23732,
+   "sha256": "ab4aabbca770f80b3d5afc978ad7034b51b88db356e69e1e442cbede66105f1f"
+  }
+ }
+}

@@ -1,0 +1,417 @@
+caso,variabile,anno,valore
+osservato,produzione_lorda,2010,27873.02677
+osservato,consumo_privato,2010,10803.39685
+osservato,investimento_E,2010,787.641367
+osservato,investimento_S,2010,397.7260542
+osservato,investimento_N,2010,589.2146946
+osservato,investimento_R,2010,382.9823414
+osservato,produzione_lorda,2011,28497.84411
+osservato,consumo_privato,2011,10932.21536
+osservato,investimento_E,2011,889.147231
+osservato,investimento_S,2011,411.1623063
+osservato,investimento_N,2011,625.6788907
+osservato,investimento_R,2011,382.3305865
+osservato,produzione_lorda,2012,29232.151
+osservato,consumo_privato,2012,11065.391
+osservato,investimento_E,2012,979.968
+osservato,investimento_S,2012,461.451
+osservato,investimento_N,2012,655.697
+osservato,investimento_R,2012,432.014
+osservato,produzione_lorda,2013,29888.3702
+osservato,consumo_privato,2013,11221.41039
+osservato,investimento_E,2013,1040.300973
+osservato,investimento_S,2013,467.9064184
+osservato,investimento_N,2013,694.3590635
+osservato,investimento_R,2013,486.640999
+osservato,produzione_lorda,2014,30756.33925
+osservato,consumo_privato,2014,11485.59399
+osservato,investimento_E,2014,1120.873071
+osservato,investimento_S,2014,519.2634825
+osservato,investimento_N,2014,736.3419464
+osservato,investimento_R,2014,508.1175307
+osservato,produzione_lorda,2015,31442.76287
+osservato,consumo_privato,2015,11875.06634
+osservato,investimento_E,2015,1162.908228
+osservato,investimento_S,2015,515.2763645
+osservato,investimento_N,2015,771.8410725
+osservato,investimento_R,2015,562.3000943
+osservato,produzione_lorda,2016,32015.74003
+osservato,consumo_privato,2016,12189.77949
+osservato,investimento_E,2016,1160.192463
+osservato,investimento_S,2016,494.6857711
+osservato,investimento_N,2016,845.5307864
+osservato,investimento_R,2016,602.4324513
+osservato,produzione_lorda,2017,32757.69183
+osservato,consumo_privato,2017,12451.96078
+osservato,investimento_E,2017,1217.722438
+osservato,investimento_S,2017,505.3221883
+osservato,investimento_N,2017,902.5941762
+osservato,investimento_R,2017,629.0185563
+osservato,produzione_lorda,2018,33764.33955
+osservato,consumo_privato,2018,12714.17167
+osservato,investimento_E,2018,1277.112406
+osservato,investimento_S,2018,541.3342036
+osservato,investimento_N,2018,984.9626808
+osservato,investimento_R,2018,627.4769191
+osservato,produzione_lorda,2019,34380.93056
+osservato,consumo_privato,2019,12936.55877
+osservato,investimento_E,2019,1294.274697
+osservato,investimento_S,2019,552.0009372
+osservato,investimento_N,2019,1064.490259
+osservato,investimento_R,2019,622.2039545
+osservato,stock_E,2010,5253.682314
+osservato,stock_S,2010,11966.29598
+osservato,stock_N,2010,2163.778443
+osservato,stock_R,2010,16313.21928
+osservato,stock_E,2011,5326.714292
+osservato,stock_S,2011,11994.62152
+osservato,stock_N,2011,2227.548387
+osservato,stock_R,2011,16316.06153
+osservato,stock_E,2012,5482.556292
+osservato,stock_S,2012,12034.73719
+osservato,stock_N,2012,2308.266901
+osservato,stock_R,2012,16320.95131
+osservato,stock_E,2013,5697.245
+osservato,stock_S,2013,12111.938
+osservato,stock_N,2013,2392.597
+osservato,stock_R,2013,16352.383
+osservato,stock_E,2014,5939.767384
+osservato,stock_S,2014,12201.77995
+osservato,stock_N,2014,2486.697176
+osservato,stock_R,2014,16463.18883
+osservato,stock_E,2015,6224.30194
+osservato,stock_S,2015,12338.34192
+osservato,stock_N,2015,2591.449439
+osservato,stock_R,2015,16592.58793
+osservato,stock_E,2016,6509.75935
+osservato,stock_S,2016,12467.24791
+osservato,stock_N,2016,2698.174801
+osservato,stock_R,2016,16773.35508
+osservato,stock_E,2017,6754.034715
+osservato,stock_S,2017,12574.478
+osservato,stock_N,2017,2838.099865
+osservato,stock_R,2017,16989.36543
+osservato,stock_E,2018,7014.004155
+osservato,stock_S,2018,12674.4067
+osservato,stock_N,2018,2985.826491
+osservato,stock_R,2018,17164.48709
+osservato,stock_E,2019,7298.641131
+osservato,stock_S,2019,12820.10486
+osservato,stock_N,2019,3159.392321
+osservato,stock_R,2019,17362.16861
+osservato,stock_E,2020,7562.557739
+osservato,stock_S,2020,12977.54794
+osservato,stock_N,2020,3351.575921
+osservato,stock_R,2020,17582.30423
+O2 H29_valore,produzione_lorda,2010,28272.90347
+O2 H29_valore,consumo_privato,2010,11300.81368
+O2 H29_valore,investimento_E,2010,690.5201211
+O2 H29_valore,investimento_S,2010,490.5244681
+O2 H29_valore,investimento_N,2010,544.7366734
+O2 H29_valore,investimento_R,2010,414.9170341
+O2 H29_valore,produzione_lorda,2011,29058.6104
+O2 H29_valore,consumo_privato,2011,11480.98125
+O2 H29_valore,investimento_E,2011,723.4020316
+O2 H29_valore,investimento_S,2011,513.8827761
+O2 H29_valore,investimento_N,2011,516.0663222
+O2 H29_valore,investimento_R,2011,434.6749881
+O2 H29_valore,produzione_lorda,2012,29829.64418
+O2 H29_valore,consumo_privato,2012,11655.37728
+O2 H29_valore,investimento_E,2012,756.2839421
+O2 H29_valore,investimento_S,2012,537.2410841
+O2 H29_valore,investimento_N,2012,487.395971
+O2 H29_valore,investimento_R,2012,450.3257774
+O2 H29_valore,produzione_lorda,2013,30566.12836
+O2 H29_valore,consumo_privato,2013,11934.09082
+O2 H29_valore,investimento_E,2013,789.1658527
+O2 H29_valore,investimento_S,2013,560.5993921
+O2 H29_valore,investimento_N,2013,516.0663221
+O2 H29_valore,investimento_R,2013,440.7895855
+O2 H29_valore,produzione_lorda,2014,31409.6509
+O2 H29_valore,consumo_privato,2014,12322.54286
+O2 H29_valore,investimento_E,2014,822.0477632
+O2 H29_valore,investimento_S,2014,583.9577001
+O2 H29_valore,investimento_N,2014,544.7366734
+O2 H29_valore,investimento_R,2014,446.2289921
+O2 H29_valore,produzione_lorda,2015,31955.34373
+O2 H29_valore,consumo_privato,2015,12783.67768
+O2 H29_valore,investimento_E,2015,854.9296737
+O2 H29_valore,investimento_S,2015,607.3160081
+O2 H29_valore,investimento_N,2015,573.4070246
+O2 H29_valore,investimento_R,2015,465.9869461
+O2 H29_valore,produzione_lorda,2016,32661.03828
+O2 H29_valore,consumo_privato,2016,13114.30168
+O2 H29_valore,investimento_E,2016,887.8115843
+O2 H29_valore,investimento_S,2016,630.6743161
+O2 H29_valore,investimento_N,2016,602.0773758
+O2 H29_valore,investimento_R,2016,485.7449001
+O2 H29_valore,produzione_lorda,2017,33395.67555
+O2 H29_valore,consumo_privato,2017,13401.01946
+O2 H29_valore,investimento_E,2017,920.6934948
+O2 H29_valore,investimento_S,2017,654.0326242
+O2 H29_valore,investimento_N,2017,630.7477271
+O2 H29_valore,investimento_R,2017,505.5028541
+O2 H29_valore,produzione_lorda,2018,34435.50148
+O2 H29_valore,consumo_privato,2018,13916.91545
+O2 H29_valore,investimento_E,2018,953.5754053
+O2 H29_valore,investimento_S,2018,677.3909322
+O2 H29_valore,investimento_N,2018,659.4180783
+O2 H29_valore,investimento_R,2018,525.2608081
+O2 H29_valore,produzione_lorda,2019,34971.12792
+O2 H29_valore,consumo_privato,2019,14419.99171
+O2 H29_valore,investimento_E,2019,986.4573158
+O2 H29_valore,investimento_S,2019,700.7492402
+O2 H29_valore,investimento_N,2019,688.0884295
+O2 H29_valore,investimento_R,2019,545.0187621
+O2 H29_valore,stock_E,2010,5253.682314
+O2 H29_valore,stock_S,2010,11966.29598
+O2 H29_valore,stock_N,2010,2163.778443
+O2 H29_valore,stock_R,2010,16313.21928
+O2 H29_valore,stock_E,2011,5215.903654
+O2 H29_valore,stock_S,2011,12086.37083
+O2 H29_valore,stock_N,2011,2165.518353
+O2 H29_valore,stock_R,2011,16349.77783
+O2 H29_valore,stock_E,2012,5246.371553
+O2 H29_valore,stock_S,2012,12225.03132
+O2 H29_valore,stock_N,2012,2187.091061
+O2 H29_valore,stock_R,2012,16405.24642
+O2 H29_valore,stock_E,2013,5316.588166
+O2 H29_valore,stock_S,2013,12376.13706
+O2 H29_valore,stock_N,2013,2217.682198
+O2 H29_valore,stock_R,2013,16475.0793
+O2 H29_valore,stock_E,2014,5414.315444
+O2 H29_valore,stock_S,2014,12543.08807
+O2 H29_valore,stock_N,2014,2285.421492
+O2 H29_valore,stock_R,2014,16533.75632
+O2 H29_valore,stock_E,2015,5523.433357
+O2 H29_valore,stock_S,2015,12727.81154
+O2 H29_valore,stock_N,2015,2383.421445
+O2 H29_valore,stock_R,2015,16596.51183
+O2 H29_valore,stock_E,2016,5644.820697
+O2 H29_valore,stock_S,2016,12932.76633
+O2 H29_valore,stock_N,2016,2510.216942
+O2 H29_valore,stock_R,2016,16677.56979
+O2 H29_valore,stock_E,2017,5782.331598
+O2 H29_valore,stock_S,2017,13159.72405
+O2 H29_valore,stock_N,2017,2655.806992
+O2 H29_valore,stock_R,2017,16776.50569
+O2 H29_valore,stock_E,2018,5937.960772
+O2 H29_valore,stock_S,2018,13403.24166
+O2 H29_valore,stock_N,2018,2789.907375
+O2 H29_valore,stock_R,2018,16892.90489
+O2 H29_valore,stock_E,2019,6102.428454
+O2 H29_valore,stock_S,2019,13659.14175
+O2 H29_valore,stock_N,2019,2902.869242
+O2 H29_valore,stock_R,2019,17026.36236
+O2 H29_valore,stock_E,2020,6266.457502
+O2 H29_valore,stock_S,2020,13913.22226
+O2 H29_valore,stock_N,2020,2942.175751
+O2 H29_valore,stock_R,2020,17176.48245
+O2 H29b_capacita,produzione_lorda,2010,28290.70345
+O2 H29b_capacita,consumo_privato,2010,11484.38711
+O2 H29b_capacita,investimento_E,2010,624.7563
+O2 H29b_capacita,investimento_S,2010,443.8078521
+O2 H29b_capacita,investimento_N,2010,544.7366734
+O2 H29b_capacita,investimento_R,2010,414.9170341
+O2 H29b_capacita,produzione_lorda,2011,29302.31771
+O2 H29b_capacita,consumo_privato,2011,11691.8569
+O2 H29b_capacita,investimento_E,2011,591.8743895
+O2 H29b_capacita,investimento_S,2011,420.4495441
+O2 H29b_capacita,investimento_N,2011,516.0663222
+O2 H29b_capacita,investimento_R,2011,434.6749881
+O2 H29b_capacita,produzione_lorda,2012,29630.76149
+O2 H29b_capacita,consumo_privato,2012,11957.62071
+O2 H29b_capacita,investimento_E,2012,558.992479
+O2 H29b_capacita,investimento_S,2012,397.0912361
+O2 H29b_capacita,investimento_N,2012,487.3959709
+O2 H29b_capacita,investimento_R,2012,454.4329421
+O2 H29b_capacita,produzione_lorda,2013,30266.09499
+O2 H29b_capacita,consumo_privato,2013,12306.95751
+O2 H29b_capacita,investimento_E,2013,541.5586966
+O2 H29b_capacita,investimento_S,2013,373.7329281
+O2 H29b_capacita,investimento_N,2013,469.925434
+O2 H29b_capacita,investimento_R,2013,474.1908961
+O2 H29b_capacita,produzione_lorda,2014,30929.08649
+O2 H29b_capacita,consumo_privato,2014,12630.91979
+O2 H29b_capacita,investimento_E,2014,574.4406072
+O2 H29b_capacita,investimento_S,2014,350.3746201
+O2 H29b_capacita,investimento_N,2014,498.5957852
+O2 H29b_capacita,investimento_R,2014,493.9488501
+O2 H29b_capacita,produzione_lorda,2015,31685.05364
+O2 H29b_capacita,consumo_privato,2015,13070.77161
+O2 H29b_capacita,investimento_E,2015,607.3225177
+O2 H29b_capacita,investimento_S,2015,327.0163121
+O2 H29b_capacita,investimento_N,2015,527.2661364
+O2 H29b_capacita,investimento_R,2015,513.7068041
+O2 H29b_capacita,produzione_lorda,2016,32438.04699
+O2 H29b_capacita,consumo_privato,2016,13426.29548
+O2 H29b_capacita,investimento_E,2016,640.2044282
+O2 H29b_capacita,investimento_S,2016,303.6580041
+O2 H29b_capacita,investimento_N,2016,555.9364877
+O2 H29b_capacita,investimento_R,2016,493.9488501
+O2 H29b_capacita,produzione_lorda,2017,33051.95486
+O2 H29b_capacita,consumo_privato,2017,13859.32456
+O2 H29b_capacita,investimento_E,2017,673.0863387
+O2 H29b_capacita,investimento_S,2017,280.2996961
+O2 H29b_capacita,investimento_N,2017,584.6068389
+O2 H29b_capacita,investimento_R,2017,474.1908961
+O2 H29b_capacita,produzione_lorda,2018,33536.3067
+O2 H29b_capacita,consumo_privato,2018,14407.81367
+O2 H29b_capacita,investimento_E,2018,640.2044282
+O2 H29b_capacita,investimento_S,2018,256.9413881
+O2 H29b_capacita,investimento_N,2018,613.2771901
+O2 H29b_capacita,investimento_R,2018,476.6214849
+O2 H29b_capacita,produzione_lorda,2019,33645.5414
+O2 H29b_capacita,consumo_privato,2019,14814.42201
+O2 H29b_capacita,investimento_E,2019,607.3225177
+O2 H29b_capacita,investimento_S,2019,233.58308
+O2 H29b_capacita,investimento_N,2019,584.6068389
+O2 H29b_capacita,investimento_R,2019,496.3794389
+O2 H29b_capacita,stock_E,2010,5253.682314
+O2 H29b_capacita,stock_S,2010,11966.29598
+O2 H29b_capacita,stock_N,2010,2163.778443
+O2 H29b_capacita,stock_R,2010,16313.21928
+O2 H29b_capacita,stock_E,2011,5150.139832
+O2 H29b_capacita,stock_S,2011,12039.65422
+O2 H29b_capacita,stock_N,2011,2165.518353
+O2 H29b_capacita,stock_R,2011,16349.77783
+O2 H29b_capacita,stock_E,2012,5040.052413
+O2 H29b_capacita,stock_S,2012,12085.82815
+O2 H29b_capacita,stock_N,2012,2201.363494
+O2 H29b_capacita,stock_R,2012,16405.24642
+O2 H29b_capacita,stock_E,2013,4904.002367
+O2 H29b_capacita,stock_S,2013,12095.16901
+O2 H29b_capacita,stock_N,2013,2232.729265
+O2 H29b_capacita,stock_R,2013,16479.18646
+O2 H29b_capacita,stock_E,2014,4767.08695
+O2 H29b_capacita,stock_S,2014,12084.78381
+O2 H29b_capacita,stock_N,2014,2242.710647
+O2 H29b_capacita,stock_R,2014,16571.16954
+O2 H29b_capacita,stock_E,2015,4674.189227
+O2 H29b_capacita,stock_S,2015,12048.96503
+O2 H29b_capacita,stock_N,2015,2243.496347
+O2 H29b_capacita,stock_R,2015,16680.77717
+O2 H29b_capacita,stock_E,2016,4625.90584
+O2 H29b_capacita,stock_S,2016,11996.45239
+O2 H29b_capacita,stock_N,2016,2240.286914
+O2 H29b_capacita,stock_R,2016,16807.60059
+O2 H29b_capacita,stock_E,2017,4607.807913
+O2 H29b_capacita,stock_S,2017,11927.05865
+O2 H29b_capacita,stock_N,2017,2231.867997
+O2 H29b_capacita,stock_R,2017,16911.72459
+O2 H29b_capacita,stock_E,2018,4614.268694
+O2 H29b_capacita,stock_S,2018,11840.92671
+O2 H29b_capacita,stock_N,2018,2214.02595
+O2 H29b_capacita,stock_R,2018,16993.67565
+O2 H29b_capacita,stock_E,2019,4572.49119
+O2 H29b_capacita,stock_S,2019,11737.51667
+O2 H29b_capacita,stock_N,2019,2163.226307
+O2 H29b_capacita,stock_R,2019,17076.15657
+O2 H29b_capacita,stock_E,2020,4493.093936
+O2 H29b_capacita,stock_S,2020,11615.38132
+O2 H29b_capacita,stock_N,2020,2044.642242
+O2 H29b_capacita,stock_R,2020,17176.48245
+O2 H29c_capacita_produzione,produzione_lorda,2010,28294.79077
+O2 H29c_capacita_produzione,consumo_privato,2010,11484.91475
+O2 H29c_capacita_produzione,investimento_E,2010,624.7563
+O2 H29c_capacita_produzione,investimento_S,2010,443.8078521
+O2 H29c_capacita_produzione,investimento_N,2010,544.7366734
+O2 H29c_capacita_produzione,investimento_R,2010,414.9170341
+O2 H29c_capacita_produzione,produzione_lorda,2011,29335.37706
+O2 H29c_capacita_produzione,consumo_privato,2011,11708.4518
+O2 H29c_capacita_produzione,investimento_E,2011,591.8743895
+O2 H29c_capacita_produzione,investimento_S,2011,420.4495441
+O2 H29c_capacita_produzione,investimento_N,2011,516.0663222
+O2 H29c_capacita_produzione,investimento_R,2011,434.6749881
+O2 H29c_capacita_produzione,produzione_lorda,2012,29638.38041
+O2 H29c_capacita_produzione,consumo_privato,2012,11965.17125
+O2 H29c_capacita_produzione,investimento_E,2012,558.992479
+O2 H29c_capacita_produzione,investimento_S,2012,397.0912361
+O2 H29c_capacita_produzione,investimento_N,2012,487.3959709
+O2 H29c_capacita_produzione,investimento_R,2012,454.4329421
+O2 H29c_capacita_produzione,produzione_lorda,2013,30298.13979
+O2 H29c_capacita_produzione,consumo_privato,2013,12295.60935
+O2 H29c_capacita_produzione,investimento_E,2013,526.1105684
+O2 H29c_capacita_produzione,investimento_S,2013,373.7329281
+O2 H29c_capacita_produzione,investimento_N,2013,516.0663221
+O2 H29c_capacita_produzione,investimento_R,2013,474.1908961
+O2 H29c_capacita_produzione,produzione_lorda,2014,30933.87797
+O2 H29c_capacita_produzione,consumo_privato,2014,12608.06672
+O2 H29c_capacita_produzione,investimento_E,2014,558.992479
+O2 H29c_capacita_produzione,investimento_S,2014,350.3746201
+O2 H29c_capacita_produzione,investimento_N,2014,544.7366734
+O2 H29c_capacita_produzione,investimento_R,2014,493.9488501
+O2 H29c_capacita_produzione,produzione_lorda,2015,31649.23899
+O2 H29c_capacita_produzione,consumo_privato,2015,13070.77262
+O2 H29c_capacita_produzione,investimento_E,2015,591.8743895
+O2 H29c_capacita_produzione,investimento_S,2015,327.0163121
+O2 H29c_capacita_produzione,investimento_N,2015,573.4070246
+O2 H29c_capacita_produzione,investimento_R,2015,513.7068041
+O2 H29c_capacita_produzione,produzione_lorda,2016,32378.29318
+O2 H29c_capacita_produzione,consumo_privato,2016,13426.14716
+O2 H29c_capacita_produzione,investimento_E,2016,624.7563
+O2 H29c_capacita_produzione,investimento_S,2016,303.6580041
+O2 H29c_capacita_produzione,investimento_N,2016,602.0773758
+O2 H29c_capacita_produzione,investimento_R,2016,514.6733275
+O2 H29c_capacita_produzione,produzione_lorda,2017,33136.78595
+O2 H29c_capacita_produzione,consumo_privato,2017,13791.9247
+O2 H29c_capacita_produzione,investimento_E,2017,657.6382106
+O2 H29c_capacita_produzione,investimento_S,2017,280.2996961
+O2 H29c_capacita_produzione,investimento_N,2017,630.7477271
+O2 H29c_capacita_produzione,investimento_R,2017,494.9153735
+O2 H29c_capacita_produzione,produzione_lorda,2018,33617.89908
+O2 H29c_capacita_produzione,consumo_privato,2018,14384.94417
+O2 H29c_capacita_produzione,investimento_E,2018,638.2968938
+O2 H29c_capacita_produzione,investimento_S,2018,256.9413881
+O2 H29c_capacita_produzione,investimento_N,2018,659.4180783
+O2 H29c_capacita_produzione,investimento_R,2018,475.1574195
+O2 H29c_capacita_produzione,produzione_lorda,2019,33800.46077
+O2 H29c_capacita_produzione,consumo_privato,2019,14848.83723
+O2 H29c_capacita_produzione,investimento_E,2019,605.4149833
+O2 H29c_capacita_produzione,investimento_S,2019,233.5830801
+O2 H29c_capacita_produzione,investimento_N,2019,688.0884296
+O2 H29c_capacita_produzione,investimento_R,2019,458.7196098
+O2 H29c_capacita_produzione,stock_E,2010,5253.682314
+O2 H29c_capacita_produzione,stock_S,2010,11966.29598
+O2 H29c_capacita_produzione,stock_N,2010,2163.778443
+O2 H29c_capacita_produzione,stock_R,2010,16313.21928
+O2 H29c_capacita_produzione,stock_E,2011,5150.139832
+O2 H29c_capacita_produzione,stock_S,2011,12039.65422
+O2 H29c_capacita_produzione,stock_N,2011,2165.518353
+O2 H29c_capacita_produzione,stock_R,2011,16349.77783
+O2 H29c_capacita_produzione,stock_E,2012,5043.521227
+O2 H29c_capacita_produzione,stock_S,2012,12085.81148
+O2 H29c_capacita_produzione,stock_N,2012,2191.220355
+O2 H29c_capacita_produzione,stock_R,2012,16405.24642
+O2 H29c_capacita_produzione,stock_E,2013,4910.872751
+O2 H29c_capacita_produzione,stock_S,2013,12093.81405
+O2 H29c_capacita_produzione,stock_N,2013,2212.396516
+O2 H29c_capacita_produzione,stock_R,2013,16479.18646
+O2 H29c_capacita_produzione,stock_E,2014,4759.051051
+O2 H29c_capacita_produzione,stock_S,2014,12082.11641
+O2 H29c_capacita_produzione,stock_N,2014,2260.57419
+O2 H29c_capacita_produzione,stock_R,2014,16571.16954
+O2 H29c_capacita_produzione,stock_E,2015,4654.021766
+O2 H29c_capacita_produzione,stock_S,2015,12044.65305
+O2 H29c_capacita_produzione,stock_N,2015,2293.662052
+O2 H29c_capacita_produzione,stock_R,2015,16680.77717
+O2 H29c_capacita_produzione,stock_E,2016,4595.195616
+O2 H29c_capacita_produzione,stock_S,2016,11990.67143
+O2 H29c_capacita_produzione,stock_N,2016,2320.551574
+O2 H29c_capacita_produzione,stock_R,2016,16807.60059
+O2 H29c_capacita_produzione,stock_E,2017,4568.063491
+O2 H29c_capacita_produzione,stock_S,2017,11920.02598
+O2 H29c_capacita_produzione,stock_N,2017,2339.997052
+O2 H29c_capacita_produzione,stock_R,2017,16932.44906
+O2 H29c_capacita_produzione,stock_E,2018,4565.534016
+O2 H29c_capacita_produzione,stock_S,2018,11832.65091
+O2 H29c_capacita_produzione,stock_N,2018,2347.117172
+O2 H29c_capacita_produzione,stock_R,2018,17034.64393
+O2 H29c_capacita_produzione,stock_E,2019,4530.325111
+O2 H29c_capacita_produzione,stock_S,2019,11728.04556
+O2 H29c_capacita_produzione,stock_N,2019,2311.086101
+O2 H29c_capacita_produzione,stock_R,2019,17114.7106
+O2 H29c_capacita_produzione,stock_E,2020,4455.842021
+O2 H29c_capacita_produzione,stock_S,2020,11603.71831
+O2 H29c_capacita_produzione,stock_N,2020,2251.509571
+O2 H29c_capacita_produzione,stock_R,2020,17176.48245

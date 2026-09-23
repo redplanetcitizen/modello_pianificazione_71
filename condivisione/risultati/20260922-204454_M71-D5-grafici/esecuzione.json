@@ -1,0 +1,207 @@
+{
+ "id": "20260922-204454_M71-D5-grafici",
+ "nome": "M71-D5-grafici",
+ "inizio_utc": "2026-09-23T00:44:54+00:00",
+ "codice": {
+  "commit": "3b3a9be8b7142825420c2ba0288e7fcd514d0452",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "O1": {
+   "obiettivo": "O1",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "valore",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  },
+  "O2": {
+   "obiettivo": "O2",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "valore",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  },
+  "O3": {
+   "obiettivo": "O3",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "valore",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  },
+  "O4": {
+   "obiettivo": "O4",
+   "capacita": true,
+   "capacita_tipo": "lineare",
+   "deriva": true,
+   "theta_non_g17": 0.0,
+   "u_non_g17": 0.772,
+   "sigma_fattore": 0.85,
+   "accumulazione": true,
+   "terminale": true,
+   "crescita_terminale": 0.0,
+   "terminale_scorte": true,
+   "sigma_max_fattore": 1.2,
+   "scorte": true,
+   "lavoro": true,
+   "lavoro_scala": 1.0,
+   "estero": true,
+   "bande_import": true,
+   "epsilon": 0.1,
+   "import_scala": 1.0,
+   "beta": 1.0,
+   "gamma_min": 1.0,
+   "pesi_o3": "valore",
+   "obiettivi_o2": "osservato",
+   "limite_var_inv": null,
+   "penalita_var_inv": 0.0,
+   "soglia_var_inv": 0.05,
+   "tempi_costruzione": [],
+   "quota_primo_anno": 0.5,
+   "elastico": false,
+   "penalita_elastico": 1000.0
+  }
+ },
+ "fine_utc": "2026-09-23T00:45:19+00:00",
+ "esito": "completata",
+ "output": {
+  "serie.csv": {
+   "bytes": 8910,
+   "sha256": "5d6bfeae9c9691c0b446a5f74d0d86fea32a440017b409afb686789610421ae6"
+  },
+  "serie_confronto.csv": {
+   "bytes": 4024,
+   "sha256": "e61ff12bda52bcd7abeb78e332c5cb4ac4e7cd8250027d159e743f30b50348e3"
+  },
+  "1_produzione_consumo.png": {
+   "bytes": 143940,
+   "sha256": "451ea8201171c1b6d42db10799f842a26d4ffbf8f440ddf90217538bacb63576"
+  },
+  "2_investimento_per_tipo.png": {
+   "bytes": 239711,
+   "sha256": "441286221b9141aa9b581f8c3a3a74ed920d2d44f475b7d9993e10ae86d68ca4"
+  },
+  "3_stock_per_tipo.png": {
+   "bytes": 269553,
+   "sha256": "16e43334ca31a0d0d88dd9f9dfd5f7f462eea184d87ed47dc03a1ef7f6d2d171"
+  },
+  "4_O2_produzione_consumo.png": {
+   "bytes": 70476,
+   "sha256": "4e119ae4533021a049366c68bb96e5519cd025204281e3ea6655cba14069443e"
+  },
+  "5_O2_investimento_per_tipo.png": {
+   "bytes": 125214,
+   "sha256": "8fa6a0c5e596683f557a3998a8fa37e776eab9961a8f85bb8ef6b297a052c589"
+  },
+  "6_O2_stock_per_tipo.png": {
+   "bytes": 146530,
+   "sha256": "8eaa7e50c83a70e4fd08b8f812ab813262e1a25fcc0c2989943dc3046842872a"
+  },
+  "sintesi.md": {
+   "bytes": 211,
+   "sha256": "1c19673f37ade3b4ee3133364e20fbe1f567aaeb32b72550d86115a562a67453"
+  }
+ }
+}

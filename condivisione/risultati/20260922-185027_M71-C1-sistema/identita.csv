@@ -1,0 +1,51 @@
+anno,identita,descrizione,max_abs,somma_abs,voce_max,n_voci
+2012,use_riga_intermedi,somma U per prodotto - Total Intermediate,5,110,722,73
+2012,use_riga_finali,somma F per prodotto - Total Final Uses,2,24,315AL,73
+2012,use_riga_bilancio,intermedi + finali (importazioni con segno negativo) - Total Commodity Output,5,122,722,73
+2012,use_col_intermedi,somma U per industria - Total Intermediate,5,122,483,71
+2012,use_col_va,somma V001-V003 - Total Value Added,1,6,113FF,71
+2012,use_col_bilancio,intermedi + valore aggiunto - Total Industry Output,5,122,483,71
+2012,make_riga,somma V per industria - Total Industry Output (Make),2,41,337,71
+2012,make_col,somma V per prodotto - Total Commodity Output (Make),2,42,327,73
+2012,x_use_make,produzione per industria: Use - Make,0,0,111CA,71
+2012,q_use_make,produzione per prodotto: Use - Make,0,0,111CA,73
+2013,use_riga_intermedi,somma U per prodotto - Total Intermediate,6,119,323,73
+2013,use_riga_finali,somma F per prodotto - Total Final Uses,2,27,325,73
+2013,use_riga_bilancio,intermedi + finali (importazioni con segno negativo) - Total Commodity Output,6,127,441,73
+2013,use_col_intermedi,somma U per industria - Total Intermediate,6,131,5411,71
+2013,use_col_va,somma V001-V003 - Total Value Added,1,25,113FF,71
+2013,use_col_bilancio,intermedi + valore aggiunto - Total Industry Output,6,144,326,71
+2013,make_riga,somma V per industria - Total Industry Output (Make),4,54,323,71
+2013,make_col,somma V per prodotto - Total Commodity Output (Make),3,42,5412OP,73
+2013,x_use_make,produzione per industria: Use - Make,0,0,111CA,71
+2013,q_use_make,produzione per prodotto: Use - Make,0,0,111CA,73
+2014,use_riga_intermedi,somma U per prodotto - Total Intermediate,6,116,484,73
+2014,use_riga_finali,somma F per prodotto - Total Final Uses,2,40,335,73
+2014,use_riga_bilancio,intermedi + finali (importazioni con segno negativo) - Total Commodity Output,6,120,3361MV,73
+2014,use_col_intermedi,somma U per industria - Total Intermediate,5,138,486,71
+2014,use_col_va,somma V001-V003 - Total Value Added,1,19,211,71
+2014,use_col_bilancio,intermedi + valore aggiunto - Total Industry Output,6,139,5411,71
+2014,make_riga,somma V per industria - Total Industry Output (Make),3,57,3361MV,71
+2014,make_col,somma V per prodotto - Total Commodity Output (Make),3,45,23,73
+2014,x_use_make,produzione per industria: Use - Make,0,0,111CA,71
+2014,q_use_make,produzione per prodotto: Use - Make,0,0,111CA,73
+2015,use_riga_intermedi,somma U per prodotto - Total Intermediate,6,113,445,73
+2015,use_riga_finali,somma F per prodotto - Total Final Uses,2,28,23,73
+2015,use_riga_bilancio,intermedi + finali (importazioni con segno negativo) - Total Commodity Output,5,117,23,73
+2015,use_col_intermedi,somma U per industria - Total Intermediate,5,129,22,71
+2015,use_col_va,somma V001-V003 - Total Value Added,1,23,211,71
+2015,use_col_bilancio,intermedi + valore aggiunto - Total Industry Output,5,123,22,71
+2015,make_riga,somma V per industria - Total Industry Output (Make),3,53,334,71
+2015,make_col,somma V per prodotto - Total Commodity Output (Make),3,53,23,73
+2015,x_use_make,produzione per industria: Use - Make,0,0,111CA,71
+2015,q_use_make,produzione per prodotto: Use - Make,0,0,111CA,73
+2016,use_riga_intermedi,somma U per prodotto - Total Intermediate,6,129,561,73
+2016,use_riga_finali,somma F per prodotto - Total Final Uses,2,26,332,73
+2016,use_riga_bilancio,intermedi + finali (importazioni con segno negativo) - Total Commodity Output,6,134,561,73
+2016,use_col_intermedi,somma U per industria - Total Intermediate,14,154,23,71
+2016,use_col_va,somma V001-V003 - Total Value Added,1,25,212,71
+2016,use_col_bilancio,intermedi + valore aggiunto - Total Industry Output,5,132,331,71
+2016,make_riga,somma V per industria - Total Industry Output (Make),12,84,23,71
+2016,make_col,somma V per prodotto - Total Commodity Output (Make),3,46,331,73
+2016,x_use_make,produzione per industria: Use - Make,12,43,23,71
+2016,q_use_make,produzione per prodotto: Use - Make,0,0,111CA,73

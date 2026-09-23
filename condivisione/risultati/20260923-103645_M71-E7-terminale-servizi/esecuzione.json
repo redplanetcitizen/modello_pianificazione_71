@@ -1,0 +1,421 @@
+{
+ "id": "20260923-103645_M71-E7-terminale-servizi",
+ "nome": "M71-E7-terminale-servizi",
+ "inizio_utc": "2026-09-23T14:36:45+00:00",
+ "codice": {
+  "commit": "603dc4db7ee922b46837836635b8d41b47d19f99",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "orizzonti": {
+   "2012-2016": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "2010-2019": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "taratura": {
+   "capacita_non_g17": "inviluppo_tendenza",
+   "sigma_fattore": 0.85
+  },
+  "penalita": {
+   "penalita_var_inv": 0.1
+  },
+  "casi": {
+   "H29_valore": {
+    "terminale_pesi": "valore",
+    "fattori": "lavoro_aggregata"
+   },
+   "H29b_capacita": {
+    "terminale_pesi": "capacita",
+    "fattori": "lavoro_aggregata"
+   },
+   "H29c_capacita_produzione": {
+    "terminale_pesi": "capacita",
+    "fattori": "produzione_aggregata"
+   }
+  }
+ },
+ "fine_utc": "2026-09-23T14:41:32+00:00",
+ "esito": "completata",
+ "output": {
+  "2012-2016_H29_valore/O4/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "99c62ec425d019f3dd551b106003c103f022b803c3d8879fef0fa18d74b3c6b4"
+  },
+  "2012-2016_H29_valore/O4/industrie.csv": {
+   "bytes": 11345,
+   "sha256": "162995907b68d7453cdfd23699b5f78e3a50837b0665031fb3b59ca81568eb59"
+  },
+  "2012-2016_H29_valore/O4/investimento.csv": {
+   "bytes": 21832,
+   "sha256": "acd5424b6682bf798868eaa59b967b4453dc01e9c0aeffb01c78e6c85676f30d"
+  },
+  "2012-2016_H29_valore/O4/prezzi_ombra.csv": {
+   "bytes": 14091,
+   "sha256": "d585f02d8ce14ad3e283a877d86d6c6ec889a14c45b3e4721b2b69ef73948424"
+  },
+  "2012-2016_H29_valore/O4/vincoli_attivi.csv": {
+   "bytes": 167,
+   "sha256": "70b106ac20627c0f05ca18440c5dad02a9cd2e154bc2004bb286ed9df5e983cf"
+  },
+  "2012-2016_H29_valore/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_H29_valore/O2/aggregati.csv": {
+   "bytes": 1442,
+   "sha256": "adb0f4a638a3021070c44ad16abcdef05c8890e76a9c1a92bfc8bfb770c34840"
+  },
+  "2012-2016_H29_valore/O2/industrie.csv": {
+   "bytes": 11490,
+   "sha256": "29087a8a6b53391549267c49ed6b52a8b320c72ae6a9bc3b045eb67e20508c90"
+  },
+  "2012-2016_H29_valore/O2/investimento.csv": {
+   "bytes": 15063,
+   "sha256": "95bcd7e613aed0fd003f6b928468c72ac5cd8ea2337bac9833d2645792f37e93"
+  },
+  "2012-2016_H29_valore/O2/prezzi_ombra.csv": {
+   "bytes": 16794,
+   "sha256": "49e904b5ae3d587a916abae101fae047279431bf64cabdb42c725bd16da0ca11"
+  },
+  "2012-2016_H29_valore/O2/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "037d4ef09e7d56708d7dfbd9f7576288922166704dd6423b34bc864ad895eb8e"
+  },
+  "2012-2016_H29_valore/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_H29b_capacita/O4/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "99c62ec425d019f3dd551b106003c103f022b803c3d8879fef0fa18d74b3c6b4"
+  },
+  "2012-2016_H29b_capacita/O4/industrie.csv": {
+   "bytes": 11345,
+   "sha256": "162995907b68d7453cdfd23699b5f78e3a50837b0665031fb3b59ca81568eb59"
+  },
+  "2012-2016_H29b_capacita/O4/investimento.csv": {
+   "bytes": 21832,
+   "sha256": "acd5424b6682bf798868eaa59b967b4453dc01e9c0aeffb01c78e6c85676f30d"
+  },
+  "2012-2016_H29b_capacita/O4/prezzi_ombra.csv": {
+   "bytes": 14091,
+   "sha256": "d585f02d8ce14ad3e283a877d86d6c6ec889a14c45b3e4721b2b69ef73948424"
+  },
+  "2012-2016_H29b_capacita/O4/vincoli_attivi.csv": {
+   "bytes": 167,
+   "sha256": "70b106ac20627c0f05ca18440c5dad02a9cd2e154bc2004bb286ed9df5e983cf"
+  },
+  "2012-2016_H29b_capacita/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_H29b_capacita/O2/aggregati.csv": {
+   "bytes": 1443,
+   "sha256": "6eabb8b5920aa542898f2b22e2e112ef42e56bc888924e919db3e3cbf6a7e027"
+  },
+  "2012-2016_H29b_capacita/O2/industrie.csv": {
+   "bytes": 11480,
+   "sha256": "4be070aa6476289b4a5536f3e7759c3dbb9498c402bd1e5d64ebce74c02f93a9"
+  },
+  "2012-2016_H29b_capacita/O2/investimento.csv": {
+   "bytes": 14936,
+   "sha256": "74b1cb3081aa627ae9af174bb954a399f8893dc835517ebce89b07157d154a40"
+  },
+  "2012-2016_H29b_capacita/O2/prezzi_ombra.csv": {
+   "bytes": 16805,
+   "sha256": "88294ccf8e9eede2f6616ff490e5368a5d045196a1968e498cd6109ab0f4a8fb"
+  },
+  "2012-2016_H29b_capacita/O2/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "6012fc20ab72f3d392957efdd15a39f6225a8c579d374b6575000a0a053d677d"
+  },
+  "2012-2016_H29b_capacita/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_H29c_capacita_produzione/O4/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "99c62ec425d019f3dd551b106003c103f022b803c3d8879fef0fa18d74b3c6b4"
+  },
+  "2012-2016_H29c_capacita_produzione/O4/industrie.csv": {
+   "bytes": 11345,
+   "sha256": "162995907b68d7453cdfd23699b5f78e3a50837b0665031fb3b59ca81568eb59"
+  },
+  "2012-2016_H29c_capacita_produzione/O4/investimento.csv": {
+   "bytes": 21832,
+   "sha256": "acd5424b6682bf798868eaa59b967b4453dc01e9c0aeffb01c78e6c85676f30d"
+  },
+  "2012-2016_H29c_capacita_produzione/O4/prezzi_ombra.csv": {
+   "bytes": 14091,
+   "sha256": "d585f02d8ce14ad3e283a877d86d6c6ec889a14c45b3e4721b2b69ef73948424"
+  },
+  "2012-2016_H29c_capacita_produzione/O4/vincoli_attivi.csv": {
+   "bytes": 167,
+   "sha256": "70b106ac20627c0f05ca18440c5dad02a9cd2e154bc2004bb286ed9df5e983cf"
+  },
+  "2012-2016_H29c_capacita_produzione/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_H29c_capacita_produzione/O2/aggregati.csv": {
+   "bytes": 1443,
+   "sha256": "dfb44109253e0ea8c8cf0138f534bf214debd864a2c9b289fc9f1cbd4613c943"
+  },
+  "2012-2016_H29c_capacita_produzione/O2/industrie.csv": {
+   "bytes": 11495,
+   "sha256": "10f5c56a10dedd406248ec511c47bb59cd69b5673bad245cbfa4d9b420e3e425"
+  },
+  "2012-2016_H29c_capacita_produzione/O2/investimento.csv": {
+   "bytes": 14989,
+   "sha256": "e1d70b14df09e0032a33a9e7dff5b70258f1dfb3c7debb571aa214fab711dedc"
+  },
+  "2012-2016_H29c_capacita_produzione/O2/prezzi_ombra.csv": {
+   "bytes": 16807,
+   "sha256": "6cb71354ebcdb5133ec605319c7851431baa294f2d3af79821b04b0e91d58719"
+  },
+  "2012-2016_H29c_capacita_produzione/O2/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "375b99dc1cd442a96f8837b91389deaaaf6d9d1844c1a2efeb27d7746c4c146d"
+  },
+  "2012-2016_H29c_capacita_produzione/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "serie_2012-2016.csv": {
+   "bytes": 10004,
+   "sha256": "9d985e8675e20a6fa6635a601decb434e8ca415ac1bad762a15712755a8c0e64"
+  },
+  "scarti_2012-2016.csv": {
+   "bytes": 650,
+   "sha256": "0306592579c10d3b90864ea2fd5e6cd7e572a46a5a4549fe5e83da2031a6f4f7"
+  },
+  "2010-2019_H29_valore/O4/aggregati.csv": {
+   "bytes": 2626,
+   "sha256": "556dc3c8d56a67b95fb0e019b41b90d206a0c407802a8bdb4f0bcf37f9306c22"
+  },
+  "2010-2019_H29_valore/O4/industrie.csv": {
+   "bytes": 23084,
+   "sha256": "3ec2cfb57c8ff33b2430a1df217485f5eb61cb5115088cb07043d65fe352a4e6"
+  },
+  "2010-2019_H29_valore/O4/investimento.csv": {
+   "bytes": 44794,
+   "sha256": "7693072623c6690ef0c5a0d3cad9cb0223faba3a128403fcb16aefe43f6cf223"
+  },
+  "2010-2019_H29_valore/O4/prezzi_ombra.csv": {
+   "bytes": 29635,
+   "sha256": "11692f2c3477328416d3451162cadfac60f68bd249ce47f4490feee5aa24925c"
+  },
+  "2010-2019_H29_valore/O4/vincoli_attivi.csv": {
+   "bytes": 186,
+   "sha256": "14506bbf5c6369bc3a561ca1cb2734bc2163119185fb91b4aa75d00f8397ac4f"
+  },
+  "2010-2019_H29_valore/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_H29_valore/O2/aggregati.csv": {
+   "bytes": 2551,
+   "sha256": "f6b191c1fa538faa50d5051bdedf35c7f71ba0b71fa741a36df2d21bfbf79a71"
+  },
+  "2010-2019_H29_valore/O2/industrie.csv": {
+   "bytes": 23253,
+   "sha256": "37a556852f276f5cc4b221672972e67a5d359449e9b59ec87b3711c85229e703"
+  },
+  "2010-2019_H29_valore/O2/investimento.csv": {
+   "bytes": 31043,
+   "sha256": "734b5e1f7b70b976d2b5c663cc52a137716a2d75335050efb4c3bcc25f089b9b"
+  },
+  "2010-2019_H29_valore/O2/prezzi_ombra.csv": {
+   "bytes": 33588,
+   "sha256": "64232f301e7a38cc979c34e5c3b11f4a1727f5dd8a784cdc70fb2aaa18736006"
+  },
+  "2010-2019_H29_valore/O2/vincoli_attivi.csv": {
+   "bytes": 213,
+   "sha256": "2f0688a3b37bdc1342a4d51a0804e212e6ca5ca3a1cdaf3ebda7418e2f85e65b"
+  },
+  "2010-2019_H29_valore/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_H29b_capacita/O4/aggregati.csv": {
+   "bytes": 2626,
+   "sha256": "556dc3c8d56a67b95fb0e019b41b90d206a0c407802a8bdb4f0bcf37f9306c22"
+  },
+  "2010-2019_H29b_capacita/O4/industrie.csv": {
+   "bytes": 23084,
+   "sha256": "3ec2cfb57c8ff33b2430a1df217485f5eb61cb5115088cb07043d65fe352a4e6"
+  },
+  "2010-2019_H29b_capacita/O4/investimento.csv": {
+   "bytes": 44794,
+   "sha256": "43f63e4eeb0db4b615b346216e2b03ef39198a328fe8e1542f837950647d047f"
+  },
+  "2010-2019_H29b_capacita/O4/prezzi_ombra.csv": {
+   "bytes": 29635,
+   "sha256": "62521b719dcab6e3e3a275238646ff6725a0294adc31cca5ec896c9f0e3ee25e"
+  },
+  "2010-2019_H29b_capacita/O4/vincoli_attivi.csv": {
+   "bytes": 186,
+   "sha256": "14506bbf5c6369bc3a561ca1cb2734bc2163119185fb91b4aa75d00f8397ac4f"
+  },
+  "2010-2019_H29b_capacita/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_H29b_capacita/O2/aggregati.csv": {
+   "bytes": 2543,
+   "sha256": "4a5ac2b9a2a0eb3fd4bfad5933fe478e1d3fbb1561728113544a57b21f9f3b84"
+  },
+  "2010-2019_H29b_capacita/O2/industrie.csv": {
+   "bytes": 23238,
+   "sha256": "6660c894449a13a9817096e50b6cffaa3e81de172b972337eef6e6eefa1b88ab"
+  },
+  "2010-2019_H29b_capacita/O2/investimento.csv": {
+   "bytes": 30987,
+   "sha256": "896a3933e029f142eb5cf89d68debbdef11284ce449f175f5adf0fa1451c7991"
+  },
+  "2010-2019_H29b_capacita/O2/prezzi_ombra.csv": {
+   "bytes": 33559,
+   "sha256": "f59942efa40ab81d88878b438b82757941302582504f510b53789aae167542e8"
+  },
+  "2010-2019_H29b_capacita/O2/vincoli_attivi.csv": {
+   "bytes": 229,
+   "sha256": "d79d7aa061ab0efd1f4640d7680926bebd0c08791b309fc83c856b69038de981"
+  },
+  "2010-2019_H29b_capacita/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_H29c_capacita_produzione/O4/aggregati.csv": {
+   "bytes": 2626,
+   "sha256": "556dc3c8d56a67b95fb0e019b41b90d206a0c407802a8bdb4f0bcf37f9306c22"
+  },
+  "2010-2019_H29c_capacita_produzione/O4/industrie.csv": {
+   "bytes": 23084,
+   "sha256": "3ec2cfb57c8ff33b2430a1df217485f5eb61cb5115088cb07043d65fe352a4e6"
+  },
+  "2010-2019_H29c_capacita_produzione/O4/investimento.csv": {
+   "bytes": 44794,
+   "sha256": "7693072623c6690ef0c5a0d3cad9cb0223faba3a128403fcb16aefe43f6cf223"
+  },
+  "2010-2019_H29c_capacita_produzione/O4/prezzi_ombra.csv": {
+   "bytes": 29635,
+   "sha256": "11692f2c3477328416d3451162cadfac60f68bd249ce47f4490feee5aa24925c"
+  },
+  "2010-2019_H29c_capacita_produzione/O4/vincoli_attivi.csv": {
+   "bytes": 186,
+   "sha256": "14506bbf5c6369bc3a561ca1cb2734bc2163119185fb91b4aa75d00f8397ac4f"
+  },
+  "2010-2019_H29c_capacita_produzione/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_H29c_capacita_produzione/O2/aggregati.csv": {
+   "bytes": 2545,
+   "sha256": "e24c741c3b5150a77cadfe1427a5ba746eea179bb673760c57562ab1acc6323f"
+  },
+  "2010-2019_H29c_capacita_produzione/O2/industrie.csv": {
+   "bytes": 23250,
+   "sha256": "f6cd0c60902a05e237fd1ccefbaa42dde2ec09d9c072160d8c4daa4d5db560be"
+  },
+  "2010-2019_H29c_capacita_produzione/O2/investimento.csv": {
+   "bytes": 30999,
+   "sha256": "4918de08dc174cc560c5bbd1b82797a8ee882bf96aa7aa49686267b1998b5318"
+  },
+  "2010-2019_H29c_capacita_produzione/O2/prezzi_ombra.csv": {
+   "bytes": 33546,
+   "sha256": "ac588a89e7f83476040c7843f9e60d8e5268104583bba1e49e44608e2aa9789d"
+  },
+  "2010-2019_H29c_capacita_produzione/O2/vincoli_attivi.csv": {
+   "bytes": 229,
+   "sha256": "6286b66405993d0067adf72516706cb964320006ab76396acef17fc9e3d6912e"
+  },
+  "2010-2019_H29c_capacita_produzione/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "serie_2010-2019.csv": {
+   "bytes": 19334,
+   "sha256": "79d10f0f06cd5b36f994f4cef5ce72b5030d56cf61fb5eb2c7294f27700b5900"
+  },
+  "scarti_2010-2019.csv": {
+   "bytes": 651,
+   "sha256": "49d188110221fe7e15c2d5694bc87f680db035aac8e454e000e27d7e47fda5a9"
+  },
+  "casi.csv": {
+   "bytes": 4016,
+   "sha256": "1c68a4f2b74d2e3f8bce5d6b9e44fd1c584ce37ac21c42da9450f780655b75e9"
+  },
+  "1_H29c_2010-2019_produzione_consumo.png": {
+   "bytes": 94864,
+   "sha256": "f676996ba6a7176eda977a8a4067217e48176fa2f84dbbc599967804868524ad"
+  },
+  "2_H29c_2010-2019_investimento_per_tipo.png": {
+   "bytes": 175507,
+   "sha256": "812ad9a1e1bb2e9ac33c610aa05751bd69acbce66fa91bddbd420eb8f25173c3"
+  },
+  "3_H29c_2010-2019_stock_per_tipo.png": {
+   "bytes": 180615,
+   "sha256": "25fd09b402c9d3c1163f4055783298f0ee7e8c784af53b20e021b75a9fe845ff"
+  },
+  "4_H29c_2012-2016_produzione_consumo.png": {
+   "bytes": 83348,
+   "sha256": "5b8ca93186a61c1b99d0213d63a674f1de82e083b4c67ae6198de2f80871ee00"
+  },
+  "5_H29c_2012-2016_investimento_per_tipo.png": {
+   "bytes": 145060,
+   "sha256": "c6daf1025464bfc0fc438e4fbbb7a8fb34a3c7e8d7eacf5f3d23ddbdcf051141"
+  },
+  "6_H29c_2012-2016_stock_per_tipo.png": {
+   "bytes": 159301,
+   "sha256": "24bca5ca2b08632831ada6e2b96b16c6bf8fbe7b2410d713712b5e3cec5f685d"
+  },
+  "sintesi.md": {
+   "bytes": 3454,
+   "sha256": "2b4d700e1a134c56ec1dd3767756005b381a5d050d982d765eaec6889b63e225"
+  }
+ }
+}

@@ -1,0 +1,72 @@
+industria_io,nome,settore,industrie_fixed_assets,capitale_nel_modello,vincolo_di_capacita,serie_g17,metodo_capacita_fed,gruppo_klems,riga_fte_nipa_6_5D,comparto_scorte
+111CA,Farms,privato,110C,"E,S,N",si,,,111CA,5,Agricoltura
+113FF,"Forestry, fishing, and related activities",privato,113F,"E,S,N",si,,,113FF,6,Altre industrie
+211,Oil and gas extraction,privato,2110,"E,S,N",si,G21,fisico,211,8,"Estrattivo, utility, costruzioni"
+212,"Mining, except oil and gas",privato,2120,"E,S,N",si,G21,fisico,212,9,"Estrattivo, utility, costruzioni"
+213,Support activities for mining,privato,2130,"E,S,N",si,G21,fisico,213,10,"Estrattivo, utility, costruzioni"
+22,Utilities,privato,2211;2212;2213,"E,S,N",si,G2211A2,fisico,22,11,"Estrattivo, utility, costruzioni"
+23,Construction,privato,2300,"E,S,N",si,,,23,12,"Estrattivo, utility, costruzioni"
+321,Wood products,privato,3210,"E,S,N",si,G321,indagine+capitale,321,15,Manifattura durevole
+327,Nonmetallic mineral products,privato,3270,"E,S,N",si,G327,indagine+capitale,327,16,Manifattura durevole
+331,Primary metals,privato,3310,"E,S,N",si,G331,fisico,331,17,Manifattura durevole
+332,Fabricated metal products,privato,3320,"E,S,N",si,G332,indagine+capitale,332,18,Manifattura durevole
+333,Machinery,privato,3330,"E,S,N",si,G333,indagine+capitale,333,19,Manifattura durevole
+334,Computer and electronic products,privato,3340,"E,S,N",si,G334,indagine+capitale,334,20,Manifattura durevole
+335,"Electrical equipment, appliances, and components",privato,3350,"E,S,N",si,G335,indagine+capitale,335,21,Manifattura durevole
+3361MV,"Motor vehicles, bodies and trailers, and parts",privato,336M,"E,S,N",si,G3361T3,fisico,3361MV,22,Manifattura durevole
+3364OT,Other transportation equipment,privato,336O,"E,S,N",si,G3364T9,indagine+capitale,3364OT,23,Manifattura durevole
+337,Furniture and related products,privato,3370,"E,S,N",si,G337,indagine+capitale,337,24,Manifattura durevole
+339,Miscellaneous manufacturing,privato,3380;3390,"E,S,N",si,G339,indagine+capitale,339,25,Manifattura durevole
+311FT,Food and beverage and tobacco products,privato,3110;3120,"E,S,N",si,G311A2,indagine+capitale,311FT,27,Manifattura non durevole
+313TT,Textile mills and textile product mills,privato,313T,"E,S,N",si,G313A4,indagine+capitale,313TT,28,Manifattura non durevole
+315AL,Apparel and leather and allied products,privato,315A,"E,S,N",si,G315A6,indagine+capitale,315AL,29,Manifattura non durevole
+322,Paper products,privato,3220,"E,S,N",si,G322,fisico,322,30,Manifattura non durevole
+323,Printing and related support activities,privato,3230,"E,S,N",si,G323,indagine+capitale,323,31,Manifattura non durevole
+324,Petroleum and coal products,privato,3240,"E,S,N",si,G324,fisico,324,32,Manifattura non durevole
+325,Chemical products,privato,3250,"E,S,N",si,G325,misto,325,33,Manifattura non durevole
+326,Plastics and rubber products,privato,3260,"E,S,N",si,G326,indagine+capitale,326,34,Manifattura non durevole
+42,Wholesale trade,privato,4210;4220,"E,S,N",si,,,42,35,Ingrosso durevole;Ingrosso non durevole
+441,Motor vehicle and parts dealers,privato,4410,"E,S,N",si,,,44RT,39,Concessionari auto
+445,Food and beverage stores,privato,4450,"E,S,N",si,,,44RT,40,Alimentari al dettaglio
+452,General merchandise stores,privato,4520,"E,S,N",si,,,44RT,41,Grandi magazzini
+4A0,Other retail,privato,442R,"E,S,N",si,,,44RT,42,Altro dettaglio
+481,Air transportation,privato,4810,"E,S,N",si,,,481,44,Altre industrie
+482,Rail transportation,privato,4820,"E,S,N",si,,,482,45,Altre industrie
+483,Water transportation,privato,4830,"E,S,N",si,,,483,46,Altre industrie
+484,Truck transportation,privato,4840,"E,S,N",si,,,484,47,Altre industrie
+485,Transit and ground passenger transportation,privato,4850,"E,S,N",si,,,485,48,Altre industrie
+486,Pipeline transportation,privato,4860,"E,S,N",si,,,486,49,Altre industrie
+487OS,Other transportation and support activities,privato,487S,"E,S,N",si,,,487OS,50,Altre industrie
+493,Warehousing and storage,privato,4930,"E,S,N",si,,,493,51,Altre industrie
+511,"Publishing industries, except internet (includes software)",privato,5110,"E,S,N",si,,,511,53,Altre industrie
+512,Motion picture and sound recording industries,privato,5120,"E,S,N",si,,,512,54,Altre industrie
+513,Broadcasting and telecommunications,privato,5130,"E,S,N",si,,,513,55,Altre industrie
+514,"Data processing, internet publishing, and other information services",privato,5140,"E,S,N",si,,,514,56,Altre industrie
+521CI,"Federal Reserve banks, credit intermediation, and related activities",privato,5210;5221;5223;5229,"E,S,N",si,,,521CI,58,Altre industrie
+523,"Securities, commodity contracts, and investments",privato,5230,"E,S,N",si,,,523,59,Altre industrie
+524,Insurance carriers and related activities,privato,524A;5243,"E,S,N",si,,,524,60,Altre industrie
+525,"Funds, trusts, and other financial vehicles",privato,5250,"E,S,N",si,,,525,61,Altre industrie
+HS,Housing,abitazioni (HS),detailresidential (tutto il residenziale privato),R,si,,,531,,Altre industrie
+ORE,Other real estate,privato,5310,"E,S,N",si,,,531,63,Altre industrie
+532RL,Rental and leasing services and lessors of intangible assets,privato,5320,"E,S,N",si,,,532RL,64,Altre industrie
+5411,Legal services,privato,5411,"E,S,N",si,,,5411,66,Altre industrie
+5415,Computer systems design and related services,privato,5415,"E,S,N",si,,,5415,67,Altre industrie
+5412OP,"Miscellaneous professional, scientific, and technical services",privato,5412,"E,S,N",si,,,5412OP,68,Altre industrie
+55,Management of companies and enterprises,privato,5500,"E,S,N",si,,,55,69,Altre industrie
+561,Administrative and support services,privato,5610,"E,S,N",si,,,561,71,Altre industrie
+562,Waste management and remediation services,privato,5620,"E,S,N",si,,,562,72,Altre industrie
+61,Educational services,privato,6100,"E,S,N",si,,,61,73,Altre industrie
+621,Ambulatory health care services,privato,6210,"E,S,N",si,,,621,75,Altre industrie
+622,Hospitals,privato,622H,"E,S,N",si,,,622HO,76,Altre industrie
+623,Nursing and residential care facilities,privato,6230,"E,S,N",si,,,622HO,77,Altre industrie
+624,Social assistance,privato,6240,"E,S,N",si,,,624,78,Altre industrie
+711AS,"Performing arts, spectator sports, museums, and related activities",privato,711A,"E,S,N",si,,,711AS,80,Altre industrie
+713,"Amusements, gambling, and recreation industries",privato,7130,"E,S,N",si,,,713,81,Altre industrie
+721,Accommodation,privato,7210,"E,S,N",si,,,721,83,Altre industrie
+722,Food services and drinking places,privato,7220,"E,S,N",si,,,722,84,Altre industrie
+81,"Other services, except government",privato,8100,"E,S,N",si,,,81,85,Altre industrie
+GFGD,Federal general government (defense),pubblico (esogeno),,no,no,,,GF,90,
+GFGN,Federal general government (nondefense),pubblico (esogeno),,no,no,,,GF,89,
+GFE,Federal government enterprises,pubblico (esogeno),,no,no,,,GF,91,
+GSLG,State and local general government,pubblico (esogeno),,no,no,,,GSL,93,
+GSLE,State and local government enterprises,pubblico (esogeno),,no,no,,,GSL,96,

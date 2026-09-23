@@ -1,0 +1,528 @@
+{
+ "id": "20260923-103203_M71-E6-taratura-gradualita",
+ "nome": "M71-E6-taratura-gradualita",
+ "inizio_utc": "2026-09-23T14:32:04+00:00",
+ "codice": {
+  "commit": "603dc4db7ee922b46837836635b8d41b47d19f99",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "orizzonti": {
+   "2012-2016": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016
+   ],
+   "2010-2019": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "taratura": {
+   "capacita_non_g17": "inviluppo_tendenza",
+   "sigma_fattore": 0.85
+  },
+  "meccanismi": {
+   "taratura": {},
+   "penalita": {
+    "penalita_var_inv": 0.1
+   },
+   "limite_15%": {
+    "limite_var_inv": 0.15
+   },
+   "penalita_tempi_costruzione": {
+    "penalita_var_inv": 0.1,
+    "tempi_costruzione": [
+     "S",
+     "R"
+    ]
+   }
+  }
+ },
+ "fine_utc": "2026-09-23T14:36:44+00:00",
+ "esito": "completata",
+ "output": {
+  "2012-2016_taratura/O4/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "99c62ec425d019f3dd551b106003c103f022b803c3d8879fef0fa18d74b3c6b4"
+  },
+  "2012-2016_taratura/O4/industrie.csv": {
+   "bytes": 11345,
+   "sha256": "162995907b68d7453cdfd23699b5f78e3a50837b0665031fb3b59ca81568eb59"
+  },
+  "2012-2016_taratura/O4/investimento.csv": {
+   "bytes": 21832,
+   "sha256": "acd5424b6682bf798868eaa59b967b4453dc01e9c0aeffb01c78e6c85676f30d"
+  },
+  "2012-2016_taratura/O4/prezzi_ombra.csv": {
+   "bytes": 14091,
+   "sha256": "d585f02d8ce14ad3e283a877d86d6c6ec889a14c45b3e4721b2b69ef73948424"
+  },
+  "2012-2016_taratura/O4/vincoli_attivi.csv": {
+   "bytes": 156,
+   "sha256": "27ea8edfc959f5fd5264a21ec39da02fe608bda5937afe5e826b676b91eb5b50"
+  },
+  "2012-2016_taratura/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_taratura/O2/aggregati.csv": {
+   "bytes": 1402,
+   "sha256": "f2c5dc1257d4440d1e52ef2fc8dcfcdc06ce0ee1ad5eb360909d99f5a5154300"
+  },
+  "2012-2016_taratura/O2/industrie.csv": {
+   "bytes": 11495,
+   "sha256": "e9cd36d0fd3752836af5c5ea760b1fb4b35e9daaec54a81f1bb93f7aacd8cf7e"
+  },
+  "2012-2016_taratura/O2/investimento.csv": {
+   "bytes": 14999,
+   "sha256": "74b4299a57879aa3f8e73f0504ff234cbb90570ae5058d123f69523b44a36070"
+  },
+  "2012-2016_taratura/O2/prezzi_ombra.csv": {
+   "bytes": 16798,
+   "sha256": "fccfc4da4cecfecc130f8f3c9e800c6d0ad15f54ffb3da230f3d2600dfe354a9"
+  },
+  "2012-2016_taratura/O2/vincoli_attivi.csv": {
+   "bytes": 198,
+   "sha256": "a71b1970188ff7fd7c85ac10b34e880c8787bcceafa1c184a54246d184f50c64"
+  },
+  "2012-2016_taratura/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_penalita/O4/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "99c62ec425d019f3dd551b106003c103f022b803c3d8879fef0fa18d74b3c6b4"
+  },
+  "2012-2016_penalita/O4/industrie.csv": {
+   "bytes": 11345,
+   "sha256": "162995907b68d7453cdfd23699b5f78e3a50837b0665031fb3b59ca81568eb59"
+  },
+  "2012-2016_penalita/O4/investimento.csv": {
+   "bytes": 21832,
+   "sha256": "acd5424b6682bf798868eaa59b967b4453dc01e9c0aeffb01c78e6c85676f30d"
+  },
+  "2012-2016_penalita/O4/prezzi_ombra.csv": {
+   "bytes": 14091,
+   "sha256": "d585f02d8ce14ad3e283a877d86d6c6ec889a14c45b3e4721b2b69ef73948424"
+  },
+  "2012-2016_penalita/O4/vincoli_attivi.csv": {
+   "bytes": 167,
+   "sha256": "70b106ac20627c0f05ca18440c5dad02a9cd2e154bc2004bb286ed9df5e983cf"
+  },
+  "2012-2016_penalita/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_penalita/O2/aggregati.csv": {
+   "bytes": 1442,
+   "sha256": "adb0f4a638a3021070c44ad16abcdef05c8890e76a9c1a92bfc8bfb770c34840"
+  },
+  "2012-2016_penalita/O2/industrie.csv": {
+   "bytes": 11490,
+   "sha256": "29087a8a6b53391549267c49ed6b52a8b320c72ae6a9bc3b045eb67e20508c90"
+  },
+  "2012-2016_penalita/O2/investimento.csv": {
+   "bytes": 15063,
+   "sha256": "95bcd7e613aed0fd003f6b928468c72ac5cd8ea2337bac9833d2645792f37e93"
+  },
+  "2012-2016_penalita/O2/prezzi_ombra.csv": {
+   "bytes": 16794,
+   "sha256": "49e904b5ae3d587a916abae101fae047279431bf64cabdb42c725bd16da0ca11"
+  },
+  "2012-2016_penalita/O2/vincoli_attivi.csv": {
+   "bytes": 209,
+   "sha256": "037d4ef09e7d56708d7dfbd9f7576288922166704dd6423b34bc864ad895eb8e"
+  },
+  "2012-2016_penalita/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_limite_15%/O4/aggregati.csv": {
+   "bytes": 1470,
+   "sha256": "99c62ec425d019f3dd551b106003c103f022b803c3d8879fef0fa18d74b3c6b4"
+  },
+  "2012-2016_limite_15%/O4/industrie.csv": {
+   "bytes": 11345,
+   "sha256": "162995907b68d7453cdfd23699b5f78e3a50837b0665031fb3b59ca81568eb59"
+  },
+  "2012-2016_limite_15%/O4/investimento.csv": {
+   "bytes": 21832,
+   "sha256": "acd5424b6682bf798868eaa59b967b4453dc01e9c0aeffb01c78e6c85676f30d"
+  },
+  "2012-2016_limite_15%/O4/prezzi_ombra.csv": {
+   "bytes": 14091,
+   "sha256": "d585f02d8ce14ad3e283a877d86d6c6ec889a14c45b3e4721b2b69ef73948424"
+  },
+  "2012-2016_limite_15%/O4/vincoli_attivi.csv": {
+   "bytes": 156,
+   "sha256": "27ea8edfc959f5fd5264a21ec39da02fe608bda5937afe5e826b676b91eb5b50"
+  },
+  "2012-2016_limite_15%/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_limite_15%/O2/aggregati.csv": {
+   "bytes": 1444,
+   "sha256": "8929f7729c123fed423a0592b71727f82c66ebc6d3319561045bd1731e8d3b9e"
+  },
+  "2012-2016_limite_15%/O2/industrie.csv": {
+   "bytes": 11480,
+   "sha256": "324fc2a48372b6570eddd07d54e570c9699107b8c36b6709f196f9930ccc99ca"
+  },
+  "2012-2016_limite_15%/O2/investimento.csv": {
+   "bytes": 15095,
+   "sha256": "7035a7413677931a4be9548e3bbdcdf24ea0820671030c7b743232673d696d39"
+  },
+  "2012-2016_limite_15%/O2/prezzi_ombra.csv": {
+   "bytes": 16797,
+   "sha256": "be743ce797ab7fbd8a4b272959db62d2ef73ca76b324f0566ea875ee0783e14d"
+  },
+  "2012-2016_limite_15%/O2/vincoli_attivi.csv": {
+   "bytes": 218,
+   "sha256": "2480271be2af8493988c31fac4c38ce2205c6aed897c13e4f691455bd1400cce"
+  },
+  "2012-2016_limite_15%/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_penalita_tempi_costruzione/O4/aggregati.csv": {
+   "bytes": 1480,
+   "sha256": "4b992af05943f4c388f6f92bd07039b4526611f3a845f923121d7a56c22b6851"
+  },
+  "2012-2016_penalita_tempi_costruzione/O4/industrie.csv": {
+   "bytes": 11340,
+   "sha256": "a14edae3a4b72682cc260c20afa1b92245152709809527563251204b6d9b9b64"
+  },
+  "2012-2016_penalita_tempi_costruzione/O4/investimento.csv": {
+   "bytes": 21848,
+   "sha256": "cd035df7d34eb752ba9c0b5d961c6570e9e2c8a51533097b075c812cded0b3b6"
+  },
+  "2012-2016_penalita_tempi_costruzione/O4/prezzi_ombra.csv": {
+   "bytes": 14121,
+   "sha256": "9f252bef60824e6326872fde4dd5921fa96800e40ca343008940fc8facb1fff6"
+  },
+  "2012-2016_penalita_tempi_costruzione/O4/vincoli_attivi.csv": {
+   "bytes": 204,
+   "sha256": "31e91e565c94eeb7f9484f1204a5c648672be02b2e561ea059c618685548dc78"
+  },
+  "2012-2016_penalita_tempi_costruzione/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2012-2016_penalita_tempi_costruzione/O2/aggregati.csv": {
+   "bytes": 1444,
+   "sha256": "5259aad499e06296ee8a866a9bd4a0080bf505c36bd54cc9b3a81376ad21c23f"
+  },
+  "2012-2016_penalita_tempi_costruzione/O2/industrie.csv": {
+   "bytes": 11490,
+   "sha256": "cc3a773b42f213f254c97f3d6fab1d4086f872f169007ac0da1919d60582b538"
+  },
+  "2012-2016_penalita_tempi_costruzione/O2/investimento.csv": {
+   "bytes": 15918,
+   "sha256": "c50c6fce2add61d0f59993b8e76248c611685db2994b8b068ffa4055d74cb8ce"
+  },
+  "2012-2016_penalita_tempi_costruzione/O2/prezzi_ombra.csv": {
+   "bytes": 16799,
+   "sha256": "e8eced5b57686eb9cfd4ea5af36c500b489f60cb0f87aa612aac6f6219526102"
+  },
+  "2012-2016_penalita_tempi_costruzione/O2/vincoli_attivi.csv": {
+   "bytes": 231,
+   "sha256": "ba4bb681feb224210ae7d17bfe9647ecfd3e12dcf4c1258add6662723db74998"
+  },
+  "2012-2016_penalita_tempi_costruzione/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "serie_2012-2016.csv": {
+   "bytes": 12024,
+   "sha256": "db42cf3b10ac991b9b860ae3ce2720a9dd45214fd02fff7745b0e34513d01ac2"
+  },
+  "scarti_2012-2016.csv": {
+   "bytes": 807,
+   "sha256": "464281d4af44923a6fbb4a7a1a84b56cff629368adbe95ee5abd4351b1b3c595"
+  },
+  "2010-2019_taratura/O4/aggregati.csv": {
+   "bytes": 2626,
+   "sha256": "556dc3c8d56a67b95fb0e019b41b90d206a0c407802a8bdb4f0bcf37f9306c22"
+  },
+  "2010-2019_taratura/O4/industrie.csv": {
+   "bytes": 23084,
+   "sha256": "3ec2cfb57c8ff33b2430a1df217485f5eb61cb5115088cb07043d65fe352a4e6"
+  },
+  "2010-2019_taratura/O4/investimento.csv": {
+   "bytes": 44794,
+   "sha256": "0fd0b05295844eb729e84100e084e7bad237995946418c5233f40c49d19be5b0"
+  },
+  "2010-2019_taratura/O4/prezzi_ombra.csv": {
+   "bytes": 29634,
+   "sha256": "f06e465b16891425c5b5c96a4f2206c34df07cb111e4d71cbce1b8dc10187af9"
+  },
+  "2010-2019_taratura/O4/vincoli_attivi.csv": {
+   "bytes": 175,
+   "sha256": "3dce5d95d7fa15959d6cccdab51f4893d52c8ebb2faf545c7bbd9eded794dac5"
+  },
+  "2010-2019_taratura/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_taratura/O2/aggregati.csv": {
+   "bytes": 2505,
+   "sha256": "0a873571ee4d18c1d3b1f0fe11a2a89ee5eb1af34fe33acae3279ee61d064578"
+  },
+  "2010-2019_taratura/O2/industrie.csv": {
+   "bytes": 23259,
+   "sha256": "1fba809ff88a2b95643bbddf6e74b61ab5096364c22a69d7fdbf3d8f95b29edb"
+  },
+  "2010-2019_taratura/O2/investimento.csv": {
+   "bytes": 30901,
+   "sha256": "41fa87a30cf6d8a9ae06bee6d191c30762122b6aa70682a9b5b919b0a1f79e08"
+  },
+  "2010-2019_taratura/O2/prezzi_ombra.csv": {
+   "bytes": 33568,
+   "sha256": "9999a992e57f2a7f27b736950277019d338b458cc7f85af4e0d233a1e33f164d"
+  },
+  "2010-2019_taratura/O2/vincoli_attivi.csv": {
+   "bytes": 220,
+   "sha256": "1636c1b938110df9619e6c681fde5547f591580601c5a32467b72fd211119bfd"
+  },
+  "2010-2019_taratura/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_penalita/O4/aggregati.csv": {
+   "bytes": 2626,
+   "sha256": "556dc3c8d56a67b95fb0e019b41b90d206a0c407802a8bdb4f0bcf37f9306c22"
+  },
+  "2010-2019_penalita/O4/industrie.csv": {
+   "bytes": 23084,
+   "sha256": "3ec2cfb57c8ff33b2430a1df217485f5eb61cb5115088cb07043d65fe352a4e6"
+  },
+  "2010-2019_penalita/O4/investimento.csv": {
+   "bytes": 44794,
+   "sha256": "7693072623c6690ef0c5a0d3cad9cb0223faba3a128403fcb16aefe43f6cf223"
+  },
+  "2010-2019_penalita/O4/prezzi_ombra.csv": {
+   "bytes": 29635,
+   "sha256": "11692f2c3477328416d3451162cadfac60f68bd249ce47f4490feee5aa24925c"
+  },
+  "2010-2019_penalita/O4/vincoli_attivi.csv": {
+   "bytes": 186,
+   "sha256": "14506bbf5c6369bc3a561ca1cb2734bc2163119185fb91b4aa75d00f8397ac4f"
+  },
+  "2010-2019_penalita/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_penalita/O2/aggregati.csv": {
+   "bytes": 2551,
+   "sha256": "f6b191c1fa538faa50d5051bdedf35c7f71ba0b71fa741a36df2d21bfbf79a71"
+  },
+  "2010-2019_penalita/O2/industrie.csv": {
+   "bytes": 23253,
+   "sha256": "37a556852f276f5cc4b221672972e67a5d359449e9b59ec87b3711c85229e703"
+  },
+  "2010-2019_penalita/O2/investimento.csv": {
+   "bytes": 31043,
+   "sha256": "734b5e1f7b70b976d2b5c663cc52a137716a2d75335050efb4c3bcc25f089b9b"
+  },
+  "2010-2019_penalita/O2/prezzi_ombra.csv": {
+   "bytes": 33588,
+   "sha256": "64232f301e7a38cc979c34e5c3b11f4a1727f5dd8a784cdc70fb2aaa18736006"
+  },
+  "2010-2019_penalita/O2/vincoli_attivi.csv": {
+   "bytes": 213,
+   "sha256": "2f0688a3b37bdc1342a4d51a0804e212e6ca5ca3a1cdaf3ebda7418e2f85e65b"
+  },
+  "2010-2019_penalita/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_limite_15%/O4/aggregati.csv": {
+   "bytes": 2633,
+   "sha256": "7452e178b635e2e0da58c0403ea6cffd66955398f171465bc2b2c28e7c64b998"
+  },
+  "2010-2019_limite_15%/O4/industrie.csv": {
+   "bytes": 23080,
+   "sha256": "14845b3fc2ce0ed2ff5133b4313d6a0d041d049081142cc9eed21d0c1e396405"
+  },
+  "2010-2019_limite_15%/O4/investimento.csv": {
+   "bytes": 44731,
+   "sha256": "3d35f0adc8f7bf5143b4e8a9c21198a25f3c7ee5ef9c72aa61216af2320caf40"
+  },
+  "2010-2019_limite_15%/O4/prezzi_ombra.csv": {
+   "bytes": 29351,
+   "sha256": "b78fbf4a4d3645216e98ebcb674c8c022c8c13626aa45ff53b7d8f4a43ffa856"
+  },
+  "2010-2019_limite_15%/O4/vincoli_attivi.csv": {
+   "bytes": 185,
+   "sha256": "afae3225dbc99dc8b256591e17d3335dacb4c7bff6bd84f159758a4487c16a45"
+  },
+  "2010-2019_limite_15%/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_limite_15%/O2/aggregati.csv": {
+   "bytes": 2545,
+   "sha256": "9d0fcc4be38e0eac31810e369ef4083a4db28513ca53f6d32b938846358a73d4"
+  },
+  "2010-2019_limite_15%/O2/industrie.csv": {
+   "bytes": 23256,
+   "sha256": "48fc496c791c2f4875c1b3cf7de3355f17f79ebd360bac9213585b0a20bafe4e"
+  },
+  "2010-2019_limite_15%/O2/investimento.csv": {
+   "bytes": 31349,
+   "sha256": "472b1baf1e82ed169709e256e4616d6e17c944d42c6837945f0e98a649c205ef"
+  },
+  "2010-2019_limite_15%/O2/prezzi_ombra.csv": {
+   "bytes": 33576,
+   "sha256": "63bd7cc6f98ff76421611b76d4234ca009208790c6a0ed407d32f4ba15b94d70"
+  },
+  "2010-2019_limite_15%/O2/vincoli_attivi.csv": {
+   "bytes": 224,
+   "sha256": "333581b648c9c0fa709862cf389d80a55ef1c387c5a9a309dd62ee233324be8d"
+  },
+  "2010-2019_limite_15%/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_penalita_tempi_costruzione/O4/aggregati.csv": {
+   "bytes": 2639,
+   "sha256": "e71e8f41baa975f887620ebf3ffa9393cd180490b2d41521dfe998721980b30c"
+  },
+  "2010-2019_penalita_tempi_costruzione/O4/industrie.csv": {
+   "bytes": 23085,
+   "sha256": "b3886f9bbfe61b0df2e23078c780a0bc957efd43116a88e6220582c99b5167f1"
+  },
+  "2010-2019_penalita_tempi_costruzione/O4/investimento.csv": {
+   "bytes": 44812,
+   "sha256": "5301db717752b4d3e43a03dde4e761db4785a99cfe0004993376817db848b89b"
+  },
+  "2010-2019_penalita_tempi_costruzione/O4/prezzi_ombra.csv": {
+   "bytes": 29563,
+   "sha256": "8f6f2cde8d49b170bcdef7516cdb63944cdcd809928b0efd92f5a57b6725ef05"
+  },
+  "2010-2019_penalita_tempi_costruzione/O4/vincoli_attivi.csv": {
+   "bytes": 208,
+   "sha256": "bc178b188454417d1e23375f7117faa5b68b98580ae29e39b4279ef75cc9456c"
+  },
+  "2010-2019_penalita_tempi_costruzione/O4/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "2010-2019_penalita_tempi_costruzione/O2/aggregati.csv": {
+   "bytes": 2550,
+   "sha256": "957ea06c6fb36ffa4809745e102eb5f71c58bc5f5717d7be7ad7357ecce44725"
+  },
+  "2010-2019_penalita_tempi_costruzione/O2/industrie.csv": {
+   "bytes": 23261,
+   "sha256": "6e4d0607718801efd325d5a1709fda7ca1477c1244e4d453cf007c0d9ae265b0"
+  },
+  "2010-2019_penalita_tempi_costruzione/O2/investimento.csv": {
+   "bytes": 32057,
+   "sha256": "3fe8213a871da8f9226ba3b06d962712a1cd1c9a6c507db7639bc5c66a2b6256"
+  },
+  "2010-2019_penalita_tempi_costruzione/O2/prezzi_ombra.csv": {
+   "bytes": 33567,
+   "sha256": "67c7ab1e3a4a96416137143597e49a997b4786acff3f4baf0564ec7f3bcbe6fd"
+  },
+  "2010-2019_penalita_tempi_costruzione/O2/vincoli_attivi.csv": {
+   "bytes": 235,
+   "sha256": "e7a1fabb01246e0f45a8500fb60fd2c581539082cd8ef5a6f0c73dc49c67747a"
+  },
+  "2010-2019_penalita_tempi_costruzione/O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "serie_2010-2019.csv": {
+   "bytes": 23272,
+   "sha256": "5e5d49cebe0a0c6724e707fb2036c62ec14c44b404d6a1fdcd264ba530df0e4d"
+  },
+  "scarti_2010-2019.csv": {
+   "bytes": 803,
+   "sha256": "e016c6d6c8a091c480dbeb684bf811b9a5564ce1bdcce77e68570e251a056cb0"
+  },
+  "casi.csv": {
+   "bytes": 4673,
+   "sha256": "89a09dc8383dda38d50b682e6b68eda8404b3c18fad05b3d8f2c02c12978ed47"
+  },
+  "1_penalita_produzione_consumo.png": {
+   "bytes": 92953,
+   "sha256": "90f3462b76a0ef9bbe82d6a50dc0c00979786efcd6edc3402cb72dacb18eac73"
+  },
+  "2_penalita_investimento_per_tipo.png": {
+   "bytes": 175400,
+   "sha256": "43036866e659eca2ef57b033fbf057a7b19eb808979690034acba386d71afbdf"
+  },
+  "3_penalita_stock_per_tipo.png": {
+   "bytes": 178992,
+   "sha256": "9994558bbcbc1819d7c4cc0e53e816ee1c93f021b4992ae45df7adf8d2e8ebcb"
+  },
+  "4_penalita_tempi_costruzione_produzione_consumo.png": {
+   "bytes": 95168,
+   "sha256": "8491122e1618684c6a29bf48ac351e0ce3af22e6c0c055e31700c4e87e1af883"
+  },
+  "5_penalita_tempi_costruzione_investimento_per_tipo.png": {
+   "bytes": 177727,
+   "sha256": "01438199405d88ad4086ace22d199b560988075dcab256a5982be5d25dd36663"
+  },
+  "6_penalita_tempi_costruzione_stock_per_tipo.png": {
+   "bytes": 181368,
+   "sha256": "134cdff873abb3e19c2657382bcc5c2b038721437003a11caeed0233322cb2c4"
+  },
+  "7_penalita_2012_2016_produzione_consumo.png": {
+   "bytes": 79906,
+   "sha256": "6c177a5cded379895630b6ac752f432fee16c007c73e5a1617d54607415e2f48"
+  },
+  "8_penalita_2012_2016_investimento_per_tipo.png": {
+   "bytes": 138986,
+   "sha256": "5219942ef8b0d767b4b87cc2c1a4698f5aa8186636fded82a8c86da485cb6de4"
+  },
+  "9_penalita_2012_2016_stock_per_tipo.png": {
+   "bytes": 154828,
+   "sha256": "920fa566f3320ee70e34d783cc393d9457606c95b20dd9404a862fa82a19998e"
+  },
+  "sintesi.md": {
+   "bytes": 3889,
+   "sha256": "08a374ab28081c9d50a65e5061589b8d9e73b4eefb79bf9f50bb758724b07f49"
+  }
+ }
+}

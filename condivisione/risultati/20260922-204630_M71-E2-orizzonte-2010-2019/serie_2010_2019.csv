@@ -1,0 +1,417 @@
+caso,variabile,anno,valore
+osservato,produzione_lorda,2010,27873.02677
+osservato,consumo_privato,2010,10803.39685
+osservato,investimento_E,2010,787.641367
+osservato,investimento_S,2010,397.7260542
+osservato,investimento_N,2010,589.2146946
+osservato,investimento_R,2010,382.9823414
+osservato,produzione_lorda,2011,28497.84411
+osservato,consumo_privato,2011,10932.21536
+osservato,investimento_E,2011,889.147231
+osservato,investimento_S,2011,411.1623063
+osservato,investimento_N,2011,625.6788907
+osservato,investimento_R,2011,382.3305865
+osservato,produzione_lorda,2012,29232.151
+osservato,consumo_privato,2012,11065.391
+osservato,investimento_E,2012,979.968
+osservato,investimento_S,2012,461.451
+osservato,investimento_N,2012,655.697
+osservato,investimento_R,2012,432.014
+osservato,produzione_lorda,2013,29888.3702
+osservato,consumo_privato,2013,11221.41039
+osservato,investimento_E,2013,1040.300973
+osservato,investimento_S,2013,467.9064184
+osservato,investimento_N,2013,694.3590635
+osservato,investimento_R,2013,486.640999
+osservato,produzione_lorda,2014,30756.33925
+osservato,consumo_privato,2014,11485.59399
+osservato,investimento_E,2014,1120.873071
+osservato,investimento_S,2014,519.2634825
+osservato,investimento_N,2014,736.3419464
+osservato,investimento_R,2014,508.1175307
+osservato,produzione_lorda,2015,31442.76287
+osservato,consumo_privato,2015,11875.06634
+osservato,investimento_E,2015,1162.908228
+osservato,investimento_S,2015,515.2763645
+osservato,investimento_N,2015,771.8410725
+osservato,investimento_R,2015,562.3000943
+osservato,produzione_lorda,2016,32015.74003
+osservato,consumo_privato,2016,12189.77949
+osservato,investimento_E,2016,1160.192463
+osservato,investimento_S,2016,494.6857711
+osservato,investimento_N,2016,845.5307864
+osservato,investimento_R,2016,602.4324513
+osservato,produzione_lorda,2017,32757.69183
+osservato,consumo_privato,2017,12451.96078
+osservato,investimento_E,2017,1217.722438
+osservato,investimento_S,2017,505.3221883
+osservato,investimento_N,2017,902.5941762
+osservato,investimento_R,2017,629.0185563
+osservato,produzione_lorda,2018,33764.33955
+osservato,consumo_privato,2018,12714.17167
+osservato,investimento_E,2018,1277.112406
+osservato,investimento_S,2018,541.3342036
+osservato,investimento_N,2018,984.9626808
+osservato,investimento_R,2018,627.4769191
+osservato,produzione_lorda,2019,34380.93056
+osservato,consumo_privato,2019,12936.55877
+osservato,investimento_E,2019,1294.274697
+osservato,investimento_S,2019,552.0009372
+osservato,investimento_N,2019,1064.490259
+osservato,investimento_R,2019,622.2039545
+osservato,stock_E,2010,5253.682314
+osservato,stock_S,2010,11966.29598
+osservato,stock_N,2010,2163.778443
+osservato,stock_R,2010,16313.21928
+osservato,stock_E,2011,5326.714292
+osservato,stock_S,2011,11994.62152
+osservato,stock_N,2011,2227.548387
+osservato,stock_R,2011,16316.06153
+osservato,stock_E,2012,5482.556292
+osservato,stock_S,2012,12034.73719
+osservato,stock_N,2012,2308.266901
+osservato,stock_R,2012,16320.95131
+osservato,stock_E,2013,5697.245
+osservato,stock_S,2013,12111.938
+osservato,stock_N,2013,2392.597
+osservato,stock_R,2013,16352.383
+osservato,stock_E,2014,5939.767384
+osservato,stock_S,2014,12201.77995
+osservato,stock_N,2014,2486.697176
+osservato,stock_R,2014,16463.18883
+osservato,stock_E,2015,6224.30194
+osservato,stock_S,2015,12338.34192
+osservato,stock_N,2015,2591.449439
+osservato,stock_R,2015,16592.58793
+osservato,stock_E,2016,6509.75935
+osservato,stock_S,2016,12467.24791
+osservato,stock_N,2016,2698.174801
+osservato,stock_R,2016,16773.35508
+osservato,stock_E,2017,6754.034715
+osservato,stock_S,2017,12574.478
+osservato,stock_N,2017,2838.099865
+osservato,stock_R,2017,16989.36543
+osservato,stock_E,2018,7014.004155
+osservato,stock_S,2018,12674.4067
+osservato,stock_N,2018,2985.826491
+osservato,stock_R,2018,17164.48709
+osservato,stock_E,2019,7298.641131
+osservato,stock_S,2019,12820.10486
+osservato,stock_N,2019,3159.392321
+osservato,stock_R,2019,17362.16861
+osservato,stock_E,2020,7562.557739
+osservato,stock_S,2020,12977.54794
+osservato,stock_N,2020,3351.575921
+osservato,stock_R,2020,17582.30423
+O2 2010-2019,produzione_lorda,2010,28048.83593
+O2 2010-2019,consumo_privato,2010,11639.391
+O2 2010-2019,investimento_E,2010,54.9003819
+O2 2010-2019,investimento_S,2010,26.85228197
+O2 2010-2019,investimento_N,2010,3.76947856
+O2 2010-2019,investimento_R,2010,1258.509877
+O2 2010-2019,produzione_lorda,2011,28770.74186
+O2 2010-2019,consumo_privato,2011,11853.70645
+O2 2010-2019,investimento_E,2011,197.359218
+O2 2010-2019,investimento_S,2011,307.1257857
+O2 2010-2019,investimento_N,2011,49.36175873
+O2 2010-2019,investimento_R,2011,1051.650904
+O2 2010-2019,produzione_lorda,2012,29505.07806
+O2 2010-2019,consumo_privato,2012,12074.52765
+O2 2010-2019,investimento_E,2012,500.5895094
+O2 2010-2019,investimento_S,2012,318.0580956
+O2 2010-2019,investimento_N,2012,243.8455993
+O2 2010-2019,investimento_R,2012,991.1385949
+O2 2010-2019,produzione_lorda,2013,30104.9096
+O2 2010-2019,consumo_privato,2013,12488.66389
+O2 2010-2019,investimento_E,2013,297.0956103
+O2 2010-2019,investimento_S,2013,507.3321263
+O2 2010-2019,investimento_N,2013,421.2636093
+O2 2010-2019,investimento_R,2013,458.5418185
+O2 2010-2019,produzione_lorda,2014,30694.18601
+O2 2010-2019,consumo_privato,2014,13081.83213
+O2 2010-2019,investimento_E,2014,414.8959977
+O2 2010-2019,investimento_S,2014,520.95488
+O2 2010-2019,investimento_N,2014,369.2706119
+O2 2010-2019,investimento_R,2014,145.8994353
+O2 2010-2019,produzione_lorda,2015,31401.0358
+O2 2010-2019,consumo_privato,2015,13638.38323
+O2 2010-2019,investimento_E,2015,660.4995841
+O2 2010-2019,investimento_S,2015,324.3736477
+O2 2010-2019,investimento_N,2015,354.9529017
+O2 2010-2019,investimento_R,2015,167.5475751
+O2 2010-2019,produzione_lorda,2016,32067.27666
+O2 2010-2019,consumo_privato,2016,13958.44446
+O2 2010-2019,investimento_E,2016,617.241249
+O2 2010-2019,investimento_S,2016,346.8791081
+O2 2010-2019,investimento_N,2016,579.3179622
+O2 2010-2019,investimento_R,2016,0
+O2 2010-2019,produzione_lorda,2017,32995.31324
+O2 2010-2019,consumo_privato,2017,14206.07174
+O2 2010-2019,investimento_E,2017,551.3011259
+O2 2010-2019,investimento_S,2017,93.51338159
+O2 2010-2019,investimento_N,2017,867.2660218
+O2 2010-2019,investimento_R,2017,0
+O2 2010-2019,produzione_lorda,2018,33905.47278
+O2 2010-2019,consumo_privato,2018,14474.54273
+O2 2010-2019,investimento_E,2018,527.1790415
+O2 2010-2019,investimento_S,2018,694.6881758
+O2 2010-2019,investimento_N,2018,811.5998817
+O2 2010-2019,investimento_R,2018,0
+O2 2010-2019,produzione_lorda,2019,34660.52384
+O2 2010-2019,consumo_privato,2019,14828.30629
+O2 2010-2019,investimento_E,2019,1937.62312
+O2 2010-2019,investimento_S,2019,455.1631579
+O2 2010-2019,investimento_N,2019,757.7253221
+O2 2010-2019,investimento_R,2019,0
+O2 2010-2019,stock_E,2010,5253.682314
+O2 2010-2019,stock_S,2010,11966.29598
+O2 2010-2019,stock_N,2010,2163.778443
+O2 2010-2019,stock_R,2010,16313.21928
+O2 2010-2019,stock_E,2011,4580.283914
+O2 2010-2019,stock_S,2011,11622.69865
+O2 2010-2019,stock_N,2011,1624.551158
+O2 2010-2019,stock_R,2011,17193.37068
+O2 2010-2019,stock_E,2012,4149.750217
+O2 2010-2019,stock_S,2012,11573.25219
+O2 2010-2019,stock_N,2012,1294.251824
+O2 2010-2019,stock_R,2012,17846.24942
+O2 2010-2019,stock_E,2013,4080.94081
+O2 2010-2019,stock_S,2013,11534.18331
+O2 2010-2019,stock_N,2013,1247.247041
+O2 2010-2019,stock_R,2013,18423.4734
+O2 2010-2019,stock_E,2014,3814.452429
+O2 2010-2019,stock_S,2014,11687.66943
+O2 2010-2019,stock_N,2014,1376.838891
+O2 2010-2019,stock_R,2014,18454.71284
+O2 2010-2019,stock_E,2015,3702.323743
+O2 2010-2019,stock_S,2015,11851.13363
+O2 2010-2019,stock_N,2015,1396.972818
+O2 2010-2019,stock_R,2015,18172.58535
+O2 2010-2019,stock_E,2016,3854.007613
+O2 2010-2019,stock_S,2016,11816.17957
+O2 2010-2019,stock_N,2016,1364.452911
+O2 2010-2019,stock_R,2016,17918.64948
+O2 2010-2019,stock_E,2017,3934.472077
+O2 2010-2019,stock_S,2017,11807.21726
+O2 2010-2019,stock_N,2017,1539.35372
+O2 2010-2019,stock_R,2017,17503.05567
+O2 2010-2019,stock_E,2018,3926.634634
+O2 2010-2019,stock_S,2018,11546.17794
+O2 2010-2019,stock_N,2018,1943.733028
+O2 2010-2019,stock_R,2018,17097.10087
+O2 2010-2019,stock_E,2019,3888.329244
+O2 2010-2019,stock_S,2019,11895.05196
+O2 2010-2019,stock_N,2019,2128.453157
+O2 2010-2019,stock_R,2019,16700.56153
+O2 2010-2019,stock_E,2020,5253.682314
+O2 2010-2019,stock_S,2020,11966.29598
+O2 2010-2019,stock_N,2020,2163.778443
+O2 2010-2019,stock_R,2020,16313.21928
+limite_15% 2010-2019,produzione_lorda,2010,28311.58914
+limite_15% 2010-2019,consumo_privato,2010,11646.70777
+limite_15% 2010-2019,investimento_E,2010,558.992479
+limite_15% 2010-2019,investimento_S,2010,397.0912361
+limite_15% 2010-2019,investimento_N,2010,487.3959709
+limite_15% 2010-2019,investimento_R,2010,454.4329421
+limite_15% 2010-2019,produzione_lorda,2011,29150.47897
+limite_15% 2010-2019,consumo_privato,2011,11789.48594
+limite_15% 2010-2019,investimento_E,2011,475.1436071
+limite_15% 2010-2019,investimento_S,2011,337.5275507
+limite_15% 2010-2019,investimento_N,2011,414.2865753
+limite_15% 2010-2019,investimento_R,2011,522.5978834
+limite_15% 2010-2019,produzione_lorda,2012,29403.23121
+limite_15% 2010-2019,consumo_privato,2012,12155.38943
+limite_15% 2010-2019,investimento_E,2012,403.8720661
+limite_15% 2010-2019,investimento_S,2012,286.8984181
+limite_15% 2010-2019,investimento_N,2012,352.143589
+limite_15% 2010-2019,investimento_R,2012,600.9875659
+limite_15% 2010-2019,produzione_lorda,2013,29916.58079
+limite_15% 2010-2019,consumo_privato,2013,12500.20571
+limite_15% 2010-2019,investimento_E,2013,444.7952111
+limite_15% 2010-2019,investimento_S,2013,243.8636554
+limite_15% 2010-2019,investimento_N,2013,299.3220506
+limite_15% 2010-2019,investimento_R,2013,537.9195005
+limite_15% 2010-2019,produzione_lorda,2014,30896.31127
+limite_15% 2010-2019,consumo_privato,2014,12818.94223
+limite_15% 2010-2019,investimento_E,2014,511.5144927
+limite_15% 2010-2019,investimento_S,2014,280.4432037
+limite_15% 2010-2019,investimento_N,2014,330.232525
+limite_15% 2010-2019,investimento_R,2014,457.2315755
+limite_15% 2010-2019,produzione_lorda,2015,31651.22866
+limite_15% 2010-2019,consumo_privato,2015,13270.83652
+limite_15% 2010-2019,investimento_E,2015,588.2416666
+limite_15% 2010-2019,investimento_S,2015,320.1471101
+limite_15% 2010-2019,investimento_N,2015,379.7674037
+limite_15% 2010-2019,investimento_R,2015,388.6468391
+limite_15% 2010-2019,produzione_lorda,2016,32283.97354
+limite_15% 2010-2019,consumo_privato,2016,13619.34995
+limite_15% 2010-2019,investimento_E,2016,676.4779166
+limite_15% 2010-2019,investimento_S,2016,368.1691766
+limite_15% 2010-2019,investimento_N,2016,436.7325143
+limite_15% 2010-2019,investimento_R,2016,330.3498133
+limite_15% 2010-2019,produzione_lorda,2017,32845.33333
+limite_15% 2010-2019,consumo_privato,2017,14062.11481
+limite_15% 2010-2019,investimento_E,2017,777.9496041
+limite_15% 2010-2019,investimento_S,2017,423.3945531
+limite_15% 2010-2019,investimento_N,2017,502.2423914
+limite_15% 2010-2019,investimento_R,2017,280.7973413
+limite_15% 2010-2019,produzione_lorda,2018,33911.75475
+limite_15% 2010-2019,consumo_privato,2018,14369.71342
+limite_15% 2010-2019,investimento_E,2018,894.6420448
+limite_15% 2010-2019,investimento_S,2018,486.9037361
+limite_15% 2010-2019,investimento_N,2018,577.5787501
+limite_15% 2010-2019,investimento_R,2018,238.6777401
+limite_15% 2010-2019,produzione_lorda,2019,34370.20271
+limite_15% 2010-2019,consumo_privato,2019,14783.83584
+limite_15% 2010-2019,investimento_E,2019,1028.838351
+limite_15% 2010-2019,investimento_S,2019,559.9392965
+limite_15% 2010-2019,investimento_N,2019,664.2155626
+limite_15% 2010-2019,investimento_R,2019,202.8760791
+limite_15% 2010-2019,stock_E,2010,5253.682314
+limite_15% 2010-2019,stock_S,2010,11966.29598
+limite_15% 2010-2019,stock_N,2010,2163.778443
+limite_15% 2010-2019,stock_R,2010,16313.21928
+limite_15% 2010-2019,stock_E,2011,5084.376011
+limite_15% 2010-2019,stock_S,2011,11992.9376
+limite_15% 2010-2019,stock_N,2011,2108.177651
+limite_15% 2010-2019,stock_R,2011,16389.29374
+limite_15% 2010-2019,stock_E,2012,4893.090314
+limite_15% 2010-2019,stock_S,2012,11957.50807
+limite_15% 2010-2019,stock_N,2012,2081.195695
+limite_15% 2010-2019,stock_R,2012,16531.76872
+limite_15% 2010-2019,stock_E,2013,4668.564806
+limite_15% 2010-2019,stock_S,2013,11866.3918
+limite_15% 2010-2019,stock_N,2013,2041.321205
+limite_15% 2010-2019,stock_R,2013,16749.3289
+limite_15% 2010-2019,stock_E,2014,4508.773832
+limite_15% 2010-2019,stock_S,2014,11736.51922
+limite_15% 2010-2019,stock_N,2014,1960.896958
+limite_15% 2010-2019,stock_R,2014,16898.77507
+limite_15% 2010-2019,stock_E,2015,4426.784897
+limite_15% 2010-2019,stock_S,2015,11648.51602
+limite_15% 2010-2019,stock_N,2015,1902.557799
+limite_15% 2010-2019,stock_R,2015,16964.06715
+limite_15% 2010-2019,stock_E,2016,4428.569322
+limite_15% 2010-2019,stock_S,2016,11604.37902
+limite_15% 2010-2019,stock_N,2016,1878.54128
+limite_15% 2010-2019,stock_R,2016,16959.26016
+limite_15% 2010-2019,stock_E,2017,4514.569913
+limite_15% 2010-2019,stock_S,2017,11611.93317
+limite_15% 2010-2019,stock_N,2017,1900.381766
+limite_15% 2010-2019,stock_R,2017,16896.26762
+limite_15% 2010-2019,stock_E,2018,4676.821584
+limite_15% 2010-2019,stock_S,2018,11674.68454
+limite_15% 2010-2019,stock_N,2018,1969.65419
+limite_15% 2010-2019,stock_R,2018,16785.18363
+limite_15% 2010-2019,stock_E,2019,4920.792091
+limite_15% 2010-2019,stock_S,2019,11792.48117
+limite_15% 2010-2019,stock_N,2019,2068.04104
+limite_15% 2010-2019,stock_R,2019,16634.55644
+limite_15% 2010-2019,stock_E,2020,5253.682314
+limite_15% 2010-2019,stock_S,2020,11966.29598
+limite_15% 2010-2019,stock_N,2020,2163.778443
+limite_15% 2010-2019,stock_R,2020,16451.62115
+penalita_0.1 2010-2019,produzione_lorda,2010,28330.8919
+penalita_0.1 2010-2019,consumo_privato,2010,11565.64626
+penalita_0.1 2010-2019,investimento_E,2010,624.7563
+penalita_0.1 2010-2019,investimento_S,2010,443.8078521
+penalita_0.1 2010-2019,investimento_N,2010,544.7366734
+penalita_0.1 2010-2019,investimento_R,2010,414.9170341
+penalita_0.1 2010-2019,produzione_lorda,2011,29418.58423
+penalita_0.1 2010-2019,consumo_privato,2011,11667.41386
+penalita_0.1 2010-2019,investimento_E,2011,591.8743895
+penalita_0.1 2010-2019,investimento_S,2011,420.4495441
+penalita_0.1 2010-2019,investimento_N,2011,516.0663222
+penalita_0.1 2010-2019,investimento_R,2011,434.6749881
+penalita_0.1 2010-2019,produzione_lorda,2012,29706.95841
+penalita_0.1 2010-2019,consumo_privato,2012,11996.09471
+penalita_0.1 2010-2019,investimento_E,2012,562.6330646
+penalita_0.1 2010-2019,investimento_S,2012,397.0912361
+penalita_0.1 2010-2019,investimento_N,2012,487.3959709
+penalita_0.1 2010-2019,investimento_R,2012,454.4329421
+penalita_0.1 2010-2019,produzione_lorda,2013,30328.13548
+penalita_0.1 2010-2019,consumo_privato,2013,12290.21022
+penalita_0.1 2010-2019,investimento_E,2013,595.5149752
+penalita_0.1 2010-2019,investimento_S,2013,373.7329281
+penalita_0.1 2010-2019,investimento_N,2013,458.7256197
+penalita_0.1 2010-2019,investimento_R,2013,474.1908961
+penalita_0.1 2010-2019,produzione_lorda,2014,30920.41484
+penalita_0.1 2010-2019,consumo_privato,2014,12708.11279
+penalita_0.1 2010-2019,investimento_E,2014,628.3968857
+penalita_0.1 2010-2019,investimento_S,2014,350.3746201
+penalita_0.1 2010-2019,investimento_N,2014,430.0552685
+penalita_0.1 2010-2019,investimento_R,2014,454.4329421
+penalita_0.1 2010-2019,produzione_lorda,2015,31401.20218
+penalita_0.1 2010-2019,consumo_privato,2015,13244.49786
+penalita_0.1 2010-2019,investimento_E,2015,661.2787962
+penalita_0.1 2010-2019,investimento_S,2015,327.0163121
+penalita_0.1 2010-2019,investimento_N,2015,401.3849172
+penalita_0.1 2010-2019,investimento_R,2015,434.6749881
+penalita_0.1 2010-2019,produzione_lorda,2016,32130.51477
+penalita_0.1 2010-2019,consumo_privato,2016,13590.18229
+penalita_0.1 2010-2019,investimento_E,2016,694.1607067
+penalita_0.1 2010-2019,investimento_S,2016,349.7083322
+penalita_0.1 2010-2019,investimento_N,2016,405.2589218
+penalita_0.1 2010-2019,investimento_R,2016,414.9170341
+penalita_0.1 2010-2019,produzione_lorda,2017,32930.51901
+penalita_0.1 2010-2019,consumo_privato,2017,13924.90396
+penalita_0.1 2010-2019,investimento_E,2017,727.0426173
+penalita_0.1 2010-2019,investimento_S,2017,373.0666402
+penalita_0.1 2010-2019,investimento_N,2017,433.929273
+penalita_0.1 2010-2019,investimento_R,2017,395.1590801
+penalita_0.1 2010-2019,produzione_lorda,2018,33930.37453
+penalita_0.1 2010-2019,consumo_privato,2018,14362.92959
+penalita_0.1 2010-2019,investimento_E,2018,759.9245278
+penalita_0.1 2010-2019,investimento_S,2018,396.4249482
+penalita_0.1 2010-2019,investimento_N,2018,462.5996243
+penalita_0.1 2010-2019,investimento_R,2018,375.401126
+penalita_0.1 2010-2019,produzione_lorda,2019,34124.99386
+penalita_0.1 2010-2019,consumo_privato,2019,14826.45549
+penalita_0.1 2010-2019,investimento_E,2019,792.8064383
+penalita_0.1 2010-2019,investimento_S,2019,419.7832562
+penalita_0.1 2010-2019,investimento_N,2019,491.2699755
+penalita_0.1 2010-2019,investimento_R,2019,355.643172
+penalita_0.1 2010-2019,stock_E,2010,5253.682314
+penalita_0.1 2010-2019,stock_S,2010,11966.29598
+penalita_0.1 2010-2019,stock_N,2010,2163.778443
+penalita_0.1 2010-2019,stock_R,2010,16313.21928
+penalita_0.1 2010-2019,stock_E,2011,5150.139832
+penalita_0.1 2010-2019,stock_S,2011,12039.65422
+penalita_0.1 2010-2019,stock_N,2011,2165.518353
+penalita_0.1 2010-2019,stock_R,2011,16349.77783
+penalita_0.1 2010-2019,stock_E,2012,5073.424708
+penalita_0.1 2010-2019,stock_S,2012,12085.98866
+penalita_0.1 2010-2019,stock_N,2012,2198.274656
+penalita_0.1 2010-2019,stock_R,2012,16405.24642
+penalita_0.1 2010-2019,stock_E,2013,4998.969547
+penalita_0.1 2010-2019,stock_S,2013,12092.94368
+penalita_0.1 2010-2019,stock_N,2013,2244.237864
+penalita_0.1 2010-2019,stock_R,2013,16479.18646
+penalita_0.1 2010-2019,stock_E,2014,4964.74831
+penalita_0.1 2010-2019,stock_S,2014,12074.37839
+penalita_0.1 2010-2019,stock_N,2014,2277.780976
+penalita_0.1 2010-2019,stock_R,2014,16571.16954
+penalita_0.1 2010-2019,stock_E,2015,4956.734968
+penalita_0.1 2010-2019,stock_S,2015,12030.35763
+penalita_0.1 2010-2019,stock_N,2015,2277.508937
+penalita_0.1 2010-2019,stock_R,2015,16641.26126
+penalita_0.1 2010-2019,stock_E,2016,4976.141278
+penalita_0.1 2010-2019,stock_S,2016,11965.95502
+penalita_0.1 2010-2019,stock_N,2016,2243.041558
+penalita_0.1 2010-2019,stock_R,2016,16689.96937
+penalita_0.1 2010-2019,stock_E,2017,5022.629651
+penalita_0.1 2010-2019,stock_S,2017,11932.28725
+penalita_0.1 2010-2019,stock_N,2017,2216.233352
+penalita_0.1 2010-2019,stock_R,2017,16717.78982
+penalita_0.1 2010-2019,stock_E,2018,5090.973603
+penalita_0.1 2010-2019,stock_S,2018,11925.89855
+penalita_0.1 2010-2019,stock_N,2018,2211.070608
+penalita_0.1 2010-2019,stock_R,2018,16725.20706
+penalita_0.1 2010-2019,stock_E,2019,5167.926096
+penalita_0.1 2010-2019,stock_S,2019,11940.79904
+penalita_0.1 2010-2019,stock_N,2019,2208.47145
+penalita_0.1 2010-2019,stock_R,2019,16712.69432
+penalita_0.1 2010-2019,stock_E,2020,5253.682314
+penalita_0.1 2010-2019,stock_S,2020,11966.29598
+penalita_0.1 2010-2019,stock_N,2020,2163.778443
+penalita_0.1 2010-2019,stock_R,2020,16680.71384

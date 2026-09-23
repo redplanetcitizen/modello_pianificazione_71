@@ -1,0 +1,247 @@
+{
+ "id": "20260922-212845_M71-E3-funzione-investimento",
+ "nome": "M71-E3-funzione-investimento",
+ "inizio_utc": "2026-09-23T01:28:45+00:00",
+ "codice": {
+  "commit": "1beeb4343b8bdb686897580204de67a3ebc80e5e",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "stima": [
+   1998,
+   2009
+  ],
+  "tasso": [
+   2005,
+   2009
+  ],
+  "orizzonte": [
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019
+  ],
+  "calibrazione": {
+   "u_non_g17": 0.734,
+   "sigma_fattore": 0.85
+  }
+ },
+ "fine_utc": "2026-09-23T01:30:25+00:00",
+ "esito": "completata",
+ "output": {
+  "dati_stima.csv": {
+   "bytes": 6271,
+   "sha256": "44619240330e49f447bc10313ad21ba8fe2a119be36830bd2ead4122d3cca7f5"
+  },
+  "stima_regole.csv": {
+   "bytes": 523,
+   "sha256": "cb6dfe606cae94dbdc1f6c97ea6f57004066c7ff98700da06198407e298e7f20"
+  },
+  "previsioni_fuori_campione.csv": {
+   "bytes": 3963,
+   "sha256": "b150ce47097247350f9ce1aad673ab7e0b18b7d3cd2af7d00c08331f76761d1d"
+  },
+  "opzioni.json": {
+   "bytes": 5754,
+   "sha256": "82fe36da7c28c1d0c494b99c044e3040a7f0f8e9929b1e99af9ac37a7afd0027"
+  },
+  "O2/aggregati.csv": {
+   "bytes": 2510,
+   "sha256": "3d5818f410e6256bc50f33f327ab9c3c0d39b5a6ac9d4360c8ee4b5a2a6a57fc"
+  },
+  "O2/industrie.csv": {
+   "bytes": 23254,
+   "sha256": "28d0bfe17af2c6852a536b7a9a10f2ce3f67531d3c490b67ce4b6175606d1e93"
+  },
+  "O2/investimento.csv": {
+   "bytes": 30596,
+   "sha256": "b0708f35c915a280c4f0aa0a7f40b47fe4ebf9659c4c21ff18b77639a40012a9"
+  },
+  "O2/prezzi_ombra.csv": {
+   "bytes": 33572,
+   "sha256": "9ff77375e142b59f09881df06c270261c0eaa95ca56361bf2dc84899adab6b83"
+  },
+  "O2/vincoli_attivi.csv": {
+   "bytes": 202,
+   "sha256": "9c5d6f2c5e9ce8af683d5412d7a35eeea15587a53d190b70159a6eadbb623b63"
+  },
+  "O2/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "acceleratore_banda_10%/aggregati.csv": {
+   "bytes": 2547,
+   "sha256": "772b7700da5f97b41144ce5980bbe2ec3123c715184a71418a30f33b182ff1a0"
+  },
+  "acceleratore_banda_10%/industrie.csv": {
+   "bytes": 23259,
+   "sha256": "14f0c42755d57e1a1044500bd5ca73dd41ade4a676008a662fb46f7aedcb3689"
+  },
+  "acceleratore_banda_10%/investimento.csv": {
+   "bytes": 30467,
+   "sha256": "cd3c1d0b3bcc2deecc4e1ec91306534c8a09e0164dd55d077a0f55b9bed9a6fb"
+  },
+  "acceleratore_banda_10%/prezzi_ombra.csv": {
+   "bytes": 33564,
+   "sha256": "e94e240de282e2fcb8dd4c7150b9c0a07ae4de82ae86e910e334394cafffa75a"
+  },
+  "acceleratore_banda_10%/vincoli_attivi.csv": {
+   "bytes": 220,
+   "sha256": "fd8c40d0d9e3514d54228ae6a6756c9fcd00d02d76fd4bec5ab60563b3891d57"
+  },
+  "acceleratore_banda_10%/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "tasso_costante_banda_10%/aggregati.csv": {
+   "bytes": 2546,
+   "sha256": "068140fd9d38183944ca8a6c709dc870eb23be514920efa9677c074fd01ff044"
+  },
+  "tasso_costante_banda_10%/industrie.csv": {
+   "bytes": 23243,
+   "sha256": "ca1ccc580e9e80649df4038e67ad22a734a6e2c25ac13bf1f939470820dd0044"
+  },
+  "tasso_costante_banda_10%/investimento.csv": {
+   "bytes": 30538,
+   "sha256": "d20f9b5dbc77dd0ab16da6f1f392bb0fc5c99df3d88dca40b0045dd5853d309f"
+  },
+  "tasso_costante_banda_10%/prezzi_ombra.csv": {
+   "bytes": 33589,
+   "sha256": "54dd9e2cf1ee6308a858434afd0960cec179359ff51119a29fa79f1af075b716"
+  },
+  "tasso_costante_banda_10%/vincoli_attivi.csv": {
+   "bytes": 237,
+   "sha256": "664bdf6025ae99a9353e9859322242583b4a327d177d2304fda81aeea5ce2424"
+  },
+  "tasso_costante_banda_10%/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "tasso_costante_penalita/aggregati.csv": {
+   "bytes": 2548,
+   "sha256": "11aa64b5e006b2a3a3aaca717c27be243035d1ef78494542bdbf0405265ba738"
+  },
+  "tasso_costante_penalita/industrie.csv": {
+   "bytes": 23246,
+   "sha256": "20621c9fd92149f82125350b35a69846dd8b4354ae89f41096b5b818d86823a3"
+  },
+  "tasso_costante_penalita/investimento.csv": {
+   "bytes": 30558,
+   "sha256": "6b2863515f37623c88c8e0711da454341ce8a4421de831a04d1c7a64b93fcc09"
+  },
+  "tasso_costante_penalita/prezzi_ombra.csv": {
+   "bytes": 33585,
+   "sha256": "ef69539021cdecca9d0a69abd0b115329f0965f91b72ca14671a137aded4e067"
+  },
+  "tasso_costante_penalita/vincoli_attivi.csv": {
+   "bytes": 216,
+   "sha256": "f18f374c9e82238df27358b95dca170ea09eaa06145c7b42b4b1a1917e739d81"
+  },
+  "tasso_costante_penalita/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "investimento_osservato/aggregati.csv": {
+   "bytes": 2533,
+   "sha256": "82fa66adeb9071c61219fca3f048c81fe8ceb16ca059dd36419061f584203880"
+  },
+  "investimento_osservato/industrie.csv": {
+   "bytes": 23236,
+   "sha256": "5e82a78811ebed5b0de77948ab9eb093f1016f1525fcd703d83104e219c28004"
+  },
+  "investimento_osservato/investimento.csv": {
+   "bytes": 30307,
+   "sha256": "6667ed777181a79e715d871004f0b49ee5110676cf75bdc6b84f0ee618a07e28"
+  },
+  "investimento_osservato/prezzi_ombra.csv": {
+   "bytes": 33577,
+   "sha256": "35c98e417dd589b2c6dcf89ea38f9b37349e30d0810751169425fee2533d29c7"
+  },
+  "investimento_osservato/vincoli_attivi.csv": {
+   "bytes": 225,
+   "sha256": "77318a1ade368564deacccb03569890dc121cbbe31c8cf888df7918f7cc23fa2"
+  },
+  "investimento_osservato/scarti_capacita.csv": {
+   "bytes": 8,
+   "sha256": "b77c61a1664bff76b9d70b10469362d5874b37a2d847437e0a5af4b1fe51d7e5"
+  },
+  "casi.csv": {
+   "bytes": 3835,
+   "sha256": "f3ce9c0506da1997935d7f9f88415b03b068c00793dd9a5195dd8a89eb3b54ab"
+  },
+  "serie_2010_2019.csv": {
+   "bytes": 29410,
+   "sha256": "60aaeb95d7ae16158dc704f1dcdfd814baf51c46f5cfd4fb6e94e863c79f1800"
+  },
+  "scarti_2010_2019.csv": {
+   "bytes": 982,
+   "sha256": "86a7ce679aa1bb5392b437ab40192faa5d8ef3bd45dbbe95996fa836e791d0b8"
+  },
+  "scarti_2012_2016.csv": {
+   "bytes": 987,
+   "sha256": "bdd7492f7fa1a090e12df5c5719e2e349122e9af34a50b57fc7bcf2bcb3b116a"
+  },
+  "1_tasso_costante_banda_10%_produzione_consumo.png": {
+   "bytes": 92317,
+   "sha256": "097730a82afd30ac48fcc08b4db9eff9ab05a4b1bb5d3df4ff3b49fdc4a67fbd"
+  },
+  "2_tasso_costante_banda_10%_investimento_per_tipo.png": {
+   "bytes": 171945,
+   "sha256": "56c7336af40454c495db8785c863405d19c8df7646b3b6363eb83b5ead7ec050"
+  },
+  "3_tasso_costante_banda_10%_stock_per_tipo.png": {
+   "bytes": 176497,
+   "sha256": "ae2888e5524e09c1fe92ae767e6a40b9ae5d38b89c8a73368620107ea9693fd7"
+  },
+  "4_acceleratore_banda_10%_produzione_consumo.png": {
+   "bytes": 91976,
+   "sha256": "3427ff2f18d80040265966d3666a60d62256f34715119f33d6f4e86307107585"
+  },
+  "5_acceleratore_banda_10%_investimento_per_tipo.png": {
+   "bytes": 173664,
+   "sha256": "a644ea44c47c06548faa11a3203ca5da9df88974fef0b3bcfa6c63a8ffb6251e"
+  },
+  "6_acceleratore_banda_10%_stock_per_tipo.png": {
+   "bytes": 182412,
+   "sha256": "f487dbad1bc62a505cfe0a54fd8bbed2daa437f9d17291bc34721a0a56587f93"
+  },
+  "sintesi.md": {
+   "bytes": 4020,
+   "sha256": "f2ddee607bacb949ce52433d2bcb6441e95b7e9eda80e78eb36e6096f0838aa2"
+  }
+ }
+}

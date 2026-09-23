@@ -1,0 +1,271 @@
+caso,variabile,anno,valore
+osservato,produzione_lorda,2012,29232.151
+osservato,consumo_privato,2012,11065.391
+osservato,investimento_E,2012,979.968
+osservato,investimento_S,2012,461.451
+osservato,investimento_N,2012,655.697
+osservato,investimento_R,2012,432.014
+osservato,produzione_lorda,2013,29888.3702
+osservato,consumo_privato,2013,11221.41039
+osservato,investimento_E,2013,1040.300973
+osservato,investimento_S,2013,467.9013577
+osservato,investimento_N,2013,694.3590635
+osservato,investimento_R,2013,486.640999
+osservato,produzione_lorda,2014,30756.33925
+osservato,consumo_privato,2014,11485.59399
+osservato,investimento_E,2014,1120.873196
+osservato,investimento_S,2014,519.2513389
+osservato,investimento_N,2014,736.3419464
+osservato,investimento_R,2014,508.1175307
+osservato,produzione_lorda,2015,31442.76287
+osservato,consumo_privato,2015,11875.06634
+osservato,investimento_E,2015,1162.908353
+osservato,investimento_S,2015,515.2587226
+osservato,investimento_N,2015,771.8410725
+osservato,investimento_R,2015,562.3000943
+osservato,produzione_lorda,2016,32015.74003
+osservato,consumo_privato,2016,12189.77949
+osservato,investimento_E,2016,1160.192713
+osservato,investimento_S,2016,494.6712135
+osservato,investimento_N,2016,845.5307864
+osservato,investimento_R,2016,602.4324513
+osservato,stock_E,2012,5482.556292
+osservato,stock_S,2012,12034.73719
+osservato,stock_N,2012,2308.266901
+osservato,stock_R,2012,16320.95131
+osservato,stock_E,2013,5697.245
+osservato,stock_S,2013,12111.938
+osservato,stock_N,2013,2392.597
+osservato,stock_R,2013,16352.383
+osservato,stock_E,2014,5939.767384
+osservato,stock_S,2014,12201.77995
+osservato,stock_N,2014,2486.697176
+osservato,stock_R,2014,16463.18883
+osservato,stock_E,2015,6224.30194
+osservato,stock_S,2015,12338.34192
+osservato,stock_N,2015,2591.449439
+osservato,stock_R,2015,16592.58793
+osservato,stock_E,2016,6509.75935
+osservato,stock_S,2016,12467.24791
+osservato,stock_N,2016,2698.174801
+osservato,stock_R,2016,16773.35508
+osservato,stock_E,2017,6754.034715
+osservato,stock_S,2017,12574.478
+osservato,stock_N,2017,2838.099865
+osservato,stock_R,2017,16989.36543
+O2 taratura,produzione_lorda,2012,29374.1936
+O2 taratura,consumo_privato,2012,11785.35275
+O2 taratura,investimento_E,2012,613.589896
+O2 taratura,investimento_S,2012,126.5307494
+O2 taratura,investimento_N,2012,170.0257052
+O2 taratura,investimento_R,2012,1330.874749
+O2 taratura,produzione_lorda,2013,30729.55752
+O2 taratura,consumo_privato,2013,12211.89078
+O2 taratura,investimento_E,2013,798.924602
+O2 taratura,investimento_S,2013,167.2840901
+O2 taratura,investimento_N,2013,512.9931715
+O2 taratura,investimento_R,2013,534.8548096
+O2 taratura,produzione_lorda,2014,31402.14817
+O2 taratura,consumo_privato,2014,12596.99274
+O2 taratura,investimento_E,2014,914.0124242
+O2 taratura,investimento_S,2014,37.36251109
+O2 taratura,investimento_N,2014,947.878551
+O2 taratura,investimento_R,2014,360.386587
+O2 taratura,produzione_lorda,2015,32417.90988
+O2 taratura,consumo_privato,2015,13151.62326
+O2 taratura,investimento_E,2015,1465.203869
+O2 taratura,investimento_S,2015,0
+O2 taratura,investimento_N,2015,634.1191577
+O2 taratura,investimento_R,2015,0
+O2 taratura,produzione_lorda,2016,33321.91353
+O2 taratura,consumo_privato,2016,13315.04934
+O2 taratura,investimento_E,2016,2309.594565
+O2 taratura,investimento_S,2016,0
+O2 taratura,investimento_N,2016,1962.961217
+O2 taratura,investimento_R,2016,0
+O2 taratura,stock_E,2012,5482.556292
+O2 taratura,stock_S,2012,12034.73719
+O2 taratura,stock_N,2012,2308.266901
+O2 taratura,stock_R,2012,16320.95131
+O2 taratura,stock_E,2013,5330.568636
+O2 taratura,stock_S,2013,11787.68338
+O2 taratura,stock_N,2013,1900.560806
+O2 taratura,stock_R,2013,17274.46051
+O2 taratura,stock_E,2014,5387.972678
+O2 taratura,stock_S,2014,11592.84022
+O2 taratura,stock_N,2014,1953.004612
+O2 taratura,stock_R,2014,17409.90318
+O2 taratura,stock_E,2015,5533.105641
+O2 taratura,stock_S,2015,11272.22228
+O2 taratura,stock_N,2015,2417.694916
+O2 taratura,stock_R,2015,17367.74598
+O2 taratura,stock_E,2016,6200.174885
+O2 taratura,stock_S,2016,10927.3517
+O2 taratura,stock_N,2016,2420.073237
+O2 taratura,stock_R,2016,16966.17693
+O2 taratura,stock_E,2017,7544.390485
+O2 taratura,stock_S,2017,10595.85327
+O2 taratura,stock_N,2017,3680.245447
+O2 taratura,stock_R,2017,16573.89278
+O2 penalita,produzione_lorda,2012,29714.08885
+O2 penalita,consumo_privato,2012,11636.40951
+O2 penalita,investimento_E,2012,933.6184975
+O2 penalita,investimento_S,2012,431.8441225
+O2 penalita,investimento_N,2012,594.3949462
+O2 penalita,investimento_R,2012,401.4471158
+O2 penalita,produzione_lorda,2013,30866.54984
+O2 penalita,consumo_privato,2013,12040.35803
+O2 penalita,investimento_E,2013,978.0765212
+O2 penalita,investimento_S,2013,447.4912078
+O2 penalita,investimento_N,2013,625.6788907
+O2 penalita,investimento_R,2013,407.9266452
+O2 penalita,produzione_lorda,2014,31686.28229
+O2 penalita,consumo_privato,2014,12345.12872
+O2 penalita,investimento_E,2014,1022.534545
+O2 penalita,investimento_S,2014,468.0565294
+O2 penalita,investimento_N,2014,656.9628352
+O2 penalita,investimento_R,2014,427.0431745
+O2 penalita,produzione_lorda,2015,32360.37392
+O2 penalita,consumo_privato,2015,12834.31879
+O2 penalita,investimento_E,2015,1066.992569
+O2 penalita,investimento_S,2015,488.6218509
+O2 penalita,investimento_N,2015,688.2467798
+O2 penalita,investimento_R,2015,446.1597038
+O2 penalita,produzione_lorda,2016,32889.85585
+O2 penalita,consumo_privato,2016,13285.26168
+O2 penalita,investimento_E,2016,1111.450592
+O2 penalita,investimento_S,2016,509.1871724
+O2 penalita,investimento_N,2016,719.5307243
+O2 penalita,investimento_R,2016,465.2762331
+O2 penalita,stock_E,2012,5482.556292
+O2 penalita,stock_S,2012,12034.73719
+O2 penalita,stock_N,2012,2308.266901
+O2 penalita,stock_R,2012,16320.95131
+O2 penalita,stock_E,2013,5650.597237
+O2 penalita,stock_S,2013,12092.99676
+O2 penalita,stock_N,2013,2324.930047
+O2 penalita,stock_R,2013,16345.03288
+O2 penalita,stock_E,2014,5850.306042
+O2 penalita,stock_S,2014,12167.47271
+O2 penalita,stock_N,2014,2407.386001
+O2 penalita,stock_R,2014,16375.03718
+O2 penalita,stock_E,2015,6061.554848
+O2 penalita,stock_S,2015,12244.22745
+O2 penalita,stock_N,2015,2544.873206
+O2 penalita,stock_R,2015,16423.46426
+O2 penalita,stock_E,2016,6278.32281
+O2 penalita,stock_S,2016,12337.82187
+O2 penalita,stock_N,2016,2708.775478
+O2 penalita,stock_R,2016,16489.88817
+O2 penalita,stock_E,2017,6504.754142
+O2 penalita,stock_S,2017,12439.9987
+O2 penalita,stock_N,2017,2875.736363
+O2 penalita,stock_R,2017,16573.89278
+O2 limite_15%,produzione_lorda,2012,29689.00156
+O2 limite_15%,consumo_privato,2012,11788.17652
+O2 limite_15%,investimento_E,2012,995.411998
+O2 limite_15%,investimento_S,2012,349.6104661
+O2 limite_15%,investimento_N,2012,531.8270571
+O2 limite_15%,investimento_R,2012,439.6801744
+O2 limite_15%,produzione_lorda,2013,30966.30979
+O2 limite_15%,consumo_privato,2013,12084.74086
+O2 limite_15%,investimento_E,2013,1144.723798
+O2 limite_15%,investimento_S,2013,297.1688961
+O2 limite_15%,investimento_N,2013,452.0529985
+O2 limite_15%,investimento_R,2013,392.4243857
+O2 limite_15%,produzione_lorda,2014,31824.58259
+O2 limite_15%,consumo_privato,2014,12379.69952
+O2 limite_15%,investimento_E,2014,1316.432367
+O2 limite_15%,investimento_S,2014,252.5935617
+O2 limite_15%,investimento_N,2014,519.8609483
+O2 limite_15%,investimento_R,2014,423.2234885
+O2 limite_15%,produzione_lorda,2015,32465.92595
+O2 limite_15%,consumo_privato,2015,12860.77531
+O2 limite_15%,investimento_E,2015,1513.897223
+O2 limite_15%,investimento_S,2015,214.7045275
+O2 limite_15%,investimento_N,2015,597.8400906
+O2 limite_15%,investimento_R,2015,484.1038882
+O2 limite_15%,produzione_lorda,2016,32964.81024
+O2 limite_15%,consumo_privato,2016,13394.4176
+O2 limite_15%,investimento_E,2016,1740.981806
+O2 limite_15%,investimento_S,2016,182.4988483
+O2 limite_15%,investimento_N,2016,687.5161042
+O2 limite_15%,investimento_R,2016,411.488305
+O2 limite_15%,stock_E,2012,5482.556292
+O2 limite_15%,stock_S,2012,12034.73719
+O2 limite_15%,stock_N,2012,2308.266901
+O2 limite_15%,stock_R,2012,16320.95131
+O2 limite_15%,stock_E,2013,5712.390738
+O2 limite_15%,stock_S,2013,12010.7631
+O2 limite_15%,stock_N,2013,2262.362158
+O2 limite_15%,stock_R,2013,16383.26594
+O2 limite_15%,stock_E,2014,6064.183187
+O2 limite_15%,stock_S,2014,11936.01565
+O2 limite_15%,stock_N,2014,2187.532412
+O2 limite_15%,stock_R,2014,16396.88397
+O2 limite_15%,stock_E,2015,6530.414537
+O2 limite_15%,stock_S,2015,11809.50681
+O2 limite_15%,stock_N,2015,2227.768797
+O2 limite_15%,stock_R,2015,16440.98624
+O2 limite_15%,stock_E,2016,7128.245906
+O2 limite_15%,stock_S,2016,11644.42421
+O2 limite_15%,stock_N,2016,2350.28483
+O2 limite_15%,stock_R,2016,16544.94919
+O2 limite_15%,stock_E,2017,7852.823915
+O2 limite_15%,stock_S,2017,11449.86456
+O2 limite_15%,stock_N,2017,2517.800723
+O2 limite_15%,stock_R,2017,16573.89278
+O2 penalita_tempi_costruzione,produzione_lorda,2012,29813.62815
+O2 penalita_tempi_costruzione,consumo_privato,2012,11589.14176
+O2 penalita_tempi_costruzione,investimento_E,2012,933.6184975
+O2 penalita_tempi_costruzione,investimento_S,2012,431.8717522
+O2 penalita_tempi_costruzione,investimento_N,2012,594.3949462
+O2 penalita_tempi_costruzione,investimento_R,2012,401.4471158
+O2 penalita_tempi_costruzione,produzione_lorda,2013,30746.74014
+O2 penalita_tempi_costruzione,consumo_privato,2013,12039.11244
+O2 penalita_tempi_costruzione,investimento_E,2013,978.0765212
+O2 penalita_tempi_costruzione,investimento_S,2013,449.3319759
+O2 penalita_tempi_costruzione,investimento_N,2013,625.6788907
+O2 penalita_tempi_costruzione,investimento_R,2013,407.9266452
+O2 penalita_tempi_costruzione,produzione_lorda,2014,31674.12697
+O2 penalita_tempi_costruzione,consumo_privato,2014,12344.82417
+O2 penalita_tempi_costruzione,investimento_E,2014,1022.534545
+O2 penalita_tempi_costruzione,investimento_S,2014,469.8972974
+O2 penalita_tempi_costruzione,investimento_N,2014,656.9628352
+O2 penalita_tempi_costruzione,investimento_R,2014,427.0431745
+O2 penalita_tempi_costruzione,produzione_lorda,2015,32373.96754
+O2 penalita_tempi_costruzione,consumo_privato,2015,12836.47588
+O2 penalita_tempi_costruzione,investimento_E,2015,1066.992569
+O2 penalita_tempi_costruzione,investimento_S,2015,490.462619
+O2 penalita_tempi_costruzione,investimento_N,2015,688.2467798
+O2 penalita_tempi_costruzione,investimento_R,2015,446.1597038
+O2 penalita_tempi_costruzione,produzione_lorda,2016,32878.79266
+O2 penalita_tempi_costruzione,consumo_privato,2016,13290.17764
+O2 penalita_tempi_costruzione,investimento_E,2016,1111.450592
+O2 penalita_tempi_costruzione,investimento_S,2016,511.0279405
+O2 penalita_tempi_costruzione,investimento_N,2016,719.5307243
+O2 penalita_tempi_costruzione,investimento_R,2016,465.2762331
+O2 penalita_tempi_costruzione,stock_E,2012,5482.556292
+O2 penalita_tempi_costruzione,stock_S,2012,12034.73719
+O2 penalita_tempi_costruzione,stock_N,2012,2308.266901
+O2 penalita_tempi_costruzione,stock_R,2012,16320.95131
+O2 penalita_tempi_costruzione,stock_E,2013,5650.597237
+O2 penalita_tempi_costruzione,stock_S,2013,12093.02439
+O2 penalita_tempi_costruzione,stock_N,2013,2324.930047
+O2 penalita_tempi_costruzione,stock_R,2013,16345.03288
+O2 penalita_tempi_costruzione,stock_E,2014,5847.435138
+O2 penalita_tempi_costruzione,stock_S,2014,12164.06116
+O2 penalita_tempi_costruzione,stock_N,2014,2418.295896
+O2 penalita_tempi_costruzione,stock_R,2014,16375.03718
+O2 penalita_tempi_costruzione,stock_E,2015,6053.614151
+O2 penalita_tempi_costruzione,stock_S,2015,12243.62431
+O2 penalita_tempi_costruzione,stock_N,2015,2562.523541
+O2 penalita_tempi_costruzione,stock_R,2015,16423.46426
+O2 penalita_tempi_costruzione,stock_E,2016,6268.845686
+O2 penalita_tempi_costruzione,stock_S,2016,12333.41127
+O2 penalita_tempi_costruzione,stock_N,2016,2729.943288
+O2 penalita_tempi_costruzione,stock_R,2016,16489.88817
+O2 penalita_tempi_costruzione,stock_E,2017,6495.086226
+O2 penalita_tempi_costruzione,stock_S,2017,12432.43626
+O2 penalita_tempi_costruzione,stock_N,2017,2892.966711
+O2 penalita_tempi_costruzione,stock_R,2017,16573.89278

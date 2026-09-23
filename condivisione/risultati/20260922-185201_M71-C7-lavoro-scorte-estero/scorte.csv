@@ -1,0 +1,67 @@
+riga,comparto,anno,stock_corrente,stock_2012
+2,Agricoltura,2011,224224,234411.3151
+2,Agricoltura,2012,215620,215620
+2,Agricoltura,2013,219303,225597.8212
+2,Agricoltura,2014,236565,222452.8698
+2,Agricoltura,2015,195237,223519.9965
+2,Agricoltura,2016,175392,217359.1616
+3,"Estrattivo, utility, costruzioni",2011,92410,92308.42596
+3,"Estrattivo, utility, costruzioni",2012,98972,98972
+3,"Estrattivo, utility, costruzioni",2013,93985,92121.70797
+3,"Estrattivo, utility, costruzioni",2014,97265,96814.49427
+3,"Estrattivo, utility, costruzioni",2015,101132,118577.6266
+3,"Estrattivo, utility, costruzioni",2016,117836,127471.616
+5,Manifattura durevole,2011,397567,397880.9689
+5,Manifattura durevole,2012,413601,413601
+5,Manifattura durevole,2013,425365,429491.2612
+5,Manifattura durevole,2014,444845,444735.3307
+5,Manifattura durevole,2015,441062,463150.2768
+5,Manifattura durevole,2016,441385,450149.9159
+6,Manifattura non durevole,2011,315529,312594.5256
+6,Manifattura non durevole,2012,315987,315987
+6,Manifattura non durevole,2013,350029,326973.628
+6,Manifattura non durevole,2014,322794,330234.1585
+6,Manifattura non durevole,2015,298587,349834.4013
+6,Manifattura non durevole,2016,323609,363460.9477
+8,Ingrosso durevole,2011,324584,325501.9285
+8,Ingrosso durevole,2012,351052,351052
+8,Ingrosso durevole,2013,366968,367791.221
+8,Ingrosso durevole,2014,392160,393662.1867
+8,Ingrosso durevole,2015,388855,403141.465
+8,Ingrosso durevole,2016,397868,406948.5745
+9,Ingrosso non durevole,2011,272817,281736.8351
+9,Ingrosso non durevole,2012,289316,289316
+9,Ingrosso non durevole,2013,295669,304734.1142
+9,Ingrosso non durevole,2014,299016,319469.551
+9,Ingrosso non durevole,2015,311156,347421.1618
+9,Ingrosso non durevole,2016,327152,357743.1587
+11,Concessionari auto,2011,135468,136231.5268
+11,Concessionari auto,2012,159204,159204
+11,Concessionari auto,2013,180059,180319.6911
+11,Concessionari auto,2014,187404,190654.9589
+11,Concessionari auto,2015,199797,202292.9101
+11,Concessionari auto,2016,219219,221770.7649
+12,Alimentari al dettaglio,2011,46858,48474.73573
+12,Alimentari al dettaglio,2012,48568,48568
+12,Alimentari al dettaglio,2013,49407,49129.45204
+12,Alimentari al dettaglio,2014,52319,50039.83526
+12,Alimentari al dettaglio,2015,53271,52172.94301
+12,Alimentari al dettaglio,2016,53973,53807.19598
+13,Grandi magazzini,2011,86703,88054.18976
+13,Grandi magazzini,2012,88112,88112
+13,Grandi magazzini,2013,90685,90522.40049
+13,Grandi magazzini,2014,92047,89378.29294
+13,Grandi magazzini,2015,93930,92209.34444
+13,Grandi magazzini,2016,93403,91380.77843
+14,Altro dettaglio,2011,222767,225224.73
+14,Altro dettaglio,2012,229494,229494
+14,Altro dettaglio,2013,244835,243487.916
+14,Altro dettaglio,2014,251282,249783.2345
+14,Altro dettaglio,2015,263737,264922.468
+14,Altro dettaglio,2016,272990,271301.4191
+15,Altre industrie,2011,155645,156589.9486
+15,Altre industrie,2012,160227,160227
+15,Altre industrie,2013,166430,167466.8346
+15,Altre industrie,2014,175978,179333.509
+15,Altre industrie,2015,185450,189345.268
+15,Altre industrie,2016,186207,180516.2954

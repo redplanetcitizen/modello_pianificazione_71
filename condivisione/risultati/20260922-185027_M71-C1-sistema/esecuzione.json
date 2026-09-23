@@ -1,0 +1,218 @@
+{
+ "id": "20260922-185027_M71-C1-sistema",
+ "nome": "M71-C1-sistema",
+ "inizio_utc": "2026-09-22T22:50:27+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "anni": [
+   2012,
+   2013,
+   2014,
+   2015,
+   2016
+  ],
+  "use": "bea-2025-09/manual/M1/IOUse_Before_Redefinitions_PRO_Summary.xlsx",
+  "make": "bea-2025-09/manual/M1/IOMake_Before_Redefinitions_PRO_Summary.xlsx",
+  "prezzi": "bea-2026-09-23/api/tidy/GDPbyIndustry/18.csv",
+  "ipotesi": [
+   "H1",
+   "H2",
+   "H3",
+   "H4",
+   "H5",
+   "H6",
+   "H24"
+  ]
+ },
+ "fine_utc": "2026-09-22T22:50:30+00:00",
+ "esito": "completata",
+ "output": {
+  "sistema/2012/B.csv": {
+   "bytes": 61873,
+   "sha256": "d03f12f91ea21075e93a40de970a6b5bab32ee0e6af1c052e53b6577cd0a5d25"
+  },
+  "sistema/2012/D.csv": {
+   "bytes": 21858,
+   "sha256": "0e39f365940016d3697debca3eab7c4d1a706465102d36888103cf390d951dcb"
+  },
+  "sistema/2012/U_reale.csv": {
+   "bytes": 18996,
+   "sha256": "f795d0b49161567cdba75ff4da059c3ee412136b9b61ce4d9bd8f44d7bebe0d7"
+  },
+  "sistema/2012/F_reale.csv": {
+   "bytes": 4520,
+   "sha256": "8fedb91f86650c4c015c2eba46598173d84a60afd189eae4c11db12f8d60eb14"
+  },
+  "sistema/2012/V_reale.csv": {
+   "bytes": 12806,
+   "sha256": "65b02ec749159da654cc13317ff81d615d1bf2617b46aaa96706e591bff255d7"
+  },
+  "sistema/2012/x_q_reale.csv": {
+   "bytes": 1327,
+   "sha256": "e0e4b650ba0819ab781f4b712ad8ff601df2ea87b6c78d6ab2087a27ecf3063e"
+  },
+  "sistema/2013/B.csv": {
+   "bytes": 61875,
+   "sha256": "2de48533ab5520e3a0df77dad74887bc8a3611f2f85e717fa2aa32baff5e70fa"
+  },
+  "sistema/2013/D.csv": {
+   "bytes": 22090,
+   "sha256": "8917fc2282c258d3a3d37197a59e2f6b311b0e1a2d4d3475411ce181ffb190f0"
+  },
+  "sistema/2013/U_reale.csv": {
+   "bytes": 49518,
+   "sha256": "8d5b91b3e7fdddb0f2f05ed120daa681c8abcf2d92351af74767f50e518d087f"
+  },
+  "sistema/2013/F_reale.csv": {
+   "bytes": 6889,
+   "sha256": "760f2fda1e3cb21a4855eb2b5e38565789dbcc1231d159c2dd28849a5b654b4a"
+  },
+  "sistema/2013/V_reale.csv": {
+   "bytes": 19428,
+   "sha256": "736a636e2099b2c52c803723f03d7985cd06e3763ce583acf8d6614ca74349c5"
+  },
+  "sistema/2013/x_q_reale.csv": {
+   "bytes": 2052,
+   "sha256": "3e7f4b96332d903cfe351319be603f44af15487e2f34482aaaa5080228bef11e"
+  },
+  "sistema/2014/B.csv": {
+   "bytes": 61837,
+   "sha256": "4feb96ebd109649fd845c2207cfbfcda535fbdaa0b9ea90d3bb443d90d3c3894"
+  },
+  "sistema/2014/D.csv": {
+   "bytes": 22150,
+   "sha256": "c22200db96f828badb6fede9ff67b13c3d4bbdd7edc17b169af2c93505a23ab7"
+  },
+  "sistema/2014/U_reale.csv": {
+   "bytes": 49520,
+   "sha256": "9c525d170b48301f4ed5dd2c5473de62843c0eb7286d7ff1c7414854a44cd1a5"
+  },
+  "sistema/2014/F_reale.csv": {
+   "bytes": 6872,
+   "sha256": "5508f743d67ab17d575a69451426d04cc85d9a122ef80810baf15927a30679e4"
+  },
+  "sistema/2014/V_reale.csv": {
+   "bytes": 19495,
+   "sha256": "bd0ec526ff304144243e00fef511efd2c01fbb3772c3dfc7256d995db248d3f7"
+  },
+  "sistema/2014/x_q_reale.csv": {
+   "bytes": 2051,
+   "sha256": "e9dabcf7398ebc055d1aa93625baabe373d6399365c3f4492d7329333055bbbc"
+  },
+  "sistema/2015/B.csv": {
+   "bytes": 61690,
+   "sha256": "7efda2411e6b44f86f1681f18d0676820717a65f82e1f402fcd7d9c3a20948d3"
+  },
+  "sistema/2015/D.csv": {
+   "bytes": 22228,
+   "sha256": "b479474a90cd365d1fb88acf74fbc9433833fb5fbd7a430e1c95ec2b8591d0d7"
+  },
+  "sistema/2015/U_reale.csv": {
+   "bytes": 49275,
+   "sha256": "625b93473fee15d6a45885b156bd103ce6ba0504a1bb4ce71e4aca8f396505fa"
+  },
+  "sistema/2015/F_reale.csv": {
+   "bytes": 6871,
+   "sha256": "d299f572d5b36b60282e7fdd10d57036760df8a7b8e3349acd5097c10698b163"
+  },
+  "sistema/2015/V_reale.csv": {
+   "bytes": 19515,
+   "sha256": "31b1411fa2ce47bfed4e3e9461863a3ee2ae9618db9f714fb35f40948669f600"
+  },
+  "sistema/2015/x_q_reale.csv": {
+   "bytes": 2038,
+   "sha256": "6152c80acf3c3d5ee92ffa08a076349ae25781f21609115c1cb02e476763e345"
+  },
+  "sistema/2016/B.csv": {
+   "bytes": 61671,
+   "sha256": "e697fd331265f770fdbc5c46a4cf283b057393d32c1597904a61b663a8432d59"
+  },
+  "sistema/2016/D.csv": {
+   "bytes": 22221,
+   "sha256": "2bde79ad6648b14002eb612c8a927fc5ff89a4bbabee70ccc98b5f73fca87c81"
+  },
+  "sistema/2016/U_reale.csv": {
+   "bytes": 49265,
+   "sha256": "4c18fd553872305c5d1ee98dbf882c3eb0ebc503f488da07672d56a324bbf0ce"
+  },
+  "sistema/2016/F_reale.csv": {
+   "bytes": 6909,
+   "sha256": "83be2b01e01e516e8e8a8a3e4cb47a0e52eb09ef6b4f3280cd12b1a985b925e3"
+  },
+  "sistema/2016/V_reale.csv": {
+   "bytes": 19531,
+   "sha256": "cdbbf197d025b5ef5c84dfacb3050d496ed1e786d8ba39f6187aa399e3d7ba0d"
+  },
+  "sistema/2016/x_q_reale.csv": {
+   "bytes": 2049,
+   "sha256": "654b525c3d31e8a382aec93d859c046fcb15783619ebd410bc7a4669d44d58b4"
+  },
+  "identita.csv": {
+   "bytes": 3999,
+   "sha256": "8404be136622d764cd2994acf2785329a098bbed38432b12c7fd14d9483e84ef"
+  },
+  "negativi.csv": {
+   "bytes": 22335,
+   "sha256": "b1b4114dbf88ac5ce2f58b13b468c838eb2b3e6e48ab0ee2e3c1f2765934b563"
+  },
+  "importazioni_positive.csv": {
+   "bytes": 379,
+   "sha256": "4e7bab8f2e137d3ecad57573b7e97217228dd8db634b0a8f21d2ffbb17dd05f2"
+  },
+  "puntini.csv": {
+   "bytes": 619753,
+   "sha256": "a59e1492037fbb2440c7563b2411ee5c91c08707f2993b40a2f0ba330cca350f"
+  },
+  "prevalenza_prodotto.csv": {
+   "bytes": 11083,
+   "sha256": "0d5af38f828640026715e3a81dc50f1feb80333b5360afd52e693a2f33b776b9"
+  },
+  "controlli_reali.csv": {
+   "bytes": 488,
+   "sha256": "a2cc383e74d9f65287b73d31e58019a9795d8a834caf52828a270cbc66a22254"
+  },
+  "riepilogo.csv": {
+   "bytes": 342,
+   "sha256": "1946ca1172deb43588b3f4fe70d901cbdb0636c489784435a7154541ad2c1c34"
+  },
+  "prezzi.csv": {
+   "bytes": 4019,
+   "sha256": "44fb83097b92831e4aa70f8a1c54dc0052e2293a01d0c15abe1c44fc7534320f"
+  },
+  "sintesi.md": {
+   "bytes": 2062,
+   "sha256": "ddeac3406b5fad7b7c4771f5bd2f80bcc4d51b8fc2bd9ce11f3eb3d41c484788"
+  }
+ }
+}

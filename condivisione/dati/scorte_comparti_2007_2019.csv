@@ -1,0 +1,144 @@
+riga,comparto,anno,stock_fine_anno_corrente,stock_fine_anno_2012
+2,Agricoltura,2007,189052,266248.526
+2,Agricoltura,2008,183869,265408.063
+2,Agricoltura,2009,166951,255089.0147
+2,Agricoltura,2010,192930,236924.7071
+2,Agricoltura,2011,224224,234411.3151
+2,Agricoltura,2012,215620,215620
+2,Agricoltura,2013,219303,225597.8212
+2,Agricoltura,2014,236565,222452.8698
+2,Agricoltura,2015,195237,223519.9965
+2,Agricoltura,2016,175392,217359.1616
+2,Agricoltura,2017,179672,210900.113
+2,Agricoltura,2018,172817,201787.2263
+2,Agricoltura,2019,164138,184057.7938
+3,"Estrattivo, utility, costruzioni",2007,102556,103007.4669
+3,"Estrattivo, utility, costruzioni",2008,98874,96065.56309
+3,"Estrattivo, utility, costruzioni",2009,88606,94148.53914
+3,"Estrattivo, utility, costruzioni",2010,92856,96675.75429
+3,"Estrattivo, utility, costruzioni",2011,92410,92308.42596
+3,"Estrattivo, utility, costruzioni",2012,98972,98972
+3,"Estrattivo, utility, costruzioni",2013,93985,92121.70797
+3,"Estrattivo, utility, costruzioni",2014,97265,96814.49427
+3,"Estrattivo, utility, costruzioni",2015,101132,118577.6266
+3,"Estrattivo, utility, costruzioni",2016,117836,127471.616
+3,"Estrattivo, utility, costruzioni",2017,105925,112178.5271
+3,"Estrattivo, utility, costruzioni",2018,101560,98781.77412
+3,"Estrattivo, utility, costruzioni",2019,103902,115056.1222
+5,Manifattura durevole,2007,356837,385565.9021
+5,Manifattura durevole,2008,355176,383052.6479
+5,Manifattura durevole,2009,336228,357671.1212
+5,Manifattura durevole,2010,367593,375761.9804
+5,Manifattura durevole,2011,397567,397880.9689
+5,Manifattura durevole,2012,413601,413601
+5,Manifattura durevole,2013,425365,429491.2612
+5,Manifattura durevole,2014,444845,444735.3307
+5,Manifattura durevole,2015,441062,463150.2768
+5,Manifattura durevole,2016,441385,450149.9159
+5,Manifattura durevole,2017,443911,447179.4624
+5,Manifattura durevole,2018,478142,457030.7937
+5,Manifattura durevole,2019,500759,484898.7858
+6,Manifattura non durevole,2007,282491,322312.1414
+6,Manifattura non durevole,2008,245689,307190.0253
+6,Manifattura non durevole,2009,260156,304180.6856
+6,Manifattura non durevole,2010,290033,310267.9926
+6,Manifattura non durevole,2011,315529,312594.5256
+6,Manifattura non durevole,2012,315987,315987
+6,Manifattura non durevole,2013,350029,326973.628
+6,Manifattura non durevole,2014,322794,330234.1585
+6,Manifattura non durevole,2015,298587,349834.4013
+6,Manifattura non durevole,2016,323609,363460.9477
+6,Manifattura non durevole,2017,346173,367555.5012
+6,Manifattura non durevole,2018,353259,372137.1522
+6,Manifattura non durevole,2019,363105,387712.5383
+8,Ingrosso durevole,2007,297727,323604.6509
+8,Ingrosso durevole,2008,311280,336356.5863
+8,Ingrosso durevole,2009,267089,284149.0969
+8,Ingrosso durevole,2010,290097,299457.1585
+8,Ingrosso durevole,2011,324584,325501.9285
+8,Ingrosso durevole,2012,351052,351052
+8,Ingrosso durevole,2013,366968,367791.221
+8,Ingrosso durevole,2014,392160,393662.1867
+8,Ingrosso durevole,2015,388855,403141.465
+8,Ingrosso durevole,2016,397868,406948.5745
+8,Ingrosso durevole,2017,425402,427836.1229
+8,Ingrosso durevole,2018,468167,460096.2502
+8,Ingrosso durevole,2019,476696,471673.1049
+9,Ingrosso non durevole,2007,220444,270814.1528
+9,Ingrosso non durevole,2008,215267,282711.2129
+9,Ingrosso non durevole,2009,215041,267525.8721
+9,Ingrosso non durevole,2010,254753,283601.2899
+9,Ingrosso non durevole,2011,272817,281736.8351
+9,Ingrosso non durevole,2012,289316,289316
+9,Ingrosso non durevole,2013,295669,304734.1142
+9,Ingrosso non durevole,2014,299016,319469.551
+9,Ingrosso non durevole,2015,311156,347421.1618
+9,Ingrosso non durevole,2016,327152,357743.1587
+9,Ingrosso non durevole,2017,353360,368124.4608
+9,Ingrosso non durevole,2018,360634,367160.44
+9,Ingrosso non durevole,2019,375628,376227.6278
+11,Concessionari auto,2007,158162,170857.7303
+11,Concessionari auto,2008,144892,157564.1601
+11,Concessionari auto,2009,114922,121603.7777
+11,Concessionari auto,2010,128567,133763.1916
+11,Concessionari auto,2011,135468,136231.5268
+11,Concessionari auto,2012,159204,159204
+11,Concessionari auto,2013,180059,180319.6911
+11,Concessionari auto,2014,187404,190654.9589
+11,Concessionari auto,2015,199797,202292.9101
+11,Concessionari auto,2016,219219,221770.7649
+11,Concessionari auto,2017,234137,236063.13
+11,Concessionari auto,2018,253615,254007.3748
+11,Concessionari auto,2019,258120,259221.1792
+12,Alimentari al dettaglio,2007,41436,49031.94166
+12,Alimentari al dettaglio,2008,42213,48475.51029
+12,Alimentari al dettaglio,2009,42556,48160.97444
+12,Alimentari al dettaglio,2010,44741,48630.8191
+12,Alimentari al dettaglio,2011,46858,48474.73573
+12,Alimentari al dettaglio,2012,48568,48568
+12,Alimentari al dettaglio,2013,49407,49129.45204
+12,Alimentari al dettaglio,2014,52319,50039.83526
+12,Alimentari al dettaglio,2015,53271,52172.94301
+12,Alimentari al dettaglio,2016,53973,53807.19598
+12,Alimentari al dettaglio,2017,56494,55865.05124
+12,Alimentari al dettaglio,2018,59570,57483.20633
+12,Alimentari al dettaglio,2019,62065,58421.59265
+13,Grandi magazzini,2007,82460,93345.12241
+13,Grandi magazzini,2008,81216,89228.88704
+13,Grandi magazzini,2009,77963,85254.99465
+13,Grandi magazzini,2010,81594,87052.54272
+13,Grandi magazzini,2011,86703,88054.18976
+13,Grandi magazzini,2012,88112,88112
+13,Grandi magazzini,2013,90685,90522.40049
+13,Grandi magazzini,2014,92047,89378.29294
+13,Grandi magazzini,2015,93930,92209.34444
+13,Grandi magazzini,2016,93403,91380.77843
+13,Grandi magazzini,2017,90775,88184.4802
+13,Grandi magazzini,2018,95076,91449.051
+13,Grandi magazzini,2019,93843,89092.37016
+14,Altro dettaglio,2007,228113,257921.2692
+14,Altro dettaglio,2008,216398,243449.2974
+14,Altro dettaglio,2009,208227,227740.1749
+14,Altro dettaglio,2010,215886,227286.2565
+14,Altro dettaglio,2011,222767,225224.73
+14,Altro dettaglio,2012,229494,229494
+14,Altro dettaglio,2013,244835,243487.916
+14,Altro dettaglio,2014,251282,249783.2345
+14,Altro dettaglio,2015,263737,264922.468
+14,Altro dettaglio,2016,272990,271301.4191
+14,Altro dettaglio,2017,283859,276204.5205
+14,Altro dettaglio,2018,293723,280244.9967
+14,Altro dettaglio,2019,301700,283019.8657
+15,Altre industrie,2007,143530,162132.1818
+15,Altre industrie,2008,149234,164164.637
+15,Altre industrie,2009,141976,157692.9232
+15,Altre industrie,2010,145710,155032.0623
+15,Altre industrie,2011,155645,156589.9486
+15,Altre industrie,2012,160227,160227
+15,Altre industrie,2013,166430,167466.8346
+15,Altre industrie,2014,175978,179333.509
+15,Altre industrie,2015,185450,189345.268
+15,Altre industrie,2016,186207,180516.2954
+15,Altre industrie,2017,191318,184126.3942
+15,Altre industrie,2018,204071,187658.1081
+15,Altre industrie,2019,207999,191177.1902

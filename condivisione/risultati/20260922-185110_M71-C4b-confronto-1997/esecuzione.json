@@ -1,0 +1,55 @@
+{
+ "id": "20260922-185110_M71-C4b-confronto-1997",
+ "nome": "M71-C4b-confronto-1997",
+ "inizio_utc": "2026-09-22T22:51:10+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "cft": "bea-2025-09/manual/M5/flow1997.xls",
+  "rettifiche": "bea-2025-09/manual/M5/changes_to_180x123combined.xls",
+  "anno_phi": 2012,
+  "perimetro": "attrezzature + strutture non residenziali, senza software"
+ },
+ "fine_utc": "2026-09-22T22:51:15+00:00",
+ "esito": "completata",
+ "output": {
+  "confronto_1997.csv": {
+   "bytes": 3023,
+   "sha256": "80f1032898b73017d547250aa4ba49ce66ed1bfa3c633ce242e31bd21ab1c8c7"
+  },
+  "sintesi.md": {
+   "bytes": 689,
+   "sha256": "7ed04eececc1a20215494a3deee1b8af7b879eb17353493ddb2e279c51909592"
+  }
+ }
+}

@@ -1,0 +1,417 @@
+caso,variabile,anno,valore
+osservato,produzione_lorda,2010,27873.02677
+osservato,consumo_privato,2010,10803.39685
+osservato,investimento_E,2010,787.641367
+osservato,investimento_S,2010,397.7260542
+osservato,investimento_N,2010,589.2146946
+osservato,investimento_R,2010,382.9823414
+osservato,produzione_lorda,2011,28497.84411
+osservato,consumo_privato,2011,10932.21536
+osservato,investimento_E,2011,889.147231
+osservato,investimento_S,2011,411.1623063
+osservato,investimento_N,2011,625.6788907
+osservato,investimento_R,2011,382.3305865
+osservato,produzione_lorda,2012,29232.151
+osservato,consumo_privato,2012,11065.391
+osservato,investimento_E,2012,979.968
+osservato,investimento_S,2012,461.451
+osservato,investimento_N,2012,655.697
+osservato,investimento_R,2012,432.014
+osservato,produzione_lorda,2013,29888.3702
+osservato,consumo_privato,2013,11221.41039
+osservato,investimento_E,2013,1040.300973
+osservato,investimento_S,2013,467.9064184
+osservato,investimento_N,2013,694.3590635
+osservato,investimento_R,2013,486.640999
+osservato,produzione_lorda,2014,30756.33925
+osservato,consumo_privato,2014,11485.59399
+osservato,investimento_E,2014,1120.873071
+osservato,investimento_S,2014,519.2634825
+osservato,investimento_N,2014,736.3419464
+osservato,investimento_R,2014,508.1175307
+osservato,produzione_lorda,2015,31442.76287
+osservato,consumo_privato,2015,11875.06634
+osservato,investimento_E,2015,1162.908228
+osservato,investimento_S,2015,515.2763645
+osservato,investimento_N,2015,771.8410725
+osservato,investimento_R,2015,562.3000943
+osservato,produzione_lorda,2016,32015.74003
+osservato,consumo_privato,2016,12189.77949
+osservato,investimento_E,2016,1160.192463
+osservato,investimento_S,2016,494.6857711
+osservato,investimento_N,2016,845.5307864
+osservato,investimento_R,2016,602.4324513
+osservato,produzione_lorda,2017,32757.69183
+osservato,consumo_privato,2017,12451.96078
+osservato,investimento_E,2017,1217.722438
+osservato,investimento_S,2017,505.3221883
+osservato,investimento_N,2017,902.5941762
+osservato,investimento_R,2017,629.0185563
+osservato,produzione_lorda,2018,33764.33955
+osservato,consumo_privato,2018,12714.17167
+osservato,investimento_E,2018,1277.112406
+osservato,investimento_S,2018,541.3342036
+osservato,investimento_N,2018,984.9626808
+osservato,investimento_R,2018,627.4769191
+osservato,produzione_lorda,2019,34380.93056
+osservato,consumo_privato,2019,12936.55877
+osservato,investimento_E,2019,1294.274697
+osservato,investimento_S,2019,552.0009372
+osservato,investimento_N,2019,1064.490259
+osservato,investimento_R,2019,622.2039545
+osservato,stock_E,2010,5253.682314
+osservato,stock_S,2010,11966.29598
+osservato,stock_N,2010,2163.778443
+osservato,stock_R,2010,16313.21928
+osservato,stock_E,2011,5326.714292
+osservato,stock_S,2011,11994.62152
+osservato,stock_N,2011,2227.548387
+osservato,stock_R,2011,16316.06153
+osservato,stock_E,2012,5482.556292
+osservato,stock_S,2012,12034.73719
+osservato,stock_N,2012,2308.266901
+osservato,stock_R,2012,16320.95131
+osservato,stock_E,2013,5697.245
+osservato,stock_S,2013,12111.938
+osservato,stock_N,2013,2392.597
+osservato,stock_R,2013,16352.383
+osservato,stock_E,2014,5939.767384
+osservato,stock_S,2014,12201.77995
+osservato,stock_N,2014,2486.697176
+osservato,stock_R,2014,16463.18883
+osservato,stock_E,2015,6224.30194
+osservato,stock_S,2015,12338.34192
+osservato,stock_N,2015,2591.449439
+osservato,stock_R,2015,16592.58793
+osservato,stock_E,2016,6509.75935
+osservato,stock_S,2016,12467.24791
+osservato,stock_N,2016,2698.174801
+osservato,stock_R,2016,16773.35508
+osservato,stock_E,2017,6754.034715
+osservato,stock_S,2017,12574.478
+osservato,stock_N,2017,2838.099865
+osservato,stock_R,2017,16989.36543
+osservato,stock_E,2018,7014.004155
+osservato,stock_S,2018,12674.4067
+osservato,stock_N,2018,2985.826491
+osservato,stock_R,2018,17164.48709
+osservato,stock_E,2019,7298.641131
+osservato,stock_S,2019,12820.10486
+osservato,stock_N,2019,3159.392321
+osservato,stock_R,2019,17362.16861
+osservato,stock_E,2020,7562.557739
+osservato,stock_S,2020,12977.54794
+osservato,stock_N,2020,3351.575921
+osservato,stock_R,2020,17582.30423
+O2 uniforme,produzione_lorda,2010,28048.83593
+O2 uniforme,consumo_privato,2010,11639.391
+O2 uniforme,investimento_E,2010,54.9003819
+O2 uniforme,investimento_S,2010,26.85228197
+O2 uniforme,investimento_N,2010,3.76947856
+O2 uniforme,investimento_R,2010,1258.509877
+O2 uniforme,produzione_lorda,2011,28770.74186
+O2 uniforme,consumo_privato,2011,11853.70645
+O2 uniforme,investimento_E,2011,197.359218
+O2 uniforme,investimento_S,2011,307.1257857
+O2 uniforme,investimento_N,2011,49.36175873
+O2 uniforme,investimento_R,2011,1051.650904
+O2 uniforme,produzione_lorda,2012,29505.07806
+O2 uniforme,consumo_privato,2012,12074.52765
+O2 uniforme,investimento_E,2012,500.5895094
+O2 uniforme,investimento_S,2012,318.0580956
+O2 uniforme,investimento_N,2012,243.8455993
+O2 uniforme,investimento_R,2012,991.1385949
+O2 uniforme,produzione_lorda,2013,30104.9096
+O2 uniforme,consumo_privato,2013,12488.66389
+O2 uniforme,investimento_E,2013,297.0956103
+O2 uniforme,investimento_S,2013,507.3321263
+O2 uniforme,investimento_N,2013,421.2636093
+O2 uniforme,investimento_R,2013,458.5418185
+O2 uniforme,produzione_lorda,2014,30694.18601
+O2 uniforme,consumo_privato,2014,13081.83213
+O2 uniforme,investimento_E,2014,414.8959977
+O2 uniforme,investimento_S,2014,520.95488
+O2 uniforme,investimento_N,2014,369.2706119
+O2 uniforme,investimento_R,2014,145.8994353
+O2 uniforme,produzione_lorda,2015,31401.0358
+O2 uniforme,consumo_privato,2015,13638.38323
+O2 uniforme,investimento_E,2015,660.4995841
+O2 uniforme,investimento_S,2015,324.3736477
+O2 uniforme,investimento_N,2015,354.9529017
+O2 uniforme,investimento_R,2015,167.5475751
+O2 uniforme,produzione_lorda,2016,32067.27666
+O2 uniforme,consumo_privato,2016,13958.44446
+O2 uniforme,investimento_E,2016,617.241249
+O2 uniforme,investimento_S,2016,346.8791081
+O2 uniforme,investimento_N,2016,579.3179622
+O2 uniforme,investimento_R,2016,0
+O2 uniforme,produzione_lorda,2017,32995.31324
+O2 uniforme,consumo_privato,2017,14206.07174
+O2 uniforme,investimento_E,2017,551.3011259
+O2 uniforme,investimento_S,2017,93.51338159
+O2 uniforme,investimento_N,2017,867.2660218
+O2 uniforme,investimento_R,2017,0
+O2 uniforme,produzione_lorda,2018,33905.47278
+O2 uniforme,consumo_privato,2018,14474.54273
+O2 uniforme,investimento_E,2018,527.1790415
+O2 uniforme,investimento_S,2018,694.6881758
+O2 uniforme,investimento_N,2018,811.5998817
+O2 uniforme,investimento_R,2018,0
+O2 uniforme,produzione_lorda,2019,34660.52384
+O2 uniforme,consumo_privato,2019,14828.30629
+O2 uniforme,investimento_E,2019,1937.62312
+O2 uniforme,investimento_S,2019,455.1631579
+O2 uniforme,investimento_N,2019,757.7253221
+O2 uniforme,investimento_R,2019,0
+O2 uniforme,stock_E,2010,5253.682314
+O2 uniforme,stock_S,2010,11966.29598
+O2 uniforme,stock_N,2010,2163.778443
+O2 uniforme,stock_R,2010,16313.21928
+O2 uniforme,stock_E,2011,4580.283914
+O2 uniforme,stock_S,2011,11622.69865
+O2 uniforme,stock_N,2011,1624.551158
+O2 uniforme,stock_R,2011,17193.37068
+O2 uniforme,stock_E,2012,4149.750217
+O2 uniforme,stock_S,2012,11573.25219
+O2 uniforme,stock_N,2012,1294.251824
+O2 uniforme,stock_R,2012,17846.24942
+O2 uniforme,stock_E,2013,4080.94081
+O2 uniforme,stock_S,2013,11534.18331
+O2 uniforme,stock_N,2013,1247.247041
+O2 uniforme,stock_R,2013,18423.4734
+O2 uniforme,stock_E,2014,3814.452429
+O2 uniforme,stock_S,2014,11687.66943
+O2 uniforme,stock_N,2014,1376.838891
+O2 uniforme,stock_R,2014,18454.71284
+O2 uniforme,stock_E,2015,3702.323743
+O2 uniforme,stock_S,2015,11851.13363
+O2 uniforme,stock_N,2015,1396.972818
+O2 uniforme,stock_R,2015,18172.58535
+O2 uniforme,stock_E,2016,3854.007613
+O2 uniforme,stock_S,2016,11816.17957
+O2 uniforme,stock_N,2016,1364.452911
+O2 uniforme,stock_R,2016,17918.64948
+O2 uniforme,stock_E,2017,3934.472077
+O2 uniforme,stock_S,2017,11807.21726
+O2 uniforme,stock_N,2017,1539.35372
+O2 uniforme,stock_R,2017,17503.05567
+O2 uniforme,stock_E,2018,3926.634634
+O2 uniforme,stock_S,2018,11546.17794
+O2 uniforme,stock_N,2018,1943.733028
+O2 uniforme,stock_R,2018,17097.10087
+O2 uniforme,stock_E,2019,3888.329244
+O2 uniforme,stock_S,2019,11895.05196
+O2 uniforme,stock_N,2019,2128.453157
+O2 uniforme,stock_R,2019,16700.56153
+O2 uniforme,stock_E,2020,5253.682314
+O2 uniforme,stock_S,2020,11966.29598
+O2 uniforme,stock_N,2020,2163.778443
+O2 uniforme,stock_R,2020,16313.21928
+O2 inviluppo,produzione_lorda,2010,27834.97828
+O2 inviluppo,consumo_privato,2010,11655.04576
+O2 inviluppo,investimento_E,2010,169.4182564
+O2 inviluppo,investimento_S,2010,76.25324236
+O2 inviluppo,investimento_N,2010,31.32853534
+O2 inviluppo,investimento_R,2010,1438.848019
+O2 inviluppo,produzione_lorda,2011,28948.43995
+O2 inviluppo,consumo_privato,2011,11913.58363
+O2 inviluppo,investimento_E,2011,153.4763899
+O2 inviluppo,investimento_S,2011,444.7667191
+O2 inviluppo,investimento_N,2011,198.6871249
+O2 inviluppo,investimento_R,2011,712.6286616
+O2 inviluppo,produzione_lorda,2012,29714.95098
+O2 inviluppo,consumo_privato,2012,12084.68065
+O2 inviluppo,investimento_E,2012,339.4280506
+O2 inviluppo,investimento_S,2012,324.8845825
+O2 inviluppo,investimento_N,2012,314.3134588
+O2 inviluppo,investimento_R,2012,829.2565193
+O2 inviluppo,produzione_lorda,2013,30207.56863
+O2 inviluppo,consumo_privato,2013,12371.89817
+O2 inviluppo,investimento_E,2013,332.5887386
+O2 inviluppo,investimento_S,2013,600.7043439
+O2 inviluppo,investimento_N,2013,355.4288284
+O2 inviluppo,investimento_R,2013,549.1387175
+O2 inviluppo,produzione_lorda,2014,30789.44444
+O2 inviluppo,consumo_privato,2014,13002.52498
+O2 inviluppo,investimento_E,2014,424.9248378
+O2 inviluppo,investimento_S,2014,567.4796827
+O2 inviluppo,investimento_N,2014,371.3914671
+O2 inviluppo,investimento_R,2014,248.1157944
+O2 inviluppo,produzione_lorda,2015,31496.85866
+O2 inviluppo,consumo_privato,2015,13604.43455
+O2 inviluppo,investimento_E,2015,651.2322909
+O2 inviluppo,investimento_S,2015,285.8220834
+O2 inviluppo,investimento_N,2015,371.4131081
+O2 inviluppo,investimento_R,2015,280.4109699
+O2 inviluppo,produzione_lorda,2016,32046.35002
+O2 inviluppo,consumo_privato,2016,14030.34817
+O2 inviluppo,investimento_E,2016,651.0613883
+O2 inviluppo,investimento_S,2016,317.3608662
+O2 inviluppo,investimento_N,2016,569.0897947
+O2 inviluppo,investimento_R,2016,0
+O2 inviluppo,produzione_lorda,2017,33001.47166
+O2 inviluppo,consumo_privato,2017,14282.6966
+O2 inviluppo,investimento_E,2017,580.809534
+O2 inviluppo,investimento_S,2017,71.95872638
+O2 inviluppo,investimento_N,2017,838.2951801
+O2 inviluppo,investimento_R,2017,0
+O2 inviluppo,produzione_lorda,2018,33858.57699
+O2 inviluppo,consumo_privato,2018,14564.05918
+O2 inviluppo,investimento_E,2018,548.5799633
+O2 inviluppo,investimento_S,2018,572.7674542
+O2 inviluppo,investimento_N,2018,805.6212673
+O2 inviluppo,investimento_R,2018,0
+O2 inviluppo,produzione_lorda,2019,34631.55679
+O2 inviluppo,consumo_privato,2019,14885.11475
+O2 inviluppo,investimento_E,2019,1856.937372
+O2 inviluppo,investimento_S,2019,365.9638223
+O2 inviluppo,investimento_N,2019,819.857619
+O2 inviluppo,investimento_R,2019,0
+O2 inviluppo,stock_E,2010,5253.682314
+O2 inviluppo,stock_S,2010,11966.29598
+O2 inviluppo,stock_N,2010,2163.778443
+O2 inviluppo,stock_R,2010,16313.21928
+O2 inviluppo,stock_E,2011,4694.801789
+O2 inviluppo,stock_S,2011,11672.09961
+O2 inviluppo,stock_N,2011,1652.110215
+O2 inviluppo,stock_R,2011,17373.70882
+O2 inviluppo,stock_E,2012,4203.074271
+O2 inviluppo,stock_S,2012,11758.89564
+O2 inviluppo,stock_N,2012,1461.242123
+O2 inviluppo,stock_R,2012,17683.38267
+O2 inviluppo,stock_E,2013,3967.175894
+O2 inviluppo,stock_S,2013,11721.73468
+O2 inviluppo,stock_N,2013,1437.152756
+O2 inviluppo,stock_R,2013,18102.50201
+O2 inviluppo,stock_E,2014,3758.681191
+O2 inviluppo,stock_S,2014,11962.46346
+O2 inviluppo,stock_N,2014,1443.51621
+O2 inviluppo,stock_R,2014,18231.78275
+O2 inviluppo,stock_E,2015,3671.692367
+O2 inviluppo,stock_S,2015,12164.60594
+O2 inviluppo,stock_N,2015,1435.457304
+O2 inviluppo,stock_R,2015,18057.04212
+O2 inviluppo,stock_E,2016,3824.817081
+O2 inviluppo,stock_S,2016,12082.6911
+O2 inviluppo,stock_N,2016,1394.82578
+O2 inviluppo,stock_R,2016,17918.64948
+O2 inviluppo,stock_E,2017,3951.404804
+O2 inviluppo,stock_S,2017,12038.37181
+O2 inviluppo,stock_N,2017,1537.135012
+O2 inviluppo,stock_R,2017,17503.05567
+O2 inviluppo,stock_E,2018,3982.499469
+O2 inviluppo,stock_S,2018,11753.14382
+O2 inviluppo,stock_N,2018,1888.763968
+O2 inviluppo,stock_R,2018,17097.10087
+O2 inviluppo,stock_E,2019,3969.005088
+O2 inviluppo,stock_S,2019,11977.80003
+O2 inviluppo,stock_N,2019,2064.308866
+O2 inviluppo,stock_R,2019,16700.56153
+O2 inviluppo,stock_E,2020,5253.682314
+O2 inviluppo,stock_S,2020,11966.29598
+O2 inviluppo,stock_N,2020,2163.778443
+O2 inviluppo,stock_R,2020,16313.21928
+O2 inviluppo_tendenza,produzione_lorda,2010,27862.8953
+O2 inviluppo_tendenza,consumo_privato,2010,11587.26276
+O2 inviluppo_tendenza,investimento_E,2010,217.004642
+O2 inviluppo_tendenza,investimento_S,2010,458.863832
+O2 inviluppo_tendenza,investimento_N,2010,100.6382062
+O2 inviluppo_tendenza,investimento_R,2010,1063.329051
+O2 inviluppo_tendenza,produzione_lorda,2011,29074.11247
+O2 inviluppo_tendenza,consumo_privato,2011,11846.00451
+O2 inviluppo_tendenza,investimento_E,2011,226.9541479
+O2 inviluppo_tendenza,investimento_S,2011,649.648337
+O2 inviluppo_tendenza,investimento_N,2011,297.6470196
+O2 inviluppo_tendenza,investimento_R,2011,286.191737
+O2 inviluppo_tendenza,produzione_lorda,2012,29602.28251
+O2 inviluppo_tendenza,consumo_privato,2012,11967.89572
+O2 inviluppo_tendenza,investimento_E,2012,526.152476
+O2 inviluppo_tendenza,investimento_S,2012,324.9405714
+O2 inviluppo_tendenza,investimento_N,2012,437.9325928
+O2 inviluppo_tendenza,investimento_R,2012,694.0330105
+O2 inviluppo_tendenza,produzione_lorda,2013,30301.63938
+O2 inviluppo_tendenza,consumo_privato,2013,12166.0404
+O2 inviluppo_tendenza,investimento_E,2013,414.7907072
+O2 inviluppo_tendenza,investimento_S,2013,382.2034903
+O2 inviluppo_tendenza,investimento_N,2013,643.4375452
+O2 inviluppo_tendenza,investimento_R,2013,609.3101209
+O2 inviluppo_tendenza,produzione_lorda,2014,31081.06443
+O2 inviluppo_tendenza,consumo_privato,2014,12589.47282
+O2 inviluppo_tendenza,investimento_E,2014,488.3771197
+O2 inviluppo_tendenza,investimento_S,2014,293.8024704
+O2 inviluppo_tendenza,investimento_N,2014,601.3467318
+O2 inviluppo_tendenza,investimento_R,2014,654.5001862
+O2 inviluppo_tendenza,produzione_lorda,2015,31603.65475
+O2 inviluppo_tendenza,consumo_privato,2015,13368.01846
+O2 inviluppo_tendenza,investimento_E,2015,685.1205082
+O2 inviluppo_tendenza,investimento_S,2015,233.1385416
+O2 inviluppo_tendenza,investimento_N,2015,681.2853435
+O2 inviluppo_tendenza,investimento_R,2015,375.213655
+O2 inviluppo_tendenza,produzione_lorda,2016,32239.93977
+O2 inviluppo_tendenza,consumo_privato,2016,13817.91368
+O2 inviluppo_tendenza,investimento_E,2016,704.3826817
+O2 inviluppo_tendenza,investimento_S,2016,113.006924
+O2 inviluppo_tendenza,investimento_N,2016,765.8431657
+O2 inviluppo_tendenza,investimento_R,2016,254.0722751
+O2 inviluppo_tendenza,produzione_lorda,2017,32906.97668
+O2 inviluppo_tendenza,consumo_privato,2017,14150.77379
+O2 inviluppo_tendenza,investimento_E,2017,659.0059775
+O2 inviluppo_tendenza,investimento_S,2017,139.4829552
+O2 inviluppo_tendenza,investimento_N,2017,1139.480504
+O2 inviluppo_tendenza,investimento_R,2017,37.14221532
+O2 inviluppo_tendenza,produzione_lorda,2018,34074.06952
+O2 inviluppo_tendenza,consumo_privato,2018,14398.97287
+O2 inviluppo_tendenza,investimento_E,2018,452.6186839
+O2 inviluppo_tendenza,investimento_S,2018,536.2082436
+O2 inviluppo_tendenza,investimento_N,2018,1100.091217
+O2 inviluppo_tendenza,investimento_R,2018,0
+O2 inviluppo_tendenza,produzione_lorda,2019,34493.26963
+O2 inviluppo_tendenza,consumo_privato,2019,14883.83497
+O2 inviluppo_tendenza,investimento_E,2019,1764.443294
+O2 inviluppo_tendenza,investimento_S,2019,536.6607731
+O2 inviluppo_tendenza,investimento_N,2019,211.8517279
+O2 inviluppo_tendenza,investimento_R,2019,0
+O2 inviluppo_tendenza,stock_E,2010,5253.682314
+O2 inviluppo_tendenza,stock_S,2010,11966.29598
+O2 inviluppo_tendenza,stock_N,2010,2163.778443
+O2 inviluppo_tendenza,stock_R,2010,16313.21928
+O2 inviluppo_tendenza,stock_E,2011,4742.388174
+O2 inviluppo_tendenza,stock_S,2011,12054.7102
+O2 inviluppo_tendenza,stock_N,2011,1721.419886
+O2 inviluppo_tendenza,stock_R,2011,16998.18985
+O2 inviluppo_tendenza,stock_E,2012,4317.396466
+O2 inviluppo_tendenza,stock_S,2012,12329.72954
+O2 inviluppo_tendenza,stock_N,2012,1608.558829
+O2 inviluppo_tendenza,stock_R,2012,16890.13633
+O2 inviluppo_tendenza,stock_E,2013,4249.541406
+O2 inviluppo_tendenza,stock_S,2013,12271.8384
+O2 inviluppo_tendenza,stock_N,2013,1662.387173
+O2 inviluppo_tendenza,stock_R,2013,17192.43021
+O2 inviluppo_tendenza,stock_E,2014,4077.306137
+O2 inviluppo_tendenza,stock_S,2014,12277.78673
+O2 inviluppo_tendenza,stock_N,2014,1889.635414
+O2 inviluppo_tendenza,stock_R,2014,17402.98999
+O2 inviluppo_tendenza,stock_E,2015,4000.127261
+O2 inviluppo_tendenza,stock_S,2015,12197.38901
+O2 inviluppo_tendenza,stock_N,2015,1990.457376
+O2 inviluppo_tendenza,stock_R,2015,17653.85624
+O2 inviluppo_tendenza,stock_E,2016,4122.145741
+O2 inviluppo_tendenza,stock_S,2016,12062.84579
+O2 inviluppo_tendenza,stock_N,2016,2122.094978
+O2 inviluppo_tendenza,stock_R,2016,17619.61752
+O2 inviluppo_tendenza,stock_E,2017,4238.529665
+O2 inviluppo_tendenza,stock_S,2017,11815.81167
+O2 inviluppo_tendenza,stock_N,2017,2281.347285
+O2 inviluppo_tendenza,stock_R,2017,17465.03154
+O2 inviluppo_tendenza,stock_E,2018,4272.653498
+O2 inviluppo_tendenza,stock_S,2018,11605.53372
+O2 inviluppo_tendenza,stock_N,2018,2745.440783
+O2 inviluppo_tendenza,stock_R,2018,17097.10087
+O2 inviluppo_tendenza,stock_E,2019,4089.095297
+O2 inviluppo_tendenza,stock_S,2019,11799.13831
+O2 inviluppo_tendenza,stock_N,2019,2963.349099
+O2 inviluppo_tendenza,stock_R,2019,16700.56153
+O2 inviluppo_tendenza,stock_E,2020,5253.682314
+O2 inviluppo_tendenza,stock_S,2020,11966.29598
+O2 inviluppo_tendenza,stock_N,2020,2163.778443
+O2 inviluppo_tendenza,stock_R,2020,16313.21928

@@ -1,0 +1,97 @@
+{
+ "id": "20260922-191936_M71-D0-controllo-osservato",
+ "nome": "M71-D0-controllo-osservato",
+ "inizio_utc": "2026-09-22T23:19:36+00:00",
+ "codice": {
+  "commit": "2725bd86d8e2e59de2e43b3777c91a3c486a71c3",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "varianti": {
+   "base": {
+    "u_non_g17": 1.0,
+    "sigma_fattore": 1.0
+   },
+   "variante": {
+    "u_non_g17": 0.772,
+    "sigma_fattore": 0.85
+   }
+  }
+ },
+ "fine_utc": "2026-09-22T23:19:36+00:00",
+ "esito": "completata",
+ "output": {
+  "base/bilanci.csv": {
+   "bytes": 22542,
+   "sha256": "5c38a9e7c8f5e6f097ed465022a5e4467a27dd1ae196fb1a16801508b7211c95"
+  },
+  "base/capacita.csv": {
+   "bytes": 10535,
+   "sha256": "b50a20a1215766c9a60d5df4a941badcc5560f25cbbadf8130b4aabf6dfba879"
+  },
+  "base/lavoro.csv": {
+   "bytes": 229,
+   "sha256": "54147641ea834af99ad5ddbb20791b8c7b89aa1c0e128ef2759052fc2e78cfde"
+  },
+  "base/estero.csv": {
+   "bytes": 211,
+   "sha256": "50fa1546715b9e8e0204b33224b02156447851da0cf405120bcc5a42bb59bd32"
+  },
+  "base/scorte.csv": {
+   "bytes": 1975,
+   "sha256": "b5cf855d6353bdd0767c6f47dbc66c81dc561782e540fbebba861717934ffb46"
+  },
+  "variante/bilanci.csv": {
+   "bytes": 22542,
+   "sha256": "5c38a9e7c8f5e6f097ed465022a5e4467a27dd1ae196fb1a16801508b7211c95"
+  },
+  "variante/capacita.csv": {
+   "bytes": 10886,
+   "sha256": "f9d7a40597f0fc81e7adc0845197a1e3a1d12204ef9faabfcacfdcaa00397572"
+  },
+  "variante/lavoro.csv": {
+   "bytes": 229,
+   "sha256": "54147641ea834af99ad5ddbb20791b8c7b89aa1c0e128ef2759052fc2e78cfde"
+  },
+  "variante/estero.csv": {
+   "bytes": 211,
+   "sha256": "50fa1546715b9e8e0204b33224b02156447851da0cf405120bcc5a42bb59bd32"
+  },
+  "variante/scorte.csv": {
+   "bytes": 2001,
+   "sha256": "21954e637fdeaf2f5160f4c1fa6465c13b6a30240f852fe430b4b0b21554d3d7"
+  },
+  "sintesi.md": {
+   "bytes": 1146,
+   "sha256": "94253e91d199f1feba08bca0469c12d7665ad32e81e06adca68ba79058c12c8d"
+  }
+ }
+}

@@ -1,0 +1,271 @@
+caso,variabile,anno,valore
+osservato,produzione_lorda,2012,29232.151
+osservato,consumo_privato,2012,11065.391
+osservato,investimento_E,2012,979.968
+osservato,investimento_S,2012,461.451
+osservato,investimento_N,2012,655.697
+osservato,investimento_R,2012,432.014
+osservato,produzione_lorda,2013,29888.3702
+osservato,consumo_privato,2013,11221.41039
+osservato,investimento_E,2013,1040.300973
+osservato,investimento_S,2013,467.9013577
+osservato,investimento_N,2013,694.3590635
+osservato,investimento_R,2013,486.640999
+osservato,produzione_lorda,2014,30756.33925
+osservato,consumo_privato,2014,11485.59399
+osservato,investimento_E,2014,1120.873196
+osservato,investimento_S,2014,519.2513389
+osservato,investimento_N,2014,736.3419464
+osservato,investimento_R,2014,508.1175307
+osservato,produzione_lorda,2015,31442.76287
+osservato,consumo_privato,2015,11875.06634
+osservato,investimento_E,2015,1162.908353
+osservato,investimento_S,2015,515.2587226
+osservato,investimento_N,2015,771.8410725
+osservato,investimento_R,2015,562.3000943
+osservato,produzione_lorda,2016,32015.74003
+osservato,consumo_privato,2016,12189.77949
+osservato,investimento_E,2016,1160.192713
+osservato,investimento_S,2016,494.6712135
+osservato,investimento_N,2016,845.5307864
+osservato,investimento_R,2016,602.4324513
+osservato,stock_E,2012,5482.556292
+osservato,stock_S,2012,12034.73719
+osservato,stock_N,2012,2308.266901
+osservato,stock_R,2012,16320.95131
+osservato,stock_E,2013,5697.245
+osservato,stock_S,2013,12111.938
+osservato,stock_N,2013,2392.597
+osservato,stock_R,2013,16352.383
+osservato,stock_E,2014,5939.767384
+osservato,stock_S,2014,12201.77995
+osservato,stock_N,2014,2486.697176
+osservato,stock_R,2014,16463.18883
+osservato,stock_E,2015,6224.30194
+osservato,stock_S,2015,12338.34192
+osservato,stock_N,2015,2591.449439
+osservato,stock_R,2015,16592.58793
+osservato,stock_E,2016,6509.75935
+osservato,stock_S,2016,12467.24791
+osservato,stock_N,2016,2698.174801
+osservato,stock_R,2016,16773.35508
+osservato,stock_E,2017,6754.034715
+osservato,stock_S,2017,12574.478
+osservato,stock_N,2017,2838.099865
+osservato,stock_R,2017,16989.36543
+O2 mantenimento,produzione_lorda,2012,29223.3218
+O2 mantenimento,consumo_privato,2012,11877.79459
+O2 mantenimento,investimento_E,2012,444.6500704
+O2 mantenimento,investimento_S,2012,331.2152317
+O2 mantenimento,investimento_N,2012,113.6510363
+O2 mantenimento,investimento_R,2012,1218.493759
+O2 mantenimento,produzione_lorda,2013,30463.00479
+O2 mantenimento,consumo_privato,2013,12215.45116
+O2 mantenimento,investimento_E,2013,473.1257201
+O2 mantenimento,investimento_S,2013,362.0571036
+O2 mantenimento,investimento_N,2013,505.0877854
+O2 mantenimento,investimento_R,2013,658.2470275
+O2 mantenimento,produzione_lorda,2014,30928.87428
+O2 mantenimento,consumo_privato,2014,12902.37048
+O2 mantenimento,investimento_E,2014,616.379401
+O2 mantenimento,investimento_S,2014,558.7115174
+O2 mantenimento,investimento_N,2014,520.5137169
+O2 mantenimento,investimento_R,2014,82.0347997
+O2 mantenimento,produzione_lorda,2015,31643.26844
+O2 mantenimento,consumo_privato,2015,13447.05862
+O2 mantenimento,investimento_E,2015,790.6295527
+O2 mantenimento,investimento_S,2015,262.0872162
+O2 mantenimento,investimento_N,2015,661.5553039
+O2 mantenimento,investimento_R,2015,0
+O2 mantenimento,produzione_lorda,2016,32447.71206
+O2 mantenimento,consumo_privato,2016,13718.53541
+O2 mantenimento,investimento_E,2016,1261.131465
+O2 mantenimento,investimento_S,2016,367.7677083
+O2 mantenimento,investimento_N,2016,862.9350894
+O2 mantenimento,investimento_R,2016,0
+O2 mantenimento,stock_E,2012,5482.556292
+O2 mantenimento,stock_S,2012,12034.73719
+O2 mantenimento,stock_N,2012,2308.266901
+O2 mantenimento,stock_R,2012,16320.95131
+O2 mantenimento,stock_E,2013,5161.62881
+O2 mantenimento,stock_S,2013,11992.36787
+O2 mantenimento,stock_N,2013,1844.186137
+O2 mantenimento,stock_R,2013,17162.07952
+O2 mantenimento,stock_E,2014,4917.430848
+O2 mantenimento,stock_S,2014,11980.73266
+O2 mantenimento,stock_N,2014,1903.49292
+O2 mantenimento,stock_R,2014,17423.51283
+O2 mantenimento,stock_E,2015,4840.756279
+O2 mantenimento,stock_S,2015,12163.1655
+O2 mantenimento,stock_N,2015,1946.734175
+O2 mantenimento,stock_R,2015,17102.68916
+O2 mantenimento,stock_E,2016,4944.323651
+O2 mantenimento,stock_S,2016,12044.15119
+O2 mantenimento,stock_N,2016,2076.847201
+O2 mantenimento,stock_R,2016,16707.24864
+O2 mantenimento,stock_E,2017,5482.556292
+O2 mantenimento,stock_S,2017,12034.73719
+O2 mantenimento,stock_N,2017,2308.266901
+O2 mantenimento,stock_R,2017,16320.95131
+O2 produzione_per_tipo,produzione_lorda,2012,29407.79716
+O2 produzione_per_tipo,consumo_privato,2012,11709.15875
+O2 produzione_per_tipo,investimento_E,2012,427.8886739
+O2 produzione_per_tipo,investimento_S,2012,368.1711884
+O2 produzione_per_tipo,investimento_N,2012,148.7320713
+O2 produzione_per_tipo,investimento_R,2012,1237.851395
+O2 produzione_per_tipo,produzione_lorda,2013,30243.5976
+O2 produzione_per_tipo,consumo_privato,2013,12127.37121
+O2 produzione_per_tipo,investimento_E,2013,402.6104916
+O2 produzione_per_tipo,investimento_S,2013,986.1098576
+O2 produzione_per_tipo,investimento_N,2013,434.9203028
+O2 produzione_per_tipo,investimento_R,2013,435.503329
+O2 produzione_per_tipo,produzione_lorda,2014,31318.22261
+O2 produzione_per_tipo,consumo_privato,2014,12431.38177
+O2 produzione_per_tipo,investimento_E,2014,536.2337979
+O2 produzione_per_tipo,investimento_S,2014,1102.995378
+O2 produzione_per_tipo,investimento_N,2014,440.0042242
+O2 produzione_per_tipo,investimento_R,2014,160.3570441
+O2 produzione_per_tipo,produzione_lorda,2015,32228.59965
+O2 produzione_per_tipo,consumo_privato,2015,12826.88878
+O2 produzione_per_tipo,investimento_E,2015,988.159074
+O2 produzione_per_tipo,investimento_S,2015,493.9328099
+O2 produzione_per_tipo,investimento_N,2015,604.2471131
+O2 produzione_per_tipo,investimento_R,2015,376.9336946
+O2 produzione_per_tipo,produzione_lorda,2016,33268.45608
+O2 produzione_per_tipo,consumo_privato,2016,13070.12952
+O2 produzione_per_tipo,investimento_E,2016,1926.723712
+O2 produzione_per_tipo,investimento_S,2016,687.332761
+O2 produzione_per_tipo,investimento_N,2016,1263.890322
+O2 produzione_per_tipo,investimento_R,2016,0
+O2 produzione_per_tipo,stock_E,2012,5482.556292
+O2 produzione_per_tipo,stock_S,2012,12034.73719
+O2 produzione_per_tipo,stock_N,2012,2308.266901
+O2 produzione_per_tipo,stock_R,2012,16320.95131
+O2 produzione_per_tipo,stock_E,2013,5144.867414
+O2 produzione_per_tipo,stock_S,2013,12029.32382
+O2 produzione_per_tipo,stock_N,2013,1879.267172
+O2 produzione_per_tipo,stock_R,2013,17181.43716
+O2 produzione_per_tipo,stock_E,2014,4830.954754
+O2 produzione_per_tipo,stock_S,2014,12638.1977
+O2 produzione_per_tipo,stock_N,2014,1852.230646
+O2 produzione_per_tipo,stock_R,2014,17219.67919
+O2 produzione_per_tipo,stock_E,2015,4692.712448
+O2 produzione_per_tipo,stock_S,2015,13332.69173
+O2 produzione_per_tipo,stock_N,2015,1822.268026
+O2 produzione_per_tipo,stock_R,2015,16981.89072
+O2 produzione_per_tipo,stock_E,2016,5024.415699
+O2 produzione_per_tipo,stock_S,2016,13388.5148
+O2 produzione_per_tipo,stock_N,2016,1933.392775
+O2 produzione_per_tipo,stock_R,2016,16966.17693
+O2 produzione_per_tipo,stock_E,2017,6210.42504
+O2 produzione_per_tipo,stock_S,2017,13632.47895
+O2 produzione_per_tipo,stock_N,2017,2614.714341
+O2 produzione_per_tipo,stock_R,2017,16573.89278
+O2 produzione_aggregata,produzione_lorda,2012,29376.67666
+O2 produzione_aggregata,consumo_privato,2012,11780.2896
+O2 produzione_aggregata,investimento_E,2012,613.7691345
+O2 produzione_aggregata,investimento_S,2012,126.5429745
+O2 produzione_aggregata,investimento_N,2012,176.0879423
+O2 produzione_aggregata,investimento_R,2012,1330.85966
+O2 produzione_aggregata,produzione_lorda,2013,30736.59401
+O2 produzione_aggregata,consumo_privato,2013,12211.60048
+O2 produzione_aggregata,investimento_E,2013,806.1531556
+O2 produzione_aggregata,investimento_S,2013,165.5059323
+O2 produzione_aggregata,investimento_N,2013,513.9133279
+O2 produzione_aggregata,investimento_R,2013,530.197771
+O2 produzione_aggregata,produzione_lorda,2014,31432.65434
+O2 produzione_aggregata,consumo_privato,2014,12536.55624
+O2 produzione_aggregata,investimento_E,2014,894.7890452
+O2 produzione_aggregata,investimento_S,2014,35.81987892
+O2 produzione_aggregata,investimento_N,2014,1045.199901
+O2 produzione_aggregata,investimento_R,2014,364.9503475
+O2 produzione_aggregata,produzione_lorda,2015,32607.01364
+O2 produzione_aggregata,consumo_privato,2015,13036.05753
+O2 produzione_aggregata,investimento_E,2015,1575.413762
+O2 produzione_aggregata,investimento_S,2015,0
+O2 produzione_aggregata,investimento_N,2015,644.0765844
+O2 produzione_aggregata,investimento_R,2015,0
+O2 produzione_aggregata,produzione_lorda,2016,33531.96091
+O2 produzione_aggregata,consumo_privato,2016,13093.43132
+O2 produzione_aggregata,investimento_E,2016,2557.033632
+O2 produzione_aggregata,investimento_S,2016,0
+O2 produzione_aggregata,investimento_N,2016,2213.324684
+O2 produzione_aggregata,investimento_R,2016,0
+O2 produzione_aggregata,stock_E,2012,5482.556292
+O2 produzione_aggregata,stock_S,2012,12034.73719
+O2 produzione_aggregata,stock_N,2012,2308.266901
+O2 produzione_aggregata,stock_R,2012,16320.95131
+O2 produzione_aggregata,stock_E,2013,5330.747874
+O2 produzione_aggregata,stock_S,2013,11787.69561
+O2 produzione_aggregata,stock_N,2013,1906.623043
+O2 produzione_aggregata,stock_R,2013,17274.44542
+O2 produzione_aggregata,stock_E,2014,5395.386262
+O2 produzione_aggregata,stock_S,2014,11591.07385
+O2 produzione_aggregata,stock_N,2014,1958.654295
+O2 produzione_aggregata,stock_R,2014,17405.2314
+O2 produzione_aggregata,stock_E,2015,5519.669303
+O2 produzione_aggregata,stock_S,2015,11269.04859
+O2 produzione_aggregata,stock_N,2015,2519.219803
+O2 produzione_aggregata,stock_R,2015,17367.74598
+O2 produzione_aggregata,stock_E,2016,6300.897853
+O2 produzione_aggregata,stock_S,2016,10924.3431
+O2 produzione_aggregata,stock_N,2016,2504.597895
+O2 produzione_aggregata,stock_R,2016,16966.17693
+O2 produzione_aggregata,stock_E,2017,7870.600749
+O2 produzione_aggregata,stock_S,2017,10592.99937
+O2 produzione_aggregata,stock_N,2017,3994.018204
+O2 produzione_aggregata,stock_R,2017,16573.89278
+O2 lavoro_aggregata,produzione_lorda,2012,29374.1936
+O2 lavoro_aggregata,consumo_privato,2012,11785.35275
+O2 lavoro_aggregata,investimento_E,2012,613.589896
+O2 lavoro_aggregata,investimento_S,2012,126.5307494
+O2 lavoro_aggregata,investimento_N,2012,170.0257052
+O2 lavoro_aggregata,investimento_R,2012,1330.874749
+O2 lavoro_aggregata,produzione_lorda,2013,30729.55752
+O2 lavoro_aggregata,consumo_privato,2013,12211.89078
+O2 lavoro_aggregata,investimento_E,2013,798.924602
+O2 lavoro_aggregata,investimento_S,2013,167.2840901
+O2 lavoro_aggregata,investimento_N,2013,512.9931715
+O2 lavoro_aggregata,investimento_R,2013,534.8548096
+O2 lavoro_aggregata,produzione_lorda,2014,31402.14817
+O2 lavoro_aggregata,consumo_privato,2014,12596.99274
+O2 lavoro_aggregata,investimento_E,2014,914.0124242
+O2 lavoro_aggregata,investimento_S,2014,37.36251109
+O2 lavoro_aggregata,investimento_N,2014,947.878551
+O2 lavoro_aggregata,investimento_R,2014,360.386587
+O2 lavoro_aggregata,produzione_lorda,2015,32417.90988
+O2 lavoro_aggregata,consumo_privato,2015,13151.62326
+O2 lavoro_aggregata,investimento_E,2015,1465.203869
+O2 lavoro_aggregata,investimento_S,2015,0
+O2 lavoro_aggregata,investimento_N,2015,634.1191577
+O2 lavoro_aggregata,investimento_R,2015,0
+O2 lavoro_aggregata,produzione_lorda,2016,33321.91353
+O2 lavoro_aggregata,consumo_privato,2016,13315.04934
+O2 lavoro_aggregata,investimento_E,2016,2309.594565
+O2 lavoro_aggregata,investimento_S,2016,0
+O2 lavoro_aggregata,investimento_N,2016,1962.961217
+O2 lavoro_aggregata,investimento_R,2016,0
+O2 lavoro_aggregata,stock_E,2012,5482.556292
+O2 lavoro_aggregata,stock_S,2012,12034.73719
+O2 lavoro_aggregata,stock_N,2012,2308.266901
+O2 lavoro_aggregata,stock_R,2012,16320.95131
+O2 lavoro_aggregata,stock_E,2013,5330.568636
+O2 lavoro_aggregata,stock_S,2013,11787.68338
+O2 lavoro_aggregata,stock_N,2013,1900.560806
+O2 lavoro_aggregata,stock_R,2013,17274.46051
+O2 lavoro_aggregata,stock_E,2014,5387.972678
+O2 lavoro_aggregata,stock_S,2014,11592.84022
+O2 lavoro_aggregata,stock_N,2014,1953.004612
+O2 lavoro_aggregata,stock_R,2014,17409.90318
+O2 lavoro_aggregata,stock_E,2015,5533.105641
+O2 lavoro_aggregata,stock_S,2015,11272.22228
+O2 lavoro_aggregata,stock_N,2015,2417.694916
+O2 lavoro_aggregata,stock_R,2015,17367.74598
+O2 lavoro_aggregata,stock_E,2016,6200.174885
+O2 lavoro_aggregata,stock_S,2016,10927.3517
+O2 lavoro_aggregata,stock_N,2016,2420.073237
+O2 lavoro_aggregata,stock_R,2016,16966.17693
+O2 lavoro_aggregata,stock_E,2017,7544.390485
+O2 lavoro_aggregata,stock_S,2017,10595.85327
+O2 lavoro_aggregata,stock_N,2017,3680.245447
+O2 lavoro_aggregata,stock_R,2017,16573.89278

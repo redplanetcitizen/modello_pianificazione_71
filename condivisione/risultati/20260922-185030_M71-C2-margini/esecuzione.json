@@ -1,0 +1,68 @@
+{
+ "id": "20260922-185030_M71-C2-margini",
+ "nome": "M71-C2-margini",
+ "inizio_utc": "2026-09-22T22:50:30+00:00",
+ "codice": {
+  "commit": "e1e5845b098d021b360ce494ff5c8d8a59d717e5",
+  "modifiche_non_registrate": false,
+  "nota": null
+ },
+ "ambiente": {
+  "pianificazione71": "0.1.0",
+  "python": "3.14.2",
+  "piattaforma": "Windows-10-10.0.19045-SP0",
+  "processore": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+  "pacchetti": {
+   "numpy": "2.5.3",
+   "pandas": "3.0.6",
+   "openpyxl": "3.1.5",
+   "highspy": "1.15.1"
+  }
+ },
+ "configurazione": {
+  "file": "C:\\Users\\franc\\Documents\\GitHub\\modello_pianificazione_71\\config\\dati.toml",
+  "sha256": "0894b639b01e33b1439d4f02f75763f4b38fd58505c2078a401442eacca3eeca",
+  "radice_archivio": "C:\\Users\\franc\\Documents\\dati_economici"
+ },
+ "verifica_dati": {
+  "completa": false,
+  "release": {
+   "bea-2025-09": 4,
+   "bea-2026-09-22": 8,
+   "bea-2026-09-23": 6,
+   "bls-2026-09-18": 1,
+   "fed-g17-2026-09-18": 2
+  }
+ },
+ "parametri": {
+  "fa": "bea-2026-09-22/manual/M3/detailnonres_inv1.xlsx",
+  "residenziale": "bea-2026-09-22/manual/M3/detailresidential.xlsx",
+  "nipa": "bea-2026-09-23/api/tidy/NIPA/T50305.csv",
+  "use": "bea-2025-09/manual/M1/IOUse_Before_Redefinitions_PRO_Summary.xlsx",
+  "concordanza": "concordanza_fa_io.csv",
+  "ipotesi": [
+   "H18",
+   "H18a"
+  ]
+ },
+ "fine_utc": "2026-09-22T22:50:35+00:00",
+ "esito": "completata",
+ "output": {
+  "concordanza_fa_io.csv": {
+   "bytes": 3550,
+   "sha256": "909f6c1da787c50bcd33cf8ee3d408cfda6da2445419de8a8f00f12c541b5c3a"
+  },
+  "confronto_totali.csv": {
+   "bytes": 1487,
+   "sha256": "a6693e42db8d952e850e31a8ecf6acda7374fbf07ee4955691a4a15a7ef6085f"
+  },
+  "investimento_fa_per_industria_io.csv": {
+   "bytes": 8039,
+   "sha256": "97d84e0d7a31e926ebb197355954ce293d1eeb1d5cb6da41cd1f515a53a96ca2"
+  },
+  "sintesi.md": {
+   "bytes": 1643,
+   "sha256": "688ea5d7525cbf84233185b98558bc74c700e586bb972633d69ce23875195767"
+  }
+ }
+}

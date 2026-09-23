@@ -1,0 +1,9 @@
+................................................                         [100%]
+============================== warnings summary ===============================
+tests/test_modello.py: 5 warnings
+tests/test_predittivo.py: 5 warnings
+  C:\Users\franc\Documents\GitHub\modello_pianificazione_71\.venv\Lib\site-packages\openpyxl\worksheet\header_footer.py:48: UserWarning: Cannot parse header or footer so it will be ignored
+    warn("""Cannot parse header or footer so it will be ignored""")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+48 passed, 10 warnings in 257.02s (0:04:17)
