@@ -6,14 +6,9 @@ Codice nuovo. È indipendente da `csvplan.jl` e dal motore LP a 411 commodity (`
 
 ## Documenti di riferimento
 
-Nel progetto "Creazione di un modello di pianificazione economica":
-
-- `progetto/04_specifica_modello.md` — specifica formale (v0.2.1);
-- `progetto/03_registro_decisioni.md` — scelte adottate, approssimazioni del primo test, verifiche aperte;
-- `progetto/02_dati_e_fonti.md` — release dei dati e copertura;
-- `progetto/05_linee_precedenti.md` — provenienza dei modelli precedenti e confronti previsti.
-
-Al momento della consegna per la revisione le versioni correnti saranno copiate in `docs/`.
+- `condivisione/README.md`: pacchetto per la revisione (definizioni di K, I, δ, unità, industrie, capacità, aggregazione dei tipi di capitale in E6, informazioni osservate usate, riproduzione);
+- `docs/progetto/`: documenti di lavoro del progetto (specifica, registro delle decisioni, registro dei modelli e dei test, specifica dello scenario E6, note dei passi C, D, E e del predittivo);
+- `docs/rapporto_M71-E6-predittivo.md`: rapporto del backtest predittivo (esecuzione ufficiale).
 
 ## Regole
 
@@ -31,7 +26,9 @@ src/pianificazione71/
   registro.py                registro delle esecuzioni
   __main__.py                comandi
 tests/                       test automatici (archivio di prova, registro, solver)
-runs/                        esecuzioni (esclusa da git)
+runs/                        esecuzioni (esclusa da git; quelle ufficiali sono copiate in condivisione/risultati/)
+condivisione/                pacchetto per la revisione, generato da `pacchetto`
+docs/                        documenti di progetto e rapporto predittivo
 ```
 
 ## Installazione (Windows, PowerShell)
@@ -42,10 +39,10 @@ Dalla cartella del repository:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -e ".[test]"
-python -m pip freeze > requisiti-bloccati.txt
+python -m pip freeze --exclude-editable | Set-Content -Encoding ascii requisiti-bloccati.txt
 ```
 
-`requisiti-bloccati.txt` fissa le versioni esatte usate; va registrato in git.
+`requisiti-bloccati.txt` fissa le versioni esatte usate; va registrato in git (in ASCII: il reindirizzamento `>` di PowerShell 5 scrive in UTF-16).
 
 ## Comandi
 
@@ -61,6 +58,9 @@ python -m pianificazione71 e1 ... e7              # passo E: test di taratura (v
 python -m pianificazione71 predittivo             # M71-E6-predittivo: backtest completo 2008-2019, stabilita' e rapporto (comando unico, ~1,5 h)
 python -m pianificazione71 predittivo --rapida    # griglia ridotta, origini dispari (prova, ~15 min)
 python -m pianificazione71 predittivo-rapporto runs\<cartella>   # rigenera stabilita' e rapporto.md di un'esecuzione
+python -m pianificazione71 predittivo-grafici runs\<cartella>    # rigenera i grafici g1-g8 di un'esecuzione
+python -m pianificazione71 pacchetto              # cartella condivisione/: serie 2008-2019, parametri E6, risultati ufficiali, test, manifest
+python -m pianificazione71 zip-dati <file.zip>    # zip dei soli file dell'archivio letti dal modello, con i manifest
 ```
 
 La pipeline predittiva costruisce una sola volta lo storico 1997-2019 e lo salva in `cache/` (non versionato); la cache si rigenera da sola se cambiano i file di configurazione.
@@ -71,8 +71,9 @@ Per usare l'archivio in un'altra posizione: `$env:DATI_ECONOMICI = "D:\percorso\
 
 | Passo | Contenuto | Stato |
 |---|---|---|
-| B | Infrastruttura: verifica dei dati, registro, test, solver | fatto |
+| B | Infrastruttura: verifica dei dati, registro, test, solver | fatto (commit `ea4f722`) |
 | C | Pipeline dei dati a 71 industrie | fatto (commit `e1e5845`) |
-| D | Modello | fatto (commit `2725bd8`); D4-D5 in cloud |
-| E | Test di taratura E1-E7 | in cloud, da eseguire ufficialmente |
-| E6-predittivo | Backtest a origine mobile 2008-2019 | codice pronto; esecuzione ufficiale da fare |
+| D | Modello; D4 O3 a valore, D5 grafici | fatto (D0-D3 commit `2725bd8`; D4-D5 esecuzioni ufficiali in `runs/`) |
+| E | Test di taratura E1-E7 | esecuzioni ufficiali in `runs/` (vedi `condivisione/MANIFEST.json`) |
+| E6-predittivo | Backtest a origine mobile 2008-2019 | esecuzione ufficiale `20260923-072127` (commit `4e16359`) |
+| Condivisione | Pacchetto per la revisione | `condivisione/` |

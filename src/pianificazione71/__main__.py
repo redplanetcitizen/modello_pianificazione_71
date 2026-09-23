@@ -237,6 +237,20 @@ def cmd_predittivo_grafici(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_pacchetto(a: argparse.Namespace) -> int:
+    from .condivisione import genera
+    c = genera(carica_configurazione(a.config), includi_non_ufficiali=a.includi_non_ufficiali, test=not a.senza_test)
+    print(f"Pacchetto di condivisione: {c}")
+    return 0
+
+
+def cmd_zip_dati(a: argparse.Namespace) -> int:
+    from .condivisione import zip_dati
+    f, h = zip_dati(carica_configurazione(a.config), Path(a.destinazione))
+    print(f"Zip dei dati: {f}\nSHA-256: {h}")
+    return 0
+
+
 def cmd_passo_c(a: argparse.Namespace) -> int:
     """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
     import importlib
@@ -285,6 +299,13 @@ def main(argv: list[str] | None = None) -> int:
     prr = sub.add_parser("predittivo-rapporto", help="stabilita' e rapporto.md per un'esecuzione M71-E6-predittivo esistente")
     prr.add_argument("cartella")
     prr.set_defaults(f=cmd_predittivo_rapporto)
+    pk = sub.add_parser("pacchetto", help="cartella condivisione/: serie 2008-2019, mappatura, G.17, parametri E6, risultati ufficiali, test, manifest")
+    pk.add_argument("--senza-test", action="store_true", help="non esegue pytest (esito_test.txt non viene scritto)")
+    pk.add_argument("--includi-non-ufficiali", action="store_true", help="copia anche esecuzioni senza commit registrato (solo prove)")
+    pk.set_defaults(f=cmd_pacchetto)
+    zd = sub.add_parser("zip-dati", help="zip dei soli file dell'archivio letti dal modello, con i manifest delle release")
+    zd.add_argument("destinazione")
+    zd.set_defaults(f=cmd_zip_dati)
     prg = sub.add_parser("predittivo-grafici", help="grafici PNG (g1-g5) per un'esecuzione M71-E6-predittivo esistente")
     prg.add_argument("cartella")
     prg.set_defaults(f=cmd_predittivo_grafici)

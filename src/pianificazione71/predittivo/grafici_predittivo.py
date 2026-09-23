@@ -4,6 +4,9 @@
 2. S per orizzonte h (protocollo B): barre raggruppate per i casi principali.
 3. Componenti r_g a un passo (protocollo B): barre raggruppate per gruppo di variabili.
 4. Errore percentuale a un passo per anno su consumo e investimento totali: casi principali.
+6. Livelli a un passo (2009-2019) dei sei aggregati: modello a confronto con l'osservato BEA.
+7. Livelli dall'origine 2011 (h = 1...5, 2012-2016): modello a confronto con l'osservato BEA.
+8. Investimento per tipo dall'origine 2011: modello a confronto con l'osservato BEA.
 Colori: palette categorica validata (blu, arancio, verde acqua, viola, giallo) + grigio per i benchmark.
 """
 from __future__ import annotations
@@ -11,6 +14,7 @@ from __future__ import annotations
 from pathlib import Path
 
 import matplotlib
+import matplotlib.ticker
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
@@ -155,6 +159,68 @@ def errori_aggregati(prev: pd.DataFrame, oss: pd.DataFrame, titolo: str) -> plt.
     return fig
 
 
+AGGREGATI = {"produzione_tot": "Produzione lorda", "consumo_tot": "Consumo privato", "investimento_tot": "Investimento fisso",
+             "importazioni_tot": "Importazioni", "scorte_tot": "Scorte (fine anno)", "stock_tot": "Stock di capitale (fine anno)"}
+TIPI = {"E": "Attrezzature (E)", "S": "Strutture (S)", "N": "Proprietà intellettuale (N)", "R": "Residenziale (R)"}
+CASI_LIVELLI = {"osservato": COL["pers"], "P0": COL["P0"], "P2|inv1.0|m1.0|S1.0|T3": COL["P2"], RIFERIMENTO_P1: COL["P1"]}
+
+
+def _con_stock_totale(df: pd.DataFrame) -> pd.DataFrame:
+    """Aggiunge la riga aggregati/stock_tot come somma dello stock per tipo."""
+    st = df[df["gruppo"] == "stock_tipo"]
+    chiavi = [c for c in ("caso", "origine", "h", "anno") if c in df.columns]
+    tot = st.groupby(chiavi, as_index=False)["valore"].sum().assign(gruppo="aggregati", chiave="stock_tot")
+    return pd.concat([df, tot], ignore_index=True)
+
+
+def _pannelli(prev: pd.DataFrame, oss: pd.DataFrame, variabili: dict, titolo: str, sel, nota: str, righe=2, colonne=3, dim=(15, 8.5)) -> plt.Figure:
+    """Barre affiancate: osservato BEA e casi principali, per ogni variabile; `sel(df)` filtra le previsioni da usare."""
+    casi = {c: k for c, k in CASI_LIVELLI.items() if c == "osservato" or c in set(prev["caso"])}
+    fig, assi = plt.subplots(righe, colonne, figsize=dim)
+    for ax, (chiave, tit) in zip(assi.ravel(), variabili.items()):
+        gruppo = "aggregati" if chiave in AGGREGATI else "investimento_tipo"
+        o = oss[(oss["gruppo"] == gruppo) & (oss["chiave"] == chiave)].set_index("anno")["valore"]
+        z = sel(prev[(prev["gruppo"] == gruppo) & (prev["chiave"] == chiave)])
+        anni = sorted(z["anno"].unique())
+        larg = 0.8 / len(casi)
+        for k, (c, colore) in enumerate(casi.items()):
+            v = o.reindex(anni) if c == "osservato" else z[z["caso"] == c].set_index("anno")["valore"].reindex(anni)
+            pos = [i - 0.4 + larg * (k + 0.5) for i in range(len(anni))]
+            ax.bar(pos, v.values, larg * 0.92, color=colore, label="Osservato (BEA)" if c == "osservato" else _etichetta(c))
+        ax.set_xticks(range(len(anni)), [str(a) for a in anni])
+        ax.set_title(tit, fontsize=10)
+        ax.set_ylabel("miliardi di $ 2012", fontsize=8.5)
+        vals = pd.concat([o.reindex(anni), z[z["caso"].isin(casi)]["valore"]])
+        ax.set_ylim(0, float(vals.max()) * 1.12)
+        ax.grid(axis="y", alpha=0.25); ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False)
+        ax.tick_params(labelsize=8)
+        ax.yaxis.set_major_formatter(matplotlib.ticker.FuncFormatter(lambda v, _: f"{v:,.0f}".replace(",", " ")))
+    h, l = assi.ravel()[0].get_legend_handles_labels()
+    fig.legend(h, l, fontsize=8.5, frameon=False, loc="upper left", ncol=len(l), bbox_to_anchor=(0.005, 0.965))
+    fig.suptitle(titolo, fontsize=11.5, fontweight="bold", x=0.01, y=0.995, ha="left")
+    fig.text(0.01, 0.005, nota, fontsize=8, color=COL["bench"])
+    fig.tight_layout(rect=(0, 0.02, 1, 0.935))
+    return fig
+
+
+def livelli_un_passo(prev: pd.DataFrame, oss: pd.DataFrame) -> plt.Figure:
+    return _pannelli(prev, oss, AGGREGATI, "Previsioni a un passo e valori osservati BEA, 2009–2019 (origini 2008–2018)",
+                     lambda d: d[d["h"] == 1],
+                     "Ogni anno t è previsto dall'origine t−1 con dati ≤ t−1 (orizzonte mobile). Stock = somma dei quattro tipi. Prezzi 2012.")
+
+
+def livelli_origine(prev: pd.DataFrame, oss: pd.DataFrame, origine: int = 2011) -> plt.Figure:
+    return _pannelli(prev, oss, AGGREGATI, f"Previsione dall'origine {origine} (h = 1…5) e valori osservati BEA, {origine + 1}–{origine + 5}",
+                     lambda d: d[d["origine"] == origine],
+                     f"Unica soluzione con dati ≤ {origine}: l'errore si accumula con l'orizzonte. Stock = somma dei quattro tipi. Prezzi 2012.")
+
+
+def investimento_tipo_origine(prev: pd.DataFrame, oss: pd.DataFrame, origine: int = 2011) -> plt.Figure:
+    return _pannelli(prev, oss, TIPI, f"Investimento per tipo dall'origine {origine} e valori osservati BEA, {origine + 1}–{origine + 5}",
+                     lambda d: d[d["origine"] == origine],
+                     f"Unica soluzione con dati ≤ {origine}. Prezzi 2012.", righe=2, colonne=2, dim=(13, 8))
+
+
 def genera(cartella: Path) -> list[Path]:
     cartella = Path(cartella)
     out = []
@@ -167,6 +233,11 @@ def genera(cartella: Path) -> list[Path]:
         "g3_componenti_B.png": componenti(sB, "Componenti dell'indicatore S per gruppo di variabili (h = 1, 2010–2019)"),
         "g4_errori_aggregati.png": errori_aggregati(prev, oss, "Errori a un passo sugli aggregati, 2009–2019 (origini 2008–2018)"),
     }
+    prev_t, oss_t = _con_stock_totale(prev), _con_stock_totale(oss)
+    figure["g6_livelli_un_passo.png"] = livelli_un_passo(prev_t, oss_t)
+    if 2011 in set(prev["origine"]):
+        figure["g7_livelli_origine_2011.png"] = livelli_origine(prev_t, oss_t, 2011)
+        figure["g8_investimento_tipo_origine_2011.png"] = investimento_tipo_origine(prev_t, oss_t, 2011)
     for nome, fig in figure.items():
         f = cartella / nome
         fig.savefig(f, dpi=160)

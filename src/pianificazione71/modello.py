@@ -128,6 +128,29 @@ class Risultato:
     n_vincoli: int = 0
 
 
+def coefficiente_capacita(P: Parametri, o: Opzioni, j: str, t: int) -> dict:
+    """Coefficiente del vincolo di capacità dell'industria j nell'anno t: κ_{j,t} · x_{j,t} ≤ Σ_a w_{j,a} K_{j,a,t}.
+
+    κ_{j,t} = κ_j · u_j / (1 + θ_j)^(t − a0), con a0 il primo anno dell'orizzonte. Usato dal vincolo del modello e dal
+    pacchetto di condivisione, così che i coefficienti esportati coincidano con quelli del vincolo.
+    """
+    theta = float(P.theta.get(j, 0.0)) if o.deriva else 0.0
+    g17_con_deriva = j in P.theta[P.theta != 0].index
+    fonte = "G.17: u osservato nell'anno a0, deriva θ = crescita capacità G.17 / crescita K^cap" if g17_con_deriva else (
+        "HS: u = 1" if j == "HS" else "uniforme: u = u_non_g17 (H9/H9b)")
+    if o.deriva and not g17_con_deriva:
+        theta = o.theta_non_g17
+    u_j = o.u_non_g17 if (not g17_con_deriva and j != "HS") else 1.0
+    if o.capacita_non_g17 != "uniforme" and j not in set(P.g17):
+        cinv = P.capacita_inviluppo.set_index("industria_io")
+        u_j = float(cinv.at[j, f"u_{o.capacita_non_g17}"])
+        theta = float(cinv.at[j, "theta_inviluppo_tendenza"]) if o.capacita_non_g17 == "inviluppo_tendenza" else 0.0
+        fonte = f"H9c ({o.capacita_non_g17}): inviluppo dei massimi 1997-2019 di x/K^cap"
+    fattore = (1 + theta) ** (t - P.anni[0])
+    return {"kappa_base": float(P.kappa[j]), "u": u_j, "theta": theta, "kappa_t": float(P.kappa[j]) * u_j / fattore,
+            "fonte": fonte}
+
+
 def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
     C = Costruttore()
     anni = list(P.anni)
@@ -213,16 +236,7 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
         # (3) capacità
         if o.capacita:
             for j in cap_ind + (["HS"] if tipi_j["HS"] else []):
-                theta = float(P.theta.get(j, 0.0)) if o.deriva else 0.0
-                if o.deriva and j not in P.theta[P.theta != 0].index:
-                    theta = o.theta_non_g17
-                u_j = o.u_non_g17 if (j not in P.theta[P.theta != 0].index and j != "HS") else 1.0
-                if o.capacita_non_g17 != "uniforme" and j not in set(P.g17):
-                    cinv = P.capacita_inviluppo.set_index("industria_io")
-                    u_j = float(cinv.at[j, f"u_{o.capacita_non_g17}"])
-                    theta = float(cinv.at[j, "theta_inviluppo_tendenza"]) if o.capacita_non_g17 == "inviluppo_tendenza" else 0.0
-                fattore = (1 + theta) ** (t - anni[0])
-                kap = float(P.kappa[j]) * u_j / fattore
+                kap = coefficiente_capacita(P, o, j, t)["kappa_t"]
                 if o.capacita_tipo == "leontief" and j != "HS":
                     for a in tipi_j[j]:
                         ka = float(P.K0[(j, a)])
