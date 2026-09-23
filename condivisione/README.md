@@ -18,7 +18,7 @@ a partire dai dati grezzi BEA, BLS e Fed dell'archivio, verificati con SHA-256 p
 
 ## 1. Riprodurre
 
-Servono Python ≥ 3.11 e git. L'esecuzione di riferimento usa Windows 10, Python 3.14.2, numpy 2.5.3, pandas 3.0.6 e highspy 1.15.1 (versioni esatte in `requisiti-bloccati.txt`).
+Servono git e Python ≥ 3.12 per installare le versioni esatte di `requisiti-bloccati.txt` (numpy 2.5.3 non è disponibile per Python 3.11). L'esecuzione di riferimento usa Windows 10, Python 3.14.2, numpy 2.5.3, pandas 3.0.6 e highspy 1.15.1. Con Python 3.11 si può saltare `requisiti-bloccati.txt` e installare solo il pacchetto (`pip install -e ".[test]"`): la replica in cloud su Linux con Python 3.11 e numpy 2.4.6 riproduce i dati e i valori ottimi; le soluzioni primali delle formulazioni LP possono differire (sezione 8).
 
 ```
 git clone https://github.com/redplanetcitizen/modello_pianificazione_71.git
