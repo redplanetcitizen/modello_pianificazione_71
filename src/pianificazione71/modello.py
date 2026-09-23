@@ -39,6 +39,8 @@ class Opzioni:
     accumulazione: bool = True
     terminale: bool = True
     crescita_terminale: float = 0.0        # K_{T+1} ≥ (1+g) K_2012 per tipo
+    terminale_pesi: str = "valore"         # "valore" (H29) | "capacita" (H29b/H29c, scartate in E7: aggregazione con i pesi w dei costi d'uso)
+    terminale_fattori: dict | None = None  # H29: {gruppo di tipi: fattore}, es. {"ESN": 1.23, "R": 1.08}; sostituisce il blocco per tipo
     terminale_scorte: bool = True          # S_{z,T} ≥ S_{z,2011}: nessun esaurimento delle scorte a fine orizzonte
     sigma_max_fattore: float | None = 1.20 # massimo delle scorte come quota del rapporto 2012 (H13c: la banda 0,85-1,20 contiene tutti i rapporti osservati); None = nessun massimo
     scorte: bool = True
@@ -53,8 +55,8 @@ class Opzioni:
     pesi_o3: str = "valore"                # "valore" (stock a prezzi 2012, decisione 22/09) | "costo_uso" (D2)
     obiettivi_o2: str = "osservato"        # "osservato" | "costante_2012"
     # --- gradualità dell'investimento (passo E; tutte disattivate per default: O1-O4 del passo D restano invariati) ---
-    limite_var_inv: float | None = None    # H25a: (1−g)·I_{a,t−1} ≤ I_{a,t} ≤ (1+g)·I_{a,t−1}, per tipo (somma sulle industrie); I_2011 osservato
-    penalita_var_inv: float = 0.0          # H25b: penalità per unità di variazione relativa di I_a oltre la soglia (rispetto a I_{a,2011})
+    limite_var_inv: float | None = None    # H25a: (1−g)·I_{a,t−1} ≤ I_{a,t} ≤ (1+g)·I_{a,t−1}, per tipo (somma sulle industrie); base: I osservato dell'anno precedente l'orizzonte
+    penalita_var_inv: float = 0.0          # H25b: penalità per unità di variazione relativa di I_a oltre la soglia (rispetto a I_a dell'anno precedente l'orizzonte)
     soglia_var_inv: float = 0.05           # H25b: variazione relativa annua non penalizzata
     tempi_costruzione: tuple = ()          # H26: tipi con spesa ripartita su due anni, es. ("S", "R")
     quota_primo_anno: float = 0.5          # H26: quota della spesa di un progetto nell'anno di avvio
@@ -287,12 +289,23 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                         coef[idx] = -(1 - d)
                     C.riga(coef, rhs, rhs, f"accumulazione[{j},{a},{t}]")
         # (8) condizione terminale di non depauperamento per tipo
-        if o.terminale:
+        if o.terminale and o.terminale_fattori is None:
             for a in list(TIPI) + ["R"]:
                 membri = [j for j in cap_ind + ["HS"] if a in tipi_j.get(j, [])]
                 base = sum(float(P.K0[(j, a)]) for j in membri)
                 C.riga({v[("K", j, a, T + 1)]: 1.0 for j in membri}, base * (1 + o.crescita_terminale), INF,
                        f"terminale[{a}]")
+        elif o.terminale:
+            # H29: stock finale per gruppo di tipi ≥ fattore × stock iniziale (gruppo = stringa di tipi, es. "ESN" o "R")
+            for gruppo, fattore in o.terminale_fattori.items():
+                coef, base = {}, 0.0
+                for a in gruppo:
+                    for j in [j for j in cap_ind + ["HS"] if a in tipi_j.get(j, [])]:
+                        # H29b: pesi di capacità w (servizi produttivi) invece del valore; R resta a valore
+                        pw = float(P.w[(j, a)]) if (o.terminale_pesi == "capacita" and a != "R") else 1.0
+                        coef[v[("K", j, a, T + 1)]] = pw
+                        base += pw * float(P.K0[(j, a)])
+                C.riga(coef, base * float(fattore), INF, f"terminale[{gruppo}]")
 
     # (9) gradualità dell'investimento (passo E, opzionale)
     massimizza = o.obiettivo != "O4"
