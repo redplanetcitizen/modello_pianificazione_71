@@ -55,7 +55,15 @@ python -m pianificazione71 verifica-dati          # impronte dei manifest e dei 
 python -m pianificazione71 verifica-dati --completa   # tutti i file di tutte le release (più lenta)
 python -m pianificazione71 ambiente               # versioni di Python e pacchetti
 python -m pianificazione71 controllo-solver       # LP di prova con HiGHS, registrato in runs/
+python -m pianificazione71 passo-c                # passo C (C1-C7), ciascuno registrato in runs/
+python -m pianificazione71 d | d4 | d5            # passo D: modello, O3 a valore, grafici
+python -m pianificazione71 e1 ... e7              # passo E: test di taratura (vedi progetto/09_registro_modelli_e_test.md)
+python -m pianificazione71 predittivo             # M71-E6-predittivo: backtest completo 2008-2019, stabilita' e rapporto (comando unico, ~1,5 h)
+python -m pianificazione71 predittivo --rapida    # griglia ridotta, origini dispari (prova, ~15 min)
+python -m pianificazione71 predittivo-rapporto runs\<cartella>   # rigenera stabilita' e rapporto.md di un'esecuzione
 ```
+
+La pipeline predittiva costruisce una sola volta lo storico 1997-2019 e lo salva in `cache/` (non versionato); la cache si rigenera da sola se cambiano i file di configurazione.
 
 Per usare l'archivio in un'altra posizione: `$env:DATI_ECONOMICI = "D:\percorso\dati_economici"`.
 
@@ -64,6 +72,7 @@ Per usare l'archivio in un'altra posizione: `$env:DATI_ECONOMICI = "D:\percorso\
 | Passo | Contenuto | Stato |
 |---|---|---|
 | B | Infrastruttura: verifica dei dati, registro, test, solver | fatto |
-| C | Pipeline dei dati a 71 industrie | da fare |
-| D | Modello | da fare |
-| E | Test | da fare |
+| C | Pipeline dei dati a 71 industrie | fatto (commit `e1e5845`) |
+| D | Modello | fatto (commit `2725bd8`); D4-D5 in cloud |
+| E | Test di taratura E1-E7 | in cloud, da eseguire ufficialmente |
+| E6-predittivo | Backtest a origine mobile 2008-2019 | codice pronto; esecuzione ufficiale da fare |

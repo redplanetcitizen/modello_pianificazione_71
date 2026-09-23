@@ -69,23 +69,27 @@ def esegui(cfg: Configurazione) -> Esecuzione:
                 "eccesso_consumo_cumulato_%", "anni_disinvestimento_netto", "investimento_netto_min"]
         sintesi = sintesi[:2] + ["```", t[[c for c in cols if c in t]].to_string(index=False, float_format=lambda v: f"{v:,.4g}"),
                                  "```", ""] + sintesi[2:]
-        s, ris = ris_tutti["2010-2019"]
-        for n0, caso, titolo in ((1, "O2 penalita", "O2 tarato + penalità"), (4, "O2 penalita_tempi_costruzione",
-                                                                               "O2 tarato + penalità + tempi di costruzione")):
+        figure = [("2010-2019", 1, "O2 penalita", "O2 tarato + penalità"),
+                  ("2010-2019", 4, "O2 penalita_tempi_costruzione", "O2 tarato + penalità + tempi di costruzione"),
+                  ("2012-2016", 7, "O2 penalita", "O2 tarato + penalità")]
+        for h, n0, caso, titolo in figure:
+            s, ris = ris_tutti[h]
             if caso not in ris:
                 continue
-            NOMI[caso], COLORI[caso] = f"{titolo}, 2010-19", "#bcbd22" if n0 == 1 else "#e377c2"
-            se = s[s.caso.isin(["osservato", caso])]
-            nota = "Orizzonte 2010-2019; H9c; H29 (E+S+N ≥ crescita FTE, R ≥ crescita HS); penalità sulle variazioni (H25b)."
-            pref = caso.replace("O2 ", "")
+            chiave = f"{caso} {h}"
+            NOMI[chiave] = f"{titolo}, {h}"
+            COLORI[chiave] = "#e377c2" if "tempi" in caso else "#bcbd22"
+            se = pd.concat([s[s.caso == "osservato"], s[s.caso == caso].assign(caso=chiave)], ignore_index=True)
+            nota = f"Orizzonte {h}; H9c; H29 (E+S+N ≥ crescita FTE, R ≥ crescita HS); penalità sulle variazioni (H25b)."
+            pref = caso.replace("O2 ", "") + ("" if h == "2010-2019" else "_2012_2016")
             es.scrivi_byte(f"{n0}_{pref}_produzione_consumo.png", _figura(
                 se, {"produzione_lorda": "Produzione lorda (71 industrie)", "consumo_privato": "Consumo privato"},
-                f"{titolo} ed economia osservata: produzione e consumo", 1, 2, (16, 5.8), [caso], nota))
+                f"{titolo} ed economia osservata, {h}: produzione e consumo", 1, 2, (16, 5.8), [chiave], nota))
             es.scrivi_byte(f"{n0 + 1}_{pref}_investimento_per_tipo.png", _figura(
                 se, {f"investimento_{a}": f"Investimento — {n}" for a, n in TIPI_TUTTI.items()},
-                f"{titolo} ed economia osservata: investimento per tipo", 2, 2, (16, 10), [caso], nota))
+                f"{titolo} ed economia osservata, {h}: investimento per tipo", 2, 2, (16, 10), [chiave], nota))
             es.scrivi_byte(f"{n0 + 2}_{pref}_stock_per_tipo.png", _figura(
                 se, {f"stock_{a}": f"Stock netto di inizio anno — {n}" for a, n in TIPI_TUTTI.items()},
-                f"{titolo} ed economia osservata: stock per tipo", 2, 2, (16, 10), [caso], nota))
+                f"{titolo} ed economia osservata, {h}: stock per tipo", 2, 2, (16, 10), [chiave], nota))
         es.scrivi_testo("sintesi.md", "\n".join(sintesi) + "\n")
     return es

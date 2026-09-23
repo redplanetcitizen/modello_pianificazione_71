@@ -214,6 +214,29 @@ def cmd_e7(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_predittivo(a: argparse.Namespace) -> int:
+    from .predittivo.backtest import esegui
+    origini = [int(x) for x in a.origini.split(",")] if a.origini else None
+    es = esegui(carica_configurazione(a.config), rapida=a.rapida, H_max=a.H, origini=origini, condizionata=not a.senza_condizionata)
+    print((es.cartella / "sintesi.md").read_text(encoding="utf-8"))
+    print(f"Registro: {es.cartella}")
+    return 0
+
+
+def cmd_predittivo_rapporto(a: argparse.Namespace) -> int:
+    from .predittivo.rapporto import completa
+    f = completa(carica_configurazione(a.config), Path(a.cartella))
+    print(f"Rapporto: {f}")
+    return 0
+
+
+def cmd_predittivo_grafici(a: argparse.Namespace) -> int:
+    from .predittivo.grafici_predittivo import genera
+    for f in genera(Path(a.cartella)):
+        print(f"Grafico: {f}")
+    return 0
+
+
 def cmd_passo_c(a: argparse.Namespace) -> int:
     """Esegue in sequenza C1, C2, C4, C4b, C5, C6, C7, ciascuno con la propria esecuzione registrata."""
     import importlib
@@ -253,6 +276,18 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("e5", help="passo E5: taratura standard H9c e condizione terminale tarata").set_defaults(f=cmd_e5)
     sub.add_parser("e6", help="passo E6: taratura standard con gradualita' dell'investimento").set_defaults(f=cmd_e6)
     sub.add_parser("e7", help="passo E7: condizione terminale in servizi produttivi (H29b, H29c)").set_defaults(f=cmd_e7)
+    pr = sub.add_parser("predittivo", help="M71-E6-predittivo: backtest a origine mobile 2008-2019 (comando unico)")
+    pr.add_argument("--rapida", action="store_true", help="griglia ridotta e origini dispari (prova)")
+    pr.add_argument("--origini", default="", help="origini separate da virgola, es. 2011,2015")
+    pr.add_argument("--H", type=int, default=5, help="orizzonte massimo (anni)")
+    pr.add_argument("--senza-condizionata", action="store_true", help="salta la previsione condizionata")
+    pr.set_defaults(f=cmd_predittivo)
+    prr = sub.add_parser("predittivo-rapporto", help="stabilita' e rapporto.md per un'esecuzione M71-E6-predittivo esistente")
+    prr.add_argument("cartella")
+    prr.set_defaults(f=cmd_predittivo_rapporto)
+    prg = sub.add_parser("predittivo-grafici", help="grafici PNG (g1-g5) per un'esecuzione M71-E6-predittivo esistente")
+    prg.add_argument("cartella")
+    prg.set_defaults(f=cmd_predittivo_grafici)
     sub.add_parser("passo-c", help="esegue tutti i sotto-passi del passo C").set_defaults(f=cmd_passo_c)
     a = ap.parse_args(argv)
     return a.f(a)

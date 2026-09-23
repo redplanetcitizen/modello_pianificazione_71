@@ -66,6 +66,20 @@ class Opzioni:
     regola_modo: str = "banda"             # "banda": (1−ε)·obiettivo ≤ I ≤ (1+ε)·obiettivo; "penalita": scarto penalizzato a gradini
     regola_eps: float = 0.10
     regola_tratti: tuple = ((0.05, 0.0), (0.15, 0.1), (float("inf"), 0.5))  # (ampiezza cumulata relativa a I_prec, penalità per unità relativa)
+    # --- pipeline predittiva M71-E6-predittivo (disattivate per default) ---
+    tratti_o2: tuple | None = None         # tratti di O2 alternativi a TRATTI_O2: ((ampiezza, punteggio), ...)
+    penalita_var_inv_ind: float = 0.0      # penalità L1 settoriale: Σ_{j,a,t} λ |I_{j,a,t} − I_{j,a,t−1}| / I_{a,prec}
+    valore_terminale: float = 0.0          # T2: + λ_K Σ_{j,a} K_{j,a,T+1} nell'obiettivo (K in miliardi 2012, v = 1)
+    p2_lambda_c: float = 1.0               # obiettivo "P2": tracking L1 del consumo previsto (per prodotto)
+    p2_lambda_x: float = 1.0               # obiettivo "P2": tracking L1 della produzione prevista (per industria)
+    p2_pesi: str = "quote"                 # "quote": scarti in quota del totale previsto; "uniformi": scarti relativi alla voce
+    p2_lambda_inv: float = 0.0             # "P2": tracking L1 dell'investimento previsto per tipo (P.previsioni["investimento_tipo"])
+    p2_lambda_m: float = 0.0               # "P2": tracking L1 delle importazioni previste per prodotto (P.import_oss)
+    p2_lambda_S: float = 0.0               # "P2": tracking L1 delle scorte previste per comparto (P.previsioni["scorte"])
+    opzioni_highs: dict | None = None      # opzioni del solver (tolleranze, algoritmo): solo per le verifiche di stabilità
+    perturba_costi: float = 0.0            # ampiezza di una perturbazione casuale (seme fisso) dei costi: verifica di molteplicità
+    seme_perturbazione: int = 0
+    omega_h: tuple | None = None           # pesi per orizzonte h = 1..H (default 1)
     elastico: bool = False                 # scarti di capacità penalizzati, solo per diagnosi
     penalita_elastico: float = 1e3
 
@@ -308,7 +322,7 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                 C.riga(coef, base * float(fattore), INF, f"terminale[{gruppo}]")
 
     # (9) gradualità dell'investimento (passo E, opzionale)
-    massimizza = o.obiettivo != "O4"
+    massimizza = o.obiettivo not in ("O4", "P2")
     membri_tipo = {a: [j for j in cap_ind + ["HS"] if a in tipi_j.get(j, [])] for a in list(TIPI) + ["R"]}
     base_2011 = {a: sum(float(P.I_prec.get((j, a), 0.0)) for j in membri_tipo[a]) for a in membri_tipo}
     if o.limite_var_inv is not None or o.penalita_var_inv:
@@ -395,6 +409,7 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                     C.riga(coef, cost_ob, cost_ob, f"regola_inv[{a},{t}]")
 
     # ---------------------------- obiettivo ----------------------------
+    om = {t: (float(o.omega_h[i]) if o.omega_h is not None and i < len(o.omega_h) else 1.0) for i, t in enumerate(anni)}
     if o.obiettivo == "O1":
         for t in anni:
             C.costo[v[("g", t)]] = o.beta ** (t - anni[0])
@@ -408,8 +423,8 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                     C.ub[v[("c", c, t)]] = 0.0
                     continue
                 coef = {v[("c", c, t)]: 1.0}
-                for k, (ampiezza, punteggio) in enumerate(TRATTI_O2):
-                    rho = C.var(f"rho{k}[{c},{t}]", ub=ampiezza, costo=float(peso[c]) * punteggio)
+                for k, (ampiezza, punteggio) in enumerate(o.tratti_o2 or TRATTI_O2):
+                    rho = C.var(f"rho{k}[{c},{t}]", ub=ampiezza, costo=float(peso[c]) * punteggio * om[t])
                     coef[rho] = -float(obiettivo[c])
                 C.riga(coef, 0.0, 0.0, f"o2[{c},{t}]")
     elif o.obiettivo == "O3":
@@ -440,12 +455,86 @@ def costruisci_e_risolvi(P: Parametri, o: Opzioni) -> Risultato:
                         dm = C.var(f"dev-[I,{j},{a},{t}]", costo=1.0 / norma)
                         C.riga({v[("I", j, a, t)]: 1.0, dp: -1.0, dm: 1.0}, float(oss.get(j, 0.0)),
                                float(oss.get(j, 0.0)), f"distanza[I,{j},{a},{t}]")
+    elif o.obiettivo == "P2":
+        # tracking L1 delle previsioni preliminari: consumo per prodotto e produzione per industria
+        for t in anni:
+            for nome, chiavi, lam, prev in (("c", Cc, o.p2_lambda_c, P.consumo_oss[t].clip(lower=0)),
+                                            ("x", J, o.p2_lambda_x, P.x_oss[t])):
+                tot = float(prev.abs().sum())
+                for k in chiavi:
+                    val = float(prev[k])
+                    if o.p2_pesi == "uniformi":
+                        scala = abs(val) if abs(val) > 1e-9 else None
+                    else:
+                        scala = tot
+                    if scala is None:
+                        continue
+                    costo = lam * om[t] / scala / len(chiavi) if o.p2_pesi == "uniformi" else lam * om[t] / scala
+                    dp = C.var(f"dev+[{nome},{k},{t}]", costo=costo)
+                    dm = C.var(f"dev-[{nome},{k},{t}]", costo=costo)
+                    C.riga({v[(nome, k, t)]: 1.0, dp: -1.0, dm: 1.0}, val, val, f"tracking[{nome},{k},{t}]")
+            prev = getattr(P, "previsioni", None) or {}
+            if o.p2_lambda_inv and "investimento_tipo" in prev:
+                it = prev["investimento_tipo"].loc[t]
+                tot = float(it.abs().sum())
+                for a in list(TIPI) + ["R"]:
+                    membri = membri_tipo.get(a, [])
+                    if not membri or tot <= 0:
+                        continue
+                    dp = C.var(f"dev+[I,{a},{t}]", costo=o.p2_lambda_inv * om[t] / tot)
+                    dm = C.var(f"dev-[I,{a},{t}]", costo=o.p2_lambda_inv * om[t] / tot)
+                    coef = {v[("I", j, a, t)]: 1.0 for j in membri}
+                    coef.update({dp: -1.0, dm: 1.0})
+                    C.riga(coef, float(it[a]), float(it[a]), f"tracking[I,{a},{t}]")
+            if o.p2_lambda_m and o.estero:
+                mp = P.import_oss[t]
+                tot = float(mp.abs().sum())
+                for c in Cc:
+                    if tot <= 0:
+                        continue
+                    dp = C.var(f"dev+[m,{c},{t}]", costo=o.p2_lambda_m * om[t] / tot)
+                    dm = C.var(f"dev-[m,{c},{t}]", costo=o.p2_lambda_m * om[t] / tot)
+                    C.riga({v[("m", c, t)]: 1.0, dp: -1.0, dm: 1.0}, float(mp[c]), float(mp[c]), f"tracking[m,{c},{t}]")
+            if o.p2_lambda_S and o.scorte and "scorte" in prev:
+                sp = prev["scorte"].loc[t]
+                tot = float(sp.abs().sum())
+                for z in COMPARTI:
+                    if tot <= 0:
+                        continue
+                    dp = C.var(f"dev+[S,{z},{t}]", costo=o.p2_lambda_S * om[t] / tot)
+                    dm = C.var(f"dev-[S,{z},{t}]", costo=o.p2_lambda_S * om[t] / tot)
+                    C.riga({v[("S", z, t)]: 1.0, dp: -1.0, dm: 1.0}, float(sp[z]), float(sp[z]), f"tracking[S,{z},{t}]")
+    if o.valore_terminale:
+        for j in cap_ind + ["HS"]:
+            for a in tipi_j.get(j, []):
+                C.costo[v[("K", j, a, T + 1)]] += (1.0 if massimizza else -1.0) * o.valore_terminale
+    if o.penalita_var_inv_ind:
+        segno = -1.0 if massimizza else 1.0
+        for a, membri in membri_tipo.items():
+            if base_2011.get(a, 0.0) <= 0:
+                continue
+            for j in membri:
+                for t in anni:
+                    coef = {v[("I", j, a, t)]: 1.0}
+                    prec = 0.0
+                    if t == anni[0]:
+                        prec = float(P.I_prec.get((j, a), 0.0))
+                    else:
+                        coef[v[("I", j, a, t - 1)]] = -1.0
+                    su = C.var(f"dinv_ind_su[{j},{a},{t}]", costo=segno * o.penalita_var_inv_ind / base_2011[a])
+                    giu = C.var(f"dinv_ind_giu[{j},{a},{t}]", costo=segno * o.penalita_var_inv_ind / base_2011[a])
+                    coef.update({su: -1.0, giu: 1.0})
+                    C.riga(coef, prec, prec, f"var_inv_ind[{j},{a},{t}]")
     if o.elastico:
         for i, n in enumerate(C.nomi):
             if n.startswith("scarto_cap"):
                 C.costo[i] = -o.penalita_elastico if massimizza else o.penalita_elastico
 
-    h = C.risolvi(massimizza)
+    if o.perturba_costi:
+        rng = np.random.default_rng(o.seme_perturbazione)
+        C.costo = [c * (1 + o.perturba_costi * rng.uniform(-1, 1)) if c != 0 else o.perturba_costi * 1e-9 * rng.uniform(-1, 1)
+                   for c in C.costo]
+    h = C.risolvi(massimizza, o.opzioni_highs)
     stato = h.modelStatusToString(h.getModelStatus())
     R = Risultato(stato, None, o, n_var=len(C.lb), n_vincoli=len(C.righe))
     if stato != "Optimal":
