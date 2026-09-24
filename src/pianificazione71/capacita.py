@@ -35,18 +35,48 @@ METODO_G17 = {"G21": "fisico", "G2211A2": "fisico", "G322": "fisico", "G324": "f
               "G3361T3": "fisico", "G325": "misto"}  # tutti gli altri: indagine Census + capitale
 
 
+# Etichette dei fogli dati che differiscono da quelle del foglio "NAICS codes" (stessa industria, stessa posizione).
+KLEMS_ALIAS = {
+    "Publishing industries, except internet (includes software)": "Publishing industries (includes software)",
+    "Data processing, internet publishing, and other information services": "Information and data processing services",
+    "Federal": "Federal government",
+    "State and local": "State and local government",
+}
+
+
+def _righe_dati_klems(righe) -> list:
+    """Righe di dati di un foglio KLEMS: etichetta nella colonna A e almeno un valore numerico negli anni.
+
+    Esclude intestazioni, righe vuote e note a piè di foglio (in alcuni fogli, per esempio
+    `Integrated Labor Productivity` e `Integrated TFP Index`, "Note:" e la nota con l'asterisco sono
+    testo nella colonna A: contarle come righe dava 65 righe contro 63 codici).
+    """
+    return [r for r in righe[2:] if r[0] not in (None, "")
+            and any(isinstance(v, (int, float)) and not isinstance(v, bool) for v in r[1:])]
+
+
 def leggi_klems(percorso, fogli, anni) -> pd.DataFrame:
-    """Valori KLEMS per codice di industria (63) e anno, somma dei fogli indicati."""
+    """Valori KLEMS per codice di industria (63) e anno, somma dei fogli indicati.
+
+    Le righe si associano ai codici per posizione, dopo aver verificato che ogni etichetta coincida
+    con la descrizione del foglio "NAICS codes" nella stessa posizione (a meno degli alias dichiarati).
+    """
     wb = openpyxl.load_workbook(percorso, read_only=True, data_only=True)
-    codici = [str(r[1]).strip() for r in list(wb["NAICS codes"].iter_rows(values_only=True))[1:]
-              if r[1] not in (None, "") and str(r[1]).strip() != "Production Account Codes"]
+    tab = [r for r in list(wb["NAICS codes"].iter_rows(values_only=True))[1:]
+           if r[1] not in (None, "") and str(r[1]).strip() != "Production Account Codes"]
+    codici = [str(r[1]).strip() for r in tab]
+    descrizioni = [str(r[0]).strip() for r in tab]
     tot = None
     for f in fogli:
         righe = list(wb[f].iter_rows(values_only=True))
         intest = [str(v) for v in righe[1]]
-        dati = [r for r in righe[2:] if r[0] not in (None, "")]
+        dati = _righe_dati_klems(righe)
         if len(dati) != len(codici):
-            raise ValueError(f"KLEMS {f}: {len(dati)} righe contro {len(codici)} codici")
+            raise ValueError(f"KLEMS {f}: {len(dati)} righe di dati contro {len(codici)} codici")
+        for k, r in enumerate(dati):
+            etichetta = str(r[0]).strip()
+            if KLEMS_ALIAS.get(etichetta, etichetta) != descrizioni[k]:
+                raise ValueError(f"KLEMS {f}, riga {k + 1}: '{etichetta}' non corrisponde a '{descrizioni[k]}' ({codici[k]})")
         df = pd.DataFrame([[r[intest.index(str(a))] for a in anni] for r in dati], index=codici, columns=list(anni))
         df = df.apply(pd.to_numeric, errors="raise").astype(float)
         tot = df if tot is None else tot + df
